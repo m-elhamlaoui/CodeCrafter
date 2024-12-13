@@ -1,0 +1,8 @@
+FROM maven:3.8.5-openjdk-17-slim AS build
+WORKDIR  /opt/app
+COPY ./  /opt/app
+RUN mvn clean install -DskipTests
+ENTRYPOINT  ["java","-jar","-Dserver.port=${PORT}","app.jar"]
+COPY --from=build /opt/app/target/*.jar app.jar
+ENV PORT 8080
+EXPOSE $PORT

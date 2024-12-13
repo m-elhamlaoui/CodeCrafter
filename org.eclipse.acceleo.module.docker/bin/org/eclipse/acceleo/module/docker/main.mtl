@@ -1,0 +1,32 @@
+[comment encoding = UTF-8 /]
+[module main('http://ezdevops2.com')/]
+
+[template public main(dockerfile : Dockerfile)]
+    [comment @main/]
+
+    [file ('docker/DockerFile', false, 'UTF-8')]
+		[for (instruction : Instruction | dockerfile.instruction)]
+			[if (instruction.oclIsTypeOf(dockermetamodel::From))]
+FROM [(instruction.oclAsType(dockermetamodel::From)).argument.value/]
+            [/if]
+			[if (instruction.oclIsTypeOf(dockermetamodel::Workdir))]
+WORKDIR [(instruction.oclAsType(dockermetamodel::Workdir)).argument.value/]
+COPY ./ [(instruction.oclAsType(dockermetamodel::Workdir)).argument.value/]
+            [/if]
+[if (instruction.oclIsTypeOf(dockermetamodel::Run))]
+RUN [(instruction.oclAsType(dockermetamodel::Run)).argument.value/]
+            [/if]
+[if (instruction.oclIsTypeOf(dockermetamodel::Copy))]
+COPY [(instruction.oclAsType(dockermetamodel::Copy)).argument.value/]
+ENV PORT 8080
+EXPOSE $PORT
+            [/if]
+[if (instruction.oclIsTypeOf(dockermetamodel::Cmd))]
+ENTRYPOINT  [(instruction.oclAsType(dockermetamodel::Cmd)).argument.value/]
+            [/if]
+        [/for]
+
+
+ 
+    [/file]
+[/template]
