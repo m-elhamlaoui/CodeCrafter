@@ -1,0 +1,122 @@
+grammar org.xtext.example.springgen.Springgen with org.eclipse.xtext.common.Terminals
+
+generate springgen "http://www.xtext.org/example/springgen/springgen"
+
+Sboot:
+    'project' nom=ID
+    configuration=Configuration?
+    elements+=Element*;
+
+Element:
+    Entity | Service | DTO | Repository | EntityRelationship;
+
+EntityRelationship:
+    'relation' type=dbRelations 'between' source=[Entity] 'and' target=[Entity] {EntityRelationship};
+
+Configuration:
+    'config' '{'
+        server=ServerInfo?
+        database=DatabaseInfo
+    '}' {Configuration};
+
+ServerInfo:
+    'server' '{'
+        ('port' port=INT)
+        ('cpath' path=PATH)?
+    '}' {ServerInfo};
+
+DatabaseInfo:
+    'database' '{'
+        'dbms' type=RDBMS
+        'dname' nom=ID
+        'dport' port=INT
+        'username' username=ID
+        'password' password=ID
+    '}' {DatabaseInfo};
+
+Entity:
+    'entity' nom=ID ('inherits' extends=[Entity])? '{'
+        ident=Identifier
+        properties+=Property*
+        repo=Repository?
+        serv+=Service*
+        control=Controller
+    '}' {Entity};
+
+Identifier:
+    'Id' nom=ID type=VTypes {Identifier};
+
+DTO:
+    'dto' nom=ID '{'
+        properties+=Property*
+    '}' {DTO};
+
+Service:
+    'service' nom=ID ('pertainingTo' entity=[Entity])? '{'
+        actions+=ServiceAction*
+    '}' {Service};
+
+Controller:
+    'controller' '{'
+        baseUrl=PATH?
+        cactions+=CustomAction*
+        ('create' 'entity:' cparam=ParamTrasfert)?
+        ('find' 'entity:' fparam=ParamTrasfert)?
+        ('delete' 'entity:' dparam=ParamTrasfert)?
+    '}' {Controller};
+
+ServiceAction:
+    'operation' nom=ID '{'
+        'returns' returnType=RType
+        ('raises' exceptionType=Type)?
+        ('implementation' implementation=STRING)?
+        'params' '(' (parameters+=ActionParameter)* ')'
+    '}' {ServiceAction};
+
+CustomAction:
+    method=HttpMethods 'action' nom=ID '{'
+        ('mappedAt' url=STRING)?
+        parameters+=ActionParameter*
+    '}' {CustomAction};
+
+ActionParameter:
+    nom=ID ':' type=Type ('default' defaultValue=STRING)? {ActionParameter};
+
+Repository:
+    'repository' '{'
+        findBy+=FindByMethod*
+        deleteBy+=DeleteByMethod*
+        customQueryMethod+=CustomQueryMethod*
+    '}' {Repository};
+
+FindByMethod:
+    'find' 'by' property=ID ':' ptype=VTypes {FindByMethod};
+
+DeleteByMethod:
+    'delete' 'by' property=ID ':' ptype=VTypes {DeleteByMethod};
+
+CustomQueryMethod:
+    'customQuery' '{' query=STRING '}' {CustomQueryMethod};
+
+Property:
+    nom=ID ':' type=Type ('default' defaultValue=STRING)? {Property};
+
+Type:
+    Vtypes=VTypes | ListType | SetType;
+
+RType:
+    Vypes=VTypes | ListType | ID;
+
+ListType: 'List<' type=Type '>';
+SetType: 'Set<' type=Type '>';
+
+terminal PATH: ('/' ('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z' | '0'..'9' | '_')*)*;
+
+enum VTypes: FLOAT='float' | LONG="long" | INTEGER="int" | CHAR="char" | BOOLEAN="boolean" | BYTE="byte" | STRING="String";
+
+enum HttpMethods: GET="Get" | DELETE="Delete" | POST="Post" | PUT="Put" | PATCH="Patch";
+
+enum RDBMS: MYSQL="Mysql" | POSTGRES="Postgres" | MARIADB="Mariadb" | H2="h2" | ORACLE="Oracle";
+
+enum dbRelations: M2M="ManyToMany" | M2O="ManyToOne" | O2M="OneToMany";
+enum ParamTrasfert: RequestBody="RequestBody" | RequestParam="RequestParam" | PathVariable="PathVariable";
