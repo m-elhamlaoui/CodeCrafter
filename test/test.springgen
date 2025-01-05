@@ -1,0 +1,72 @@
+// Full Test: Corrected to Match Your Xtext Grammar without semicolons
+
+project MySpringBootProject 
+    config {
+        server {
+            port 8080
+        }
+        database {
+            dbms MySQL
+            name testdb
+            port 3306
+            username root
+            password root
+        }
+    }
+
+    // Define the Person entity
+    entity Person {
+        Id id long
+        nom: String
+        age: int
+
+        // Repository methods
+        repository {
+            find by id: long
+            delete by id: long
+        }
+
+        // Controller methods
+        controller {
+            create entity: RequestParam
+            delete entity: PathVariable
+        }
+    }
+
+    // Define a PersonDTO (data transfer object)
+    dto PersonDTO {
+        n: String
+        age: int
+    }
+
+    // Define a RequestDto for request transfer
+    dto RequestDto {
+        nom: String
+        age: int
+        childs: List<int>
+        idCardNum: String
+    }
+
+    // Define a Product entity with repository and controller methods
+    entity Product {
+        Id id long
+        productName: String
+        price: float
+
+        repository {
+            find by id: long
+            find by productName: String
+            delete by id: long
+        }
+
+        controller {
+            create entity: RequestParam
+            delete entity: PathVariable
+        }
+    }
+
+    // Define a ProductDTO
+    dto ProductDTO {
+        productName: String
+        price: float
+    }
