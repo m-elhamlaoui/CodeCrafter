@@ -101,11 +101,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FindByMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="property" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyType" eType="#//ValueTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ValueTypes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DeleteByMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="property" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyType" eType="#//ValueTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ValueTypes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CustomQueryMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="query" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

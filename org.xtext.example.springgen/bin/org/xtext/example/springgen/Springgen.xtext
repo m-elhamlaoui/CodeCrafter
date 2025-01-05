@@ -1,122 +1,129 @@
-grammar org.xtext.example.springgen.Springgen with org.eclipse.xtext.common.Terminals
+grammar org.xtext.example.springgen.SpringGen with org.eclipse.xtext.common.Terminals
 
 generate springgen "http://www.xtext.org/example/springgen/springgen"
 
-Sboot:
-    'project' nom=ID
-    configuration=Configuration?
-    elements+=Element*;
+SpringBootProject:
+    'project' name=ID
+    configuration=ProjectConfiguration?
+    elements+=ProjectElement*;
 
-Element:
-    Entity | Service | DTO | Repository | EntityRelationship;
+ProjectElement:
+    Entity | EntityRelationship | DTO | Service | Repository | Controller;
 
 EntityRelationship:
-    'relation' type=dbRelations 'between' source=[Entity] 'and' target=[Entity] {EntityRelationship};
+    'relation' type=DatabaseRelations 'between' source=[Entity] 'and' target=[Entity];
 
-Configuration:
+ProjectConfiguration:
     'config' '{'
-        server=ServerInfo?
-        database=DatabaseInfo
-    '}' {Configuration};
+        server=ServerConfiguration?
+        database=DatabaseConfiguration
+    '}';
 
-ServerInfo:
+ServerConfiguration:
     'server' '{'
-        ('port' port=INT)
-        ('cpath' path=PATH)?
-    '}' {ServerInfo};
+        'port' port=INT
+        ('contextPath' contextPath=STRING)?
+    '}';
 
-DatabaseInfo:
+DatabaseConfiguration:
     'database' '{'
         'dbms' type=RDBMS
-        'dname' nom=ID
-        'dport' port=INT
+        'name' name=ID
+        'port' port=INT
         'username' username=ID
         'password' password=ID
-    '}' {DatabaseInfo};
+    '}';
 
 Entity:
-    'entity' nom=ID ('inherits' extends=[Entity])? '{'
-        ident=Identifier
+    'entity' name=ID ('inherits' extends=[Entity])? '{'
+        identifier=Identifier
         properties+=Property*
-        repo=Repository?
-        serv+=Service*
-        control=Controller
-    '}' {Entity};
+        repository=Repository?
+        services+=Service*
+        controller=Controller?
+    '}';
 
 Identifier:
-    'Id' nom=ID type=VTypes {Identifier};
+    'Id' name=ID type=ValueTypes;
 
 DTO:
-    'dto' nom=ID '{'
+    'dto' name=ID '{'
         properties+=Property*
-    '}' {DTO};
+    '}';
 
 Service:
-    'service' nom=ID ('pertainingTo' entity=[Entity])? '{'
+    'service' name=ID ('pertainingTo' entity=[Entity])? '{'
         actions+=ServiceAction*
-    '}' {Service};
+    '}';
 
 Controller:
     'controller' '{'
-        baseUrl=PATH?
-        cactions+=CustomAction*
-        ('create' 'entity:' cparam=ParamTrasfert)?
-        ('find' 'entity:' fparam=ParamTrasfert)?
-        ('delete' 'entity:' dparam=ParamTrasfert)?
-    '}' {Controller};
+        baseUrl=STRING?
+        customActions+=CustomAction*
+        ('create' 'entity:' createParam=ParamTransfer)?
+        ('find' 'entity:' findParam=ParamTransfer)?
+        ('delete' 'entity:' deleteParam=ParamTransfer)?
+    '}';
 
 ServiceAction:
-    'operation' nom=ID '{'
-        'returns' returnType=RType
+    'operation' name=ID '{'
+        'returns' returnType=ReturnType
         ('raises' exceptionType=Type)?
         ('implementation' implementation=STRING)?
-        'params' '(' (parameters+=ActionParameter)* ')'
-    '}' {ServiceAction};
+        'params' '(' parameters+=ActionParameter* ')'
+    '}';
 
 CustomAction:
-    method=HttpMethods 'action' nom=ID '{'
+    method=HttpMethods 'action' name=ID '{'
         ('mappedAt' url=STRING)?
         parameters+=ActionParameter*
-    '}' {CustomAction};
+    '}';
 
 ActionParameter:
-    nom=ID ':' type=Type ('default' defaultValue=STRING)? {ActionParameter};
+    name=ID ':' type=Type ('default' defaultValue=STRING)?;
 
 Repository:
     'repository' '{'
-        findBy+=FindByMethod*
-        deleteBy+=DeleteByMethod*
-        customQueryMethod+=CustomQueryMethod*
-    '}' {Repository};
+        findByMethods+=FindByMethod*
+        deleteByMethods+=DeleteByMethod*
+        customQueryMethods+=CustomQueryMethod*
+    '}';
 
 FindByMethod:
-    'find' 'by' property=ID ':' ptype=VTypes {FindByMethod};
+    'find' 'by' property=ID ':' ptype=ValueTypes;
 
 DeleteByMethod:
-    'delete' 'by' property=ID ':' ptype=VTypes {DeleteByMethod};
+    'delete' 'by' property=ID ':' ptype=ValueTypes;
 
 CustomQueryMethod:
-    'customQuery' '{' query=STRING '}' {CustomQueryMethod};
+    'customQuery' '{' query=STRING '}';
 
 Property:
-    nom=ID ':' type=Type ('default' defaultValue=STRING)? {Property};
+    name=ID ':' type=Type ('default' defaultValue=STRING)?;
 
 Type:
-    Vtypes=VTypes | ListType | SetType;
+    ValueTypes | ListType | SetType;
 
-RType:
-    Vypes=VTypes | ListType | ID;
+ReturnType:
+    ValueTypes | ListType | ID;
 
-ListType: 'List<' type=Type '>';
-SetType: 'Set<' type=Type '>';
+ListType:
+    'List<' type=Type '>';
 
-terminal PATH: ('/' ('a'..'z' | 'A'..'Z') ('a'..'z' | 'A'..'Z' | '0'..'9' | '_')*)*;
+SetType:
+    'Set<' type=Type '>';
 
-enum VTypes: FLOAT='float' | LONG="long" | INTEGER="int" | CHAR="char" | BOOLEAN="boolean" | BYTE="byte" | STRING="String";
+ValueTypes:
+    FLOAT='float' | LONG='long' | INTEGER='int' | CHAR='char' | BOOLEAN='boolean' | BYTE='byte' | STRING='String';
 
-enum HttpMethods: GET="Get" | DELETE="Delete" | POST="Post" | PUT="Put" | PATCH="Patch";
+HttpMethods:
+    GET="GET" | DELETE="DELETE" | POST="POST" | PUT="PUT" | PATCH="PATCH";
 
-enum RDBMS: MYSQL="Mysql" | POSTGRES="Postgres" | MARIADB="Mariadb" | H2="h2" | ORACLE="Oracle";
+RDBMS:
+    MYSQL="MySQL" | POSTGRES="Postgres" | MARIADB="MariaDB" | H2="H2" | ORACLE="Oracle";
 
-enum dbRelations: M2M="ManyToMany" | M2O="ManyToOne" | O2M="OneToMany";
-enum ParamTrasfert: RequestBody="RequestBody" | RequestParam="RequestParam" | PathVariable="PathVariable";
+DatabaseRelations:
+    M2M="ManyToMany" | M2O="ManyToOne" | O2M="OneToMany";
+
+ParamTransfer:
+    RequestBody="RequestBody" | RequestParam="RequestParam" | PathVariable="PathVariable";
