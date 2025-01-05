@@ -11,14 +11,27 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.example.springgen.springgen.ActionParameter;
+import org.xtext.example.springgen.springgen.AngularApp;
+import org.xtext.example.springgen.springgen.AngularComponent;
+import org.xtext.example.springgen.springgen.AngularModule;
+import org.xtext.example.springgen.springgen.AngularModuleImport;
+import org.xtext.example.springgen.springgen.AngularService;
+import org.xtext.example.springgen.springgen.AngularServiceMethod;
+import org.xtext.example.springgen.springgen.BaseImage;
+import org.xtext.example.springgen.springgen.CmdInstruction;
 import org.xtext.example.springgen.springgen.Controller;
+import org.xtext.example.springgen.springgen.CopyInstruction;
 import org.xtext.example.springgen.springgen.CustomAction;
 import org.xtext.example.springgen.springgen.CustomQueryMethod;
 import org.xtext.example.springgen.springgen.DatabaseConfiguration;
 import org.xtext.example.springgen.springgen.DatabaseRelations;
 import org.xtext.example.springgen.springgen.DeleteByMethod;
+import org.xtext.example.springgen.springgen.DockerInstruction;
+import org.xtext.example.springgen.springgen.Dockerfile;
 import org.xtext.example.springgen.springgen.Entity;
 import org.xtext.example.springgen.springgen.EntityRelationship;
+import org.xtext.example.springgen.springgen.EnvInstruction;
+import org.xtext.example.springgen.springgen.ExposeInstruction;
 import org.xtext.example.springgen.springgen.FindByMethod;
 import org.xtext.example.springgen.springgen.HttpMethods;
 import org.xtext.example.springgen.springgen.Identifier;
@@ -29,6 +42,7 @@ import org.xtext.example.springgen.springgen.ProjectElement;
 import org.xtext.example.springgen.springgen.Property;
 import org.xtext.example.springgen.springgen.Repository;
 import org.xtext.example.springgen.springgen.ReturnType;
+import org.xtext.example.springgen.springgen.RunInstruction;
 import org.xtext.example.springgen.springgen.ServerConfiguration;
 import org.xtext.example.springgen.springgen.Service;
 import org.xtext.example.springgen.springgen.ServiceAction;
@@ -38,6 +52,7 @@ import org.xtext.example.springgen.springgen.SpringgenFactory;
 import org.xtext.example.springgen.springgen.SpringgenPackage;
 import org.xtext.example.springgen.springgen.Type;
 import org.xtext.example.springgen.springgen.ValueTypes;
+import org.xtext.example.springgen.springgen.WorkdirInstruction;
 
 /**
  * <!-- begin-user-doc -->
@@ -244,6 +259,111 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
   private EClass paramTransferEClass = null;
 
   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dockerfileEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass baseImageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dockerInstructionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass runInstructionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass copyInstructionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass exposeInstructionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass envInstructionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass workdirInstructionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cmdInstructionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass angularAppEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass angularComponentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass angularServiceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass angularServiceMethodEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass angularModuleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass angularModuleImportEClass = null;
+
+  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -347,6 +467,28 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
   public EReference getSpringBootProject_Elements()
   {
     return (EReference)springBootProjectEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getSpringBootProject_Dockerfile()
+  {
+    return (EReference)springBootProjectEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getSpringBootProject_AngularApp()
+  {
+    return (EReference)springBootProjectEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1521,6 +1663,490 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
+  public EClass getDockerfile()
+  {
+    return dockerfileEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getDockerfile_BaseImage()
+  {
+    return (EReference)dockerfileEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getDockerfile_Instructions()
+  {
+    return (EReference)dockerfileEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getBaseImage()
+  {
+    return baseImageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBaseImage_Image()
+  {
+    return (EAttribute)baseImageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getDockerInstruction()
+  {
+    return dockerInstructionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRunInstruction()
+  {
+    return runInstructionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRunInstruction_Command()
+  {
+    return (EAttribute)runInstructionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCopyInstruction()
+  {
+    return copyInstructionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCopyInstruction_Source()
+  {
+    return (EAttribute)copyInstructionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCopyInstruction_Target()
+  {
+    return (EAttribute)copyInstructionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getExposeInstruction()
+  {
+    return exposeInstructionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getExposeInstruction_Port()
+  {
+    return (EAttribute)exposeInstructionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEnvInstruction()
+  {
+    return envInstructionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEnvInstruction_Key()
+  {
+    return (EAttribute)envInstructionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEnvInstruction_Value()
+  {
+    return (EAttribute)envInstructionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getWorkdirInstruction()
+  {
+    return workdirInstructionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getWorkdirInstruction_Path()
+  {
+    return (EAttribute)workdirInstructionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCmdInstruction()
+  {
+    return cmdInstructionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCmdInstruction_Command()
+  {
+    return (EAttribute)cmdInstructionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAngularApp()
+  {
+    return angularAppEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngularApp_Name()
+  {
+    return (EAttribute)angularAppEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAngularApp_Components()
+  {
+    return (EReference)angularAppEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAngularApp_Services()
+  {
+    return (EReference)angularAppEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAngularApp_Modules()
+  {
+    return (EReference)angularAppEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAngularComponent()
+  {
+    return angularComponentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngularComponent_Name()
+  {
+    return (EAttribute)angularComponentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngularComponent_Selector()
+  {
+    return (EAttribute)angularComponentEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngularComponent_TemplateUrl()
+  {
+    return (EAttribute)angularComponentEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngularComponent_StyleUrls()
+  {
+    return (EAttribute)angularComponentEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAngularService()
+  {
+    return angularServiceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngularService_Name()
+  {
+    return (EAttribute)angularServiceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAngularService_Methods()
+  {
+    return (EReference)angularServiceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAngularServiceMethod()
+  {
+    return angularServiceMethodEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngularServiceMethod_Name()
+  {
+    return (EAttribute)angularServiceMethodEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAngularServiceMethod_ReturnType()
+  {
+    return (EReference)angularServiceMethodEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAngularServiceMethod_Parameters()
+  {
+    return (EReference)angularServiceMethodEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAngularModule()
+  {
+    return angularModuleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngularModule_Name()
+  {
+    return (EAttribute)angularModuleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAngularModule_Declarations()
+  {
+    return (EReference)angularModuleEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAngularModule_Imports()
+  {
+    return (EReference)angularModuleEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAngularModule_Providers()
+  {
+    return (EReference)angularModuleEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAngularModuleImport()
+  {
+    return angularModuleImportEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAngularModuleImport_Module()
+  {
+    return (EAttribute)angularModuleImportEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public SpringgenFactory getSpringgenFactory()
   {
     return (SpringgenFactory)getEFactoryInstance();
@@ -1550,6 +2176,8 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
     createEAttribute(springBootProjectEClass, SPRING_BOOT_PROJECT__NAME);
     createEReference(springBootProjectEClass, SPRING_BOOT_PROJECT__CONFIGURATION);
     createEReference(springBootProjectEClass, SPRING_BOOT_PROJECT__ELEMENTS);
+    createEReference(springBootProjectEClass, SPRING_BOOT_PROJECT__DOCKERFILE);
+    createEReference(springBootProjectEClass, SPRING_BOOT_PROJECT__ANGULAR_APP);
 
     projectElementEClass = createEClass(PROJECT_ELEMENT);
 
@@ -1683,6 +2311,65 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
     createEAttribute(paramTransferEClass, PARAM_TRANSFER__REQUEST_BODY);
     createEAttribute(paramTransferEClass, PARAM_TRANSFER__REQUEST_PARAM);
     createEAttribute(paramTransferEClass, PARAM_TRANSFER__PATH_VARIABLE);
+
+    dockerfileEClass = createEClass(DOCKERFILE);
+    createEReference(dockerfileEClass, DOCKERFILE__BASE_IMAGE);
+    createEReference(dockerfileEClass, DOCKERFILE__INSTRUCTIONS);
+
+    baseImageEClass = createEClass(BASE_IMAGE);
+    createEAttribute(baseImageEClass, BASE_IMAGE__IMAGE);
+
+    dockerInstructionEClass = createEClass(DOCKER_INSTRUCTION);
+
+    runInstructionEClass = createEClass(RUN_INSTRUCTION);
+    createEAttribute(runInstructionEClass, RUN_INSTRUCTION__COMMAND);
+
+    copyInstructionEClass = createEClass(COPY_INSTRUCTION);
+    createEAttribute(copyInstructionEClass, COPY_INSTRUCTION__SOURCE);
+    createEAttribute(copyInstructionEClass, COPY_INSTRUCTION__TARGET);
+
+    exposeInstructionEClass = createEClass(EXPOSE_INSTRUCTION);
+    createEAttribute(exposeInstructionEClass, EXPOSE_INSTRUCTION__PORT);
+
+    envInstructionEClass = createEClass(ENV_INSTRUCTION);
+    createEAttribute(envInstructionEClass, ENV_INSTRUCTION__KEY);
+    createEAttribute(envInstructionEClass, ENV_INSTRUCTION__VALUE);
+
+    workdirInstructionEClass = createEClass(WORKDIR_INSTRUCTION);
+    createEAttribute(workdirInstructionEClass, WORKDIR_INSTRUCTION__PATH);
+
+    cmdInstructionEClass = createEClass(CMD_INSTRUCTION);
+    createEAttribute(cmdInstructionEClass, CMD_INSTRUCTION__COMMAND);
+
+    angularAppEClass = createEClass(ANGULAR_APP);
+    createEAttribute(angularAppEClass, ANGULAR_APP__NAME);
+    createEReference(angularAppEClass, ANGULAR_APP__COMPONENTS);
+    createEReference(angularAppEClass, ANGULAR_APP__SERVICES);
+    createEReference(angularAppEClass, ANGULAR_APP__MODULES);
+
+    angularComponentEClass = createEClass(ANGULAR_COMPONENT);
+    createEAttribute(angularComponentEClass, ANGULAR_COMPONENT__NAME);
+    createEAttribute(angularComponentEClass, ANGULAR_COMPONENT__SELECTOR);
+    createEAttribute(angularComponentEClass, ANGULAR_COMPONENT__TEMPLATE_URL);
+    createEAttribute(angularComponentEClass, ANGULAR_COMPONENT__STYLE_URLS);
+
+    angularServiceEClass = createEClass(ANGULAR_SERVICE);
+    createEAttribute(angularServiceEClass, ANGULAR_SERVICE__NAME);
+    createEReference(angularServiceEClass, ANGULAR_SERVICE__METHODS);
+
+    angularServiceMethodEClass = createEClass(ANGULAR_SERVICE_METHOD);
+    createEAttribute(angularServiceMethodEClass, ANGULAR_SERVICE_METHOD__NAME);
+    createEReference(angularServiceMethodEClass, ANGULAR_SERVICE_METHOD__RETURN_TYPE);
+    createEReference(angularServiceMethodEClass, ANGULAR_SERVICE_METHOD__PARAMETERS);
+
+    angularModuleEClass = createEClass(ANGULAR_MODULE);
+    createEAttribute(angularModuleEClass, ANGULAR_MODULE__NAME);
+    createEReference(angularModuleEClass, ANGULAR_MODULE__DECLARATIONS);
+    createEReference(angularModuleEClass, ANGULAR_MODULE__IMPORTS);
+    createEReference(angularModuleEClass, ANGULAR_MODULE__PROVIDERS);
+
+    angularModuleImportEClass = createEClass(ANGULAR_MODULE_IMPORT);
+    createEAttribute(angularModuleImportEClass, ANGULAR_MODULE_IMPORT__MODULE);
   }
 
   /**
@@ -1725,12 +2412,20 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
     setTypeEClass.getESuperTypes().add(this.getType());
     valueTypesEClass.getESuperTypes().add(this.getType());
     valueTypesEClass.getESuperTypes().add(this.getReturnType());
+    runInstructionEClass.getESuperTypes().add(this.getDockerInstruction());
+    copyInstructionEClass.getESuperTypes().add(this.getDockerInstruction());
+    exposeInstructionEClass.getESuperTypes().add(this.getDockerInstruction());
+    envInstructionEClass.getESuperTypes().add(this.getDockerInstruction());
+    workdirInstructionEClass.getESuperTypes().add(this.getDockerInstruction());
+    cmdInstructionEClass.getESuperTypes().add(this.getDockerInstruction());
 
     // Initialize classes and features; add operations and parameters
     initEClass(springBootProjectEClass, SpringBootProject.class, "SpringBootProject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSpringBootProject_Name(), ecorePackage.getEString(), "name", null, 0, 1, SpringBootProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSpringBootProject_Configuration(), this.getProjectConfiguration(), null, "configuration", null, 0, 1, SpringBootProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSpringBootProject_Elements(), this.getProjectElement(), null, "elements", null, 0, -1, SpringBootProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSpringBootProject_Dockerfile(), this.getDockerfile(), null, "dockerfile", null, 0, 1, SpringBootProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSpringBootProject_AngularApp(), this.getAngularApp(), null, "angularApp", null, 0, 1, SpringBootProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(projectElementEClass, ProjectElement.class, "ProjectElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1864,6 +2559,65 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
     initEAttribute(getParamTransfer_REQUEST_BODY(), ecorePackage.getEString(), "REQUEST_BODY", null, 0, 1, ParamTransfer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getParamTransfer_REQUEST_PARAM(), ecorePackage.getEString(), "REQUEST_PARAM", null, 0, 1, ParamTransfer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getParamTransfer_PATH_VARIABLE(), ecorePackage.getEString(), "PATH_VARIABLE", null, 0, 1, ParamTransfer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dockerfileEClass, Dockerfile.class, "Dockerfile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDockerfile_BaseImage(), this.getBaseImage(), null, "baseImage", null, 0, 1, Dockerfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDockerfile_Instructions(), this.getDockerInstruction(), null, "instructions", null, 0, -1, Dockerfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(baseImageEClass, BaseImage.class, "BaseImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBaseImage_Image(), ecorePackage.getEString(), "image", null, 0, 1, BaseImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dockerInstructionEClass, DockerInstruction.class, "DockerInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(runInstructionEClass, RunInstruction.class, "RunInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRunInstruction_Command(), ecorePackage.getEString(), "command", null, 0, 1, RunInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(copyInstructionEClass, CopyInstruction.class, "CopyInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCopyInstruction_Source(), ecorePackage.getEString(), "source", null, 0, 1, CopyInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCopyInstruction_Target(), ecorePackage.getEString(), "target", null, 0, 1, CopyInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(exposeInstructionEClass, ExposeInstruction.class, "ExposeInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getExposeInstruction_Port(), ecorePackage.getEInt(), "port", null, 0, 1, ExposeInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(envInstructionEClass, EnvInstruction.class, "EnvInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEnvInstruction_Key(), ecorePackage.getEString(), "key", null, 0, 1, EnvInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEnvInstruction_Value(), ecorePackage.getEString(), "value", null, 0, 1, EnvInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(workdirInstructionEClass, WorkdirInstruction.class, "WorkdirInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getWorkdirInstruction_Path(), ecorePackage.getEString(), "path", null, 0, 1, WorkdirInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cmdInstructionEClass, CmdInstruction.class, "CmdInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCmdInstruction_Command(), ecorePackage.getEString(), "command", null, 0, 1, CmdInstruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(angularAppEClass, AngularApp.class, "AngularApp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAngularApp_Name(), ecorePackage.getEString(), "name", null, 0, 1, AngularApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAngularApp_Components(), this.getAngularComponent(), null, "components", null, 0, -1, AngularApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAngularApp_Services(), this.getAngularService(), null, "services", null, 0, -1, AngularApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAngularApp_Modules(), this.getAngularModule(), null, "modules", null, 0, -1, AngularApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(angularComponentEClass, AngularComponent.class, "AngularComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAngularComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, AngularComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAngularComponent_Selector(), ecorePackage.getEString(), "selector", null, 0, 1, AngularComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAngularComponent_TemplateUrl(), ecorePackage.getEString(), "templateUrl", null, 0, 1, AngularComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAngularComponent_StyleUrls(), ecorePackage.getEString(), "styleUrls", null, 0, 1, AngularComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(angularServiceEClass, AngularService.class, "AngularService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAngularService_Name(), ecorePackage.getEString(), "name", null, 0, 1, AngularService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAngularService_Methods(), this.getAngularServiceMethod(), null, "methods", null, 0, -1, AngularService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(angularServiceMethodEClass, AngularServiceMethod.class, "AngularServiceMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAngularServiceMethod_Name(), ecorePackage.getEString(), "name", null, 0, 1, AngularServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAngularServiceMethod_ReturnType(), this.getReturnType(), null, "returnType", null, 0, 1, AngularServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAngularServiceMethod_Parameters(), this.getActionParameter(), null, "parameters", null, 0, -1, AngularServiceMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(angularModuleEClass, AngularModule.class, "AngularModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAngularModule_Name(), ecorePackage.getEString(), "name", null, 0, 1, AngularModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAngularModule_Declarations(), this.getAngularComponent(), null, "declarations", null, 0, -1, AngularModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAngularModule_Imports(), this.getAngularModuleImport(), null, "imports", null, 0, -1, AngularModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAngularModule_Providers(), this.getAngularService(), null, "providers", null, 0, -1, AngularModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(angularModuleImportEClass, AngularModuleImport.class, "AngularModuleImport", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAngularModuleImport_Module(), ecorePackage.getEString(), "module", null, 0, 1, AngularModuleImport.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

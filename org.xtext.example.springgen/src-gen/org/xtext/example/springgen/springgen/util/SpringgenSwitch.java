@@ -280,6 +280,117 @@ public class SpringgenSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SpringgenPackage.DOCKERFILE:
+      {
+        Dockerfile dockerfile = (Dockerfile)theEObject;
+        T result = caseDockerfile(dockerfile);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.BASE_IMAGE:
+      {
+        BaseImage baseImage = (BaseImage)theEObject;
+        T result = caseBaseImage(baseImage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.DOCKER_INSTRUCTION:
+      {
+        DockerInstruction dockerInstruction = (DockerInstruction)theEObject;
+        T result = caseDockerInstruction(dockerInstruction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.RUN_INSTRUCTION:
+      {
+        RunInstruction runInstruction = (RunInstruction)theEObject;
+        T result = caseRunInstruction(runInstruction);
+        if (result == null) result = caseDockerInstruction(runInstruction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.COPY_INSTRUCTION:
+      {
+        CopyInstruction copyInstruction = (CopyInstruction)theEObject;
+        T result = caseCopyInstruction(copyInstruction);
+        if (result == null) result = caseDockerInstruction(copyInstruction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.EXPOSE_INSTRUCTION:
+      {
+        ExposeInstruction exposeInstruction = (ExposeInstruction)theEObject;
+        T result = caseExposeInstruction(exposeInstruction);
+        if (result == null) result = caseDockerInstruction(exposeInstruction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.ENV_INSTRUCTION:
+      {
+        EnvInstruction envInstruction = (EnvInstruction)theEObject;
+        T result = caseEnvInstruction(envInstruction);
+        if (result == null) result = caseDockerInstruction(envInstruction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.WORKDIR_INSTRUCTION:
+      {
+        WorkdirInstruction workdirInstruction = (WorkdirInstruction)theEObject;
+        T result = caseWorkdirInstruction(workdirInstruction);
+        if (result == null) result = caseDockerInstruction(workdirInstruction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.CMD_INSTRUCTION:
+      {
+        CmdInstruction cmdInstruction = (CmdInstruction)theEObject;
+        T result = caseCmdInstruction(cmdInstruction);
+        if (result == null) result = caseDockerInstruction(cmdInstruction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.ANGULAR_APP:
+      {
+        AngularApp angularApp = (AngularApp)theEObject;
+        T result = caseAngularApp(angularApp);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.ANGULAR_COMPONENT:
+      {
+        AngularComponent angularComponent = (AngularComponent)theEObject;
+        T result = caseAngularComponent(angularComponent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.ANGULAR_SERVICE:
+      {
+        AngularService angularService = (AngularService)theEObject;
+        T result = caseAngularService(angularService);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.ANGULAR_SERVICE_METHOD:
+      {
+        AngularServiceMethod angularServiceMethod = (AngularServiceMethod)theEObject;
+        T result = caseAngularServiceMethod(angularServiceMethod);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.ANGULAR_MODULE:
+      {
+        AngularModule angularModule = (AngularModule)theEObject;
+        T result = caseAngularModule(angularModule);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SpringgenPackage.ANGULAR_MODULE_IMPORT:
+      {
+        AngularModuleImport angularModuleImport = (AngularModuleImport)theEObject;
+        T result = caseAngularModuleImport(angularModuleImport);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -728,6 +839,246 @@ public class SpringgenSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseParamTransfer(ParamTransfer object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dockerfile</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dockerfile</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDockerfile(Dockerfile object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Base Image</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Base Image</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBaseImage(BaseImage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Docker Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Docker Instruction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDockerInstruction(DockerInstruction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Run Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Run Instruction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRunInstruction(RunInstruction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Copy Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Copy Instruction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCopyInstruction(CopyInstruction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Expose Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Expose Instruction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExposeInstruction(ExposeInstruction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Env Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Env Instruction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnvInstruction(EnvInstruction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Workdir Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Workdir Instruction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseWorkdirInstruction(WorkdirInstruction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Cmd Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Cmd Instruction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCmdInstruction(CmdInstruction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Angular App</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Angular App</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAngularApp(AngularApp object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Angular Component</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Angular Component</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAngularComponent(AngularComponent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Angular Service</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Angular Service</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAngularService(AngularService object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Angular Service Method</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Angular Service Method</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAngularServiceMethod(AngularServiceMethod object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Angular Module</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Angular Module</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAngularModule(AngularModule object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Angular Module Import</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Angular Module Import</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAngularModuleImport(AngularModuleImport object)
   {
     return null;
   }

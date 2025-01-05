@@ -4,21 +4,21 @@ import java.util.*;
 
 @Builder
 public class PersonDTO {
-    private org.xtext.example.springgen.springgen.impl.ValueTypesImpl@5c34e9f7 (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) n;
-    private org.xtext.example.springgen.springgen.impl.ValueTypesImpl@24b04e87 (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) age;
+    private org.xtext.example.springgen.springgen.impl.ValueTypesImpl@160a4727 (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) nom;
+    private org.xtext.example.springgen.springgen.impl.ValueTypesImpl@1d9fd69c (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) age;
 
-    public org.xtext.example.springgen.springgen.impl.ValueTypesImpl@5c34e9f7 (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) getN() {
-        return n;
+    public org.xtext.example.springgen.springgen.impl.ValueTypesImpl@160a4727 (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) getNom() {
+        return nom;
     }
 
-    public void setN(org.xtext.example.springgen.springgen.impl.ValueTypesImpl@5c34e9f7 (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) n) {
-        this.n = n;
+    public void setNom(org.xtext.example.springgen.springgen.impl.ValueTypesImpl@160a4727 (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) nom) {
+        this.nom = nom;
     }
-    public org.xtext.example.springgen.springgen.impl.ValueTypesImpl@24b04e87 (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) getAge() {
+    public org.xtext.example.springgen.springgen.impl.ValueTypesImpl@1d9fd69c (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) getAge() {
         return age;
     }
 
-    public void setAge(org.xtext.example.springgen.springgen.impl.ValueTypesImpl@24b04e87 (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) age) {
+    public void setAge(org.xtext.example.springgen.springgen.impl.ValueTypesImpl@1d9fd69c (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) age) {
         this.age = age;
     }
 }

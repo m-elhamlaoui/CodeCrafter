@@ -17,11 +17,17 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
+import org.xtext.example.springgen.springgen.CmdInstruction;
+import org.xtext.example.springgen.springgen.CopyInstruction;
 import org.xtext.example.springgen.springgen.CustomQueryMethod;
 import org.xtext.example.springgen.springgen.DTO;
 import org.xtext.example.springgen.springgen.DatabaseConfiguration;
 import org.xtext.example.springgen.springgen.DeleteByMethod;
+import org.xtext.example.springgen.springgen.DockerInstruction;
+import org.xtext.example.springgen.springgen.Dockerfile;
 import org.xtext.example.springgen.springgen.Entity;
+import org.xtext.example.springgen.springgen.EnvInstruction;
+import org.xtext.example.springgen.springgen.ExposeInstruction;
 import org.xtext.example.springgen.springgen.FindByMethod;
 import org.xtext.example.springgen.springgen.Identifier;
 import org.xtext.example.springgen.springgen.ListType;
@@ -30,11 +36,13 @@ import org.xtext.example.springgen.springgen.ProjectConfiguration;
 import org.xtext.example.springgen.springgen.Property;
 import org.xtext.example.springgen.springgen.RDBMS;
 import org.xtext.example.springgen.springgen.Repository;
+import org.xtext.example.springgen.springgen.RunInstruction;
 import org.xtext.example.springgen.springgen.ServerConfiguration;
 import org.xtext.example.springgen.springgen.SetType;
 import org.xtext.example.springgen.springgen.SpringBootProject;
 import org.xtext.example.springgen.springgen.Type;
 import org.xtext.example.springgen.springgen.ValueTypes;
+import org.xtext.example.springgen.springgen.WorkdirInstruction;
 
 /**
  * Generates code from your model files on save.
@@ -140,6 +148,12 @@ public class SpringGenGenerator extends AbstractGenerator {
       }
     }
     this.generatePomXml(config, fsa, projectName);
+    final Procedure1<EObject> _function_4 = (EObject element) -> {
+      if ((element instanceof Dockerfile)) {
+        this.generateDockerfile(((Dockerfile) element), fsa, input);
+      }
+    };
+    IteratorExtensions.<EObject>forEach(input.getAllContents(), _function_4);
   }
 
   public void generateController(final Entity entity, final IFileSystemAccess2 fsa, final Resource input) {
@@ -1725,5 +1739,82 @@ public class SpringGenGenerator extends AbstractGenerator {
     final String folderPath = (("src/main/java/com/springboot/" + projectName) + "/entities");
     final String filePath = (((folderPath + "/") + className) + ".java");
     fsa.generateFile(filePath, content);
+  }
+
+  public void generateDockerfile(final Dockerfile dockerfile, final IFileSystemAccess2 fsa, final Resource input) {
+    final ArrayList<String> projectNameHolder = new ArrayList<String>();
+    final Procedure1<EObject> _function = (EObject element) -> {
+      if ((element instanceof SpringBootProject)) {
+        projectNameHolder.add(((SpringBootProject)element).getName());
+      }
+    };
+    IteratorExtensions.<EObject>forEach(input.getAllContents(), _function);
+    final String projectName = projectNameHolder.get(0);
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("FROM ");
+    String _image = dockerfile.getBaseImage().getImage();
+    _builder.append(_image);
+    _builder.newLineIfNotEmpty();
+    {
+      EList<DockerInstruction> _instructions = dockerfile.getInstructions();
+      for(final DockerInstruction instruction : _instructions) {
+        {
+          if ((instruction instanceof RunInstruction)) {
+            _builder.append("RUN ");
+            String _command = ((RunInstruction)instruction).getCommand();
+            _builder.append(_command);
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        {
+          if ((instruction instanceof CopyInstruction)) {
+            _builder.append("COPY ");
+            String _source = ((CopyInstruction)instruction).getSource();
+            _builder.append(_source);
+            _builder.append(" ");
+            String _target = ((CopyInstruction)instruction).getTarget();
+            _builder.append(_target);
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        {
+          if ((instruction instanceof ExposeInstruction)) {
+            _builder.append("EXPOSE ");
+            int _port = ((ExposeInstruction)instruction).getPort();
+            _builder.append(_port);
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        {
+          if ((instruction instanceof EnvInstruction)) {
+            _builder.append("ENV ");
+            String _key = ((EnvInstruction)instruction).getKey();
+            _builder.append(_key);
+            _builder.append(" ");
+            String _value = ((EnvInstruction)instruction).getValue();
+            _builder.append(_value);
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        {
+          if ((instruction instanceof WorkdirInstruction)) {
+            _builder.append("WORKDIR ");
+            String _path = ((WorkdirInstruction)instruction).getPath();
+            _builder.append(_path);
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        {
+          if ((instruction instanceof CmdInstruction)) {
+            _builder.append("CMD ");
+            String _command_1 = ((CmdInstruction)instruction).getCommand();
+            _builder.append(_command_1);
+            _builder.newLineIfNotEmpty();
+          }
+        }
+      }
+    }
+    final String content = _builder.toString();
+    fsa.generateFile("Dockerfile", content);
   }
 }

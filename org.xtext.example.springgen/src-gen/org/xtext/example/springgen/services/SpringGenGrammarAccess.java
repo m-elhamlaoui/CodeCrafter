@@ -33,16 +33,24 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final RuleCall cConfigurationProjectConfigurationParserRuleCall_2_0 = (RuleCall)cConfigurationAssignment_2.eContents().get(0);
 		private final Assignment cElementsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cElementsProjectElementParserRuleCall_3_0 = (RuleCall)cElementsAssignment_3.eContents().get(0);
+		private final Assignment cDockerfileAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDockerfileDockerfileParserRuleCall_4_0 = (RuleCall)cDockerfileAssignment_4.eContents().get(0);
+		private final Assignment cAngularAppAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cAngularAppAngularAppParserRuleCall_5_0 = (RuleCall)cAngularAppAssignment_5.eContents().get(0);
 		
 		//SpringBootProject:
 		//    'project' name=ID
 		//    configuration=ProjectConfiguration?
-		//    elements+=ProjectElement*;
+		//    elements+=ProjectElement*
+		//    dockerfile=Dockerfile?
+		//    angularApp=AngularApp?;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'project' name=ID
 		//configuration=ProjectConfiguration?
 		//elements+=ProjectElement*
+		//dockerfile=Dockerfile?
+		//angularApp=AngularApp?
 		public Group getGroup() { return cGroup; }
 		
 		//'project'
@@ -65,6 +73,18 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		
 		//ProjectElement
 		public RuleCall getElementsProjectElementParserRuleCall_3_0() { return cElementsProjectElementParserRuleCall_3_0; }
+		
+		//dockerfile=Dockerfile?
+		public Assignment getDockerfileAssignment_4() { return cDockerfileAssignment_4; }
+		
+		//Dockerfile
+		public RuleCall getDockerfileDockerfileParserRuleCall_4_0() { return cDockerfileDockerfileParserRuleCall_4_0; }
+		
+		//angularApp=AngularApp?
+		public Assignment getAngularAppAssignment_5() { return cAngularAppAssignment_5; }
+		
+		//AngularApp
+		public RuleCall getAngularAppAngularAppParserRuleCall_5_0() { return cAngularAppAngularAppParserRuleCall_5_0; }
 	}
 	public class ProjectElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.ProjectElement");
@@ -1475,6 +1495,581 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//"PathVariable"
 		public Keyword getPATH_VARIABLEPathVariableKeyword_2_0() { return cPATH_VARIABLEPathVariableKeyword_2_0; }
 	}
+	public class DockerfileElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.Dockerfile");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDockerfileKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cBaseImageAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cBaseImageBaseImageParserRuleCall_2_0 = (RuleCall)cBaseImageAssignment_2.eContents().get(0);
+		private final Assignment cInstructionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cInstructionsDockerInstructionParserRuleCall_3_0 = (RuleCall)cInstructionsAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//Dockerfile:
+		//    'dockerfile' '{'
+		//        baseImage=BaseImage
+		//        instructions+=DockerInstruction*
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'dockerfile' '{'
+		//    baseImage=BaseImage
+		//    instructions+=DockerInstruction*
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'dockerfile'
+		public Keyword getDockerfileKeyword_0() { return cDockerfileKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//baseImage=BaseImage
+		public Assignment getBaseImageAssignment_2() { return cBaseImageAssignment_2; }
+		
+		//BaseImage
+		public RuleCall getBaseImageBaseImageParserRuleCall_2_0() { return cBaseImageBaseImageParserRuleCall_2_0; }
+		
+		//instructions+=DockerInstruction*
+		public Assignment getInstructionsAssignment_3() { return cInstructionsAssignment_3; }
+		
+		//DockerInstruction
+		public RuleCall getInstructionsDockerInstructionParserRuleCall_3_0() { return cInstructionsDockerInstructionParserRuleCall_3_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+	public class BaseImageElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.BaseImage");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFROMKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cImageAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImageSTRINGTerminalRuleCall_1_0 = (RuleCall)cImageAssignment_1.eContents().get(0);
+		
+		//BaseImage:
+		//    'FROM' image=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'FROM' image=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//'FROM'
+		public Keyword getFROMKeyword_0() { return cFROMKeyword_0; }
+		
+		//image=STRING
+		public Assignment getImageAssignment_1() { return cImageAssignment_1; }
+		
+		//STRING
+		public RuleCall getImageSTRINGTerminalRuleCall_1_0() { return cImageSTRINGTerminalRuleCall_1_0; }
+	}
+	public class DockerInstructionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.DockerInstruction");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cRunInstructionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cCopyInstructionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cExposeInstructionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cEnvInstructionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cWorkdirInstructionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cCmdInstructionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		
+		//DockerInstruction:
+		//    RunInstruction | CopyInstruction | ExposeInstruction | EnvInstruction | WorkdirInstruction | CmdInstruction;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//RunInstruction | CopyInstruction | ExposeInstruction | EnvInstruction | WorkdirInstruction | CmdInstruction
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//RunInstruction
+		public RuleCall getRunInstructionParserRuleCall_0() { return cRunInstructionParserRuleCall_0; }
+		
+		//CopyInstruction
+		public RuleCall getCopyInstructionParserRuleCall_1() { return cCopyInstructionParserRuleCall_1; }
+		
+		//ExposeInstruction
+		public RuleCall getExposeInstructionParserRuleCall_2() { return cExposeInstructionParserRuleCall_2; }
+		
+		//EnvInstruction
+		public RuleCall getEnvInstructionParserRuleCall_3() { return cEnvInstructionParserRuleCall_3; }
+		
+		//WorkdirInstruction
+		public RuleCall getWorkdirInstructionParserRuleCall_4() { return cWorkdirInstructionParserRuleCall_4; }
+		
+		//CmdInstruction
+		public RuleCall getCmdInstructionParserRuleCall_5() { return cCmdInstructionParserRuleCall_5; }
+	}
+	public class RunInstructionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.RunInstruction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cRUNKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cCommandAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cCommandSTRINGTerminalRuleCall_1_0 = (RuleCall)cCommandAssignment_1.eContents().get(0);
+		
+		//RunInstruction:
+		//    'RUN' command=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'RUN' command=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//'RUN'
+		public Keyword getRUNKeyword_0() { return cRUNKeyword_0; }
+		
+		//command=STRING
+		public Assignment getCommandAssignment_1() { return cCommandAssignment_1; }
+		
+		//STRING
+		public RuleCall getCommandSTRINGTerminalRuleCall_1_0() { return cCommandSTRINGTerminalRuleCall_1_0; }
+	}
+	public class CopyInstructionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.CopyInstruction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cCOPYKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cSourceAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSourceSTRINGTerminalRuleCall_1_0 = (RuleCall)cSourceAssignment_1.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTargetAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTargetSTRINGTerminalRuleCall_3_0 = (RuleCall)cTargetAssignment_3.eContents().get(0);
+		
+		//CopyInstruction:
+		//    'COPY' source=STRING ':' target=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'COPY' source=STRING ':' target=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//'COPY'
+		public Keyword getCOPYKeyword_0() { return cCOPYKeyword_0; }
+		
+		//source=STRING
+		public Assignment getSourceAssignment_1() { return cSourceAssignment_1; }
+		
+		//STRING
+		public RuleCall getSourceSTRINGTerminalRuleCall_1_0() { return cSourceSTRINGTerminalRuleCall_1_0; }
+		
+		//':'
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
+		
+		//target=STRING
+		public Assignment getTargetAssignment_3() { return cTargetAssignment_3; }
+		
+		//STRING
+		public RuleCall getTargetSTRINGTerminalRuleCall_3_0() { return cTargetSTRINGTerminalRuleCall_3_0; }
+	}
+	public class ExposeInstructionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.ExposeInstruction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cEXPOSEKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cPortAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cPortINTTerminalRuleCall_1_0 = (RuleCall)cPortAssignment_1.eContents().get(0);
+		
+		//ExposeInstruction:
+		//    'EXPOSE' port=INT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'EXPOSE' port=INT
+		public Group getGroup() { return cGroup; }
+		
+		//'EXPOSE'
+		public Keyword getEXPOSEKeyword_0() { return cEXPOSEKeyword_0; }
+		
+		//port=INT
+		public Assignment getPortAssignment_1() { return cPortAssignment_1; }
+		
+		//INT
+		public RuleCall getPortINTTerminalRuleCall_1_0() { return cPortINTTerminalRuleCall_1_0; }
+	}
+	public class EnvInstructionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.EnvInstruction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cENVKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cKeyAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cKeyIDTerminalRuleCall_1_0 = (RuleCall)cKeyAssignment_1.eContents().get(0);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//EnvInstruction:
+		//    'ENV' key=ID value=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'ENV' key=ID value=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//'ENV'
+		public Keyword getENVKeyword_0() { return cENVKeyword_0; }
+		
+		//key=ID
+		public Assignment getKeyAssignment_1() { return cKeyAssignment_1; }
+		
+		//ID
+		public RuleCall getKeyIDTerminalRuleCall_1_0() { return cKeyIDTerminalRuleCall_1_0; }
+		
+		//value=STRING
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_2_0() { return cValueSTRINGTerminalRuleCall_2_0; }
+	}
+	public class WorkdirInstructionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.WorkdirInstruction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cWORKDIRKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cPathAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cPathSTRINGTerminalRuleCall_1_0 = (RuleCall)cPathAssignment_1.eContents().get(0);
+		
+		//WorkdirInstruction:
+		//    'WORKDIR' path=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'WORKDIR' path=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//'WORKDIR'
+		public Keyword getWORKDIRKeyword_0() { return cWORKDIRKeyword_0; }
+		
+		//path=STRING
+		public Assignment getPathAssignment_1() { return cPathAssignment_1; }
+		
+		//STRING
+		public RuleCall getPathSTRINGTerminalRuleCall_1_0() { return cPathSTRINGTerminalRuleCall_1_0; }
+	}
+	public class CmdInstructionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.CmdInstruction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cCMDKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cCommandAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cCommandSTRINGTerminalRuleCall_1_0 = (RuleCall)cCommandAssignment_1.eContents().get(0);
+		
+		//CmdInstruction:
+		//    'CMD' command=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'CMD' command=STRING
+		public Group getGroup() { return cGroup; }
+		
+		//'CMD'
+		public Keyword getCMDKeyword_0() { return cCMDKeyword_0; }
+		
+		//command=STRING
+		public Assignment getCommandAssignment_1() { return cCommandAssignment_1; }
+		
+		//STRING
+		public RuleCall getCommandSTRINGTerminalRuleCall_1_0() { return cCommandSTRINGTerminalRuleCall_1_0; }
+	}
+	public class AngularAppElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.AngularApp");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cAngularAppKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Assignment cComponentsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cComponentsAngularComponentParserRuleCall_3_0 = (RuleCall)cComponentsAssignment_3.eContents().get(0);
+		private final Assignment cServicesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cServicesAngularServiceParserRuleCall_4_0 = (RuleCall)cServicesAssignment_4.eContents().get(0);
+		private final Assignment cModulesAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cModulesAngularModuleParserRuleCall_5_0 = (RuleCall)cModulesAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//AngularApp:
+		//    'angularApp' '{'
+		//        name=ID
+		//        components+=AngularComponent*
+		//        services+=AngularService*
+		//        modules+=AngularModule*
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'angularApp' '{'
+		//    name=ID
+		//    components+=AngularComponent*
+		//    services+=AngularService*
+		//    modules+=AngularModule*
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'angularApp'
+		public Keyword getAngularAppKeyword_0() { return cAngularAppKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//name=ID
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		
+		//components+=AngularComponent*
+		public Assignment getComponentsAssignment_3() { return cComponentsAssignment_3; }
+		
+		//AngularComponent
+		public RuleCall getComponentsAngularComponentParserRuleCall_3_0() { return cComponentsAngularComponentParserRuleCall_3_0; }
+		
+		//services+=AngularService*
+		public Assignment getServicesAssignment_4() { return cServicesAssignment_4; }
+		
+		//AngularService
+		public RuleCall getServicesAngularServiceParserRuleCall_4_0() { return cServicesAngularServiceParserRuleCall_4_0; }
+		
+		//modules+=AngularModule*
+		public Assignment getModulesAssignment_5() { return cModulesAssignment_5; }
+		
+		//AngularModule
+		public RuleCall getModulesAngularModuleParserRuleCall_5_0() { return cModulesAngularModuleParserRuleCall_5_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+	public class AngularComponentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.AngularComponent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cComponentKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cSelectorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSelectorSTRINGTerminalRuleCall_3_0 = (RuleCall)cSelectorAssignment_3.eContents().get(0);
+		private final Assignment cTemplateUrlAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTemplateUrlSTRINGTerminalRuleCall_4_0 = (RuleCall)cTemplateUrlAssignment_4.eContents().get(0);
+		private final Assignment cStyleUrlsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cStyleUrlsSTRINGTerminalRuleCall_5_0 = (RuleCall)cStyleUrlsAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//AngularComponent:
+		//    'component' name=ID '{'
+		//        selector=STRING
+		//        templateUrl=STRING
+		//        styleUrls=STRING
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'component' name=ID '{'
+		//    selector=STRING
+		//    templateUrl=STRING
+		//    styleUrls=STRING
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'component'
+		public Keyword getComponentKeyword_0() { return cComponentKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//selector=STRING
+		public Assignment getSelectorAssignment_3() { return cSelectorAssignment_3; }
+		
+		//STRING
+		public RuleCall getSelectorSTRINGTerminalRuleCall_3_0() { return cSelectorSTRINGTerminalRuleCall_3_0; }
+		
+		//templateUrl=STRING
+		public Assignment getTemplateUrlAssignment_4() { return cTemplateUrlAssignment_4; }
+		
+		//STRING
+		public RuleCall getTemplateUrlSTRINGTerminalRuleCall_4_0() { return cTemplateUrlSTRINGTerminalRuleCall_4_0; }
+		
+		//styleUrls=STRING
+		public Assignment getStyleUrlsAssignment_5() { return cStyleUrlsAssignment_5; }
+		
+		//STRING
+		public RuleCall getStyleUrlsSTRINGTerminalRuleCall_5_0() { return cStyleUrlsSTRINGTerminalRuleCall_5_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+	public class AngularServiceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.AngularService");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cServiceKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cMethodsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cMethodsAngularServiceMethodParserRuleCall_3_0 = (RuleCall)cMethodsAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//AngularService:
+		//    'service' name=ID '{'
+		//        methods+=AngularServiceMethod*
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'service' name=ID '{'
+		//    methods+=AngularServiceMethod*
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'service'
+		public Keyword getServiceKeyword_0() { return cServiceKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//methods+=AngularServiceMethod*
+		public Assignment getMethodsAssignment_3() { return cMethodsAssignment_3; }
+		
+		//AngularServiceMethod
+		public RuleCall getMethodsAngularServiceMethodParserRuleCall_3_0() { return cMethodsAngularServiceMethodParserRuleCall_3_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+	public class AngularServiceMethodElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.AngularServiceMethod");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cMethodKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cReturnsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cReturnTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cReturnTypeReturnTypeParserRuleCall_4_0 = (RuleCall)cReturnTypeAssignment_4.eContents().get(0);
+		private final Assignment cParametersAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cParametersActionParameterParserRuleCall_5_0 = (RuleCall)cParametersAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//AngularServiceMethod:
+		//    'method' name=ID '{'
+		//        'returns' returnType=ReturnType
+		//        parameters+=ActionParameter*
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'method' name=ID '{'
+		//    'returns' returnType=ReturnType
+		//    parameters+=ActionParameter*
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'method'
+		public Keyword getMethodKeyword_0() { return cMethodKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//'returns'
+		public Keyword getReturnsKeyword_3() { return cReturnsKeyword_3; }
+		
+		//returnType=ReturnType
+		public Assignment getReturnTypeAssignment_4() { return cReturnTypeAssignment_4; }
+		
+		//ReturnType
+		public RuleCall getReturnTypeReturnTypeParserRuleCall_4_0() { return cReturnTypeReturnTypeParserRuleCall_4_0; }
+		
+		//parameters+=ActionParameter*
+		public Assignment getParametersAssignment_5() { return cParametersAssignment_5; }
+		
+		//ActionParameter
+		public RuleCall getParametersActionParameterParserRuleCall_5_0() { return cParametersActionParameterParserRuleCall_5_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+	public class AngularModuleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.AngularModule");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cModuleKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cDeclarationsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDeclarationsAngularComponentParserRuleCall_3_0 = (RuleCall)cDeclarationsAssignment_3.eContents().get(0);
+		private final Assignment cImportsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cImportsAngularModuleImportParserRuleCall_4_0 = (RuleCall)cImportsAssignment_4.eContents().get(0);
+		private final Assignment cProvidersAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cProvidersAngularServiceParserRuleCall_5_0 = (RuleCall)cProvidersAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//AngularModule:
+		//    'module' name=ID '{'
+		//        declarations+=AngularComponent*
+		//        imports+=AngularModuleImport*
+		//        providers+=AngularService*
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'module' name=ID '{'
+		//    declarations+=AngularComponent*
+		//    imports+=AngularModuleImport*
+		//    providers+=AngularService*
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'module'
+		public Keyword getModuleKeyword_0() { return cModuleKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//declarations+=AngularComponent*
+		public Assignment getDeclarationsAssignment_3() { return cDeclarationsAssignment_3; }
+		
+		//AngularComponent
+		public RuleCall getDeclarationsAngularComponentParserRuleCall_3_0() { return cDeclarationsAngularComponentParserRuleCall_3_0; }
+		
+		//imports+=AngularModuleImport*
+		public Assignment getImportsAssignment_4() { return cImportsAssignment_4; }
+		
+		//AngularModuleImport
+		public RuleCall getImportsAngularModuleImportParserRuleCall_4_0() { return cImportsAngularModuleImportParserRuleCall_4_0; }
+		
+		//providers+=AngularService*
+		public Assignment getProvidersAssignment_5() { return cProvidersAssignment_5; }
+		
+		//AngularService
+		public RuleCall getProvidersAngularServiceParserRuleCall_5_0() { return cProvidersAngularServiceParserRuleCall_5_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+	public class AngularModuleImportElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.AngularModuleImport");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cModuleAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cModuleIDTerminalRuleCall_1_0 = (RuleCall)cModuleAssignment_1.eContents().get(0);
+		
+		//AngularModuleImport:
+		//    'import' module=ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'import' module=ID
+		public Group getGroup() { return cGroup; }
+		
+		//'import'
+		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
+		
+		//module=ID
+		public Assignment getModuleAssignment_1() { return cModuleAssignment_1; }
+		
+		//ID
+		public RuleCall getModuleIDTerminalRuleCall_1_0() { return cModuleIDTerminalRuleCall_1_0; }
+	}
 	
 	
 	private final SpringBootProjectElements pSpringBootProject;
@@ -1505,6 +2100,21 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 	private final RDBMSElements pRDBMS;
 	private final DatabaseRelationsElements pDatabaseRelations;
 	private final ParamTransferElements pParamTransfer;
+	private final DockerfileElements pDockerfile;
+	private final BaseImageElements pBaseImage;
+	private final DockerInstructionElements pDockerInstruction;
+	private final RunInstructionElements pRunInstruction;
+	private final CopyInstructionElements pCopyInstruction;
+	private final ExposeInstructionElements pExposeInstruction;
+	private final EnvInstructionElements pEnvInstruction;
+	private final WorkdirInstructionElements pWorkdirInstruction;
+	private final CmdInstructionElements pCmdInstruction;
+	private final AngularAppElements pAngularApp;
+	private final AngularComponentElements pAngularComponent;
+	private final AngularServiceElements pAngularService;
+	private final AngularServiceMethodElements pAngularServiceMethod;
+	private final AngularModuleElements pAngularModule;
+	private final AngularModuleImportElements pAngularModuleImport;
 	
 	private final Grammar grammar;
 	
@@ -1543,6 +2153,21 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		this.pRDBMS = new RDBMSElements();
 		this.pDatabaseRelations = new DatabaseRelationsElements();
 		this.pParamTransfer = new ParamTransferElements();
+		this.pDockerfile = new DockerfileElements();
+		this.pBaseImage = new BaseImageElements();
+		this.pDockerInstruction = new DockerInstructionElements();
+		this.pRunInstruction = new RunInstructionElements();
+		this.pCopyInstruction = new CopyInstructionElements();
+		this.pExposeInstruction = new ExposeInstructionElements();
+		this.pEnvInstruction = new EnvInstructionElements();
+		this.pWorkdirInstruction = new WorkdirInstructionElements();
+		this.pCmdInstruction = new CmdInstructionElements();
+		this.pAngularApp = new AngularAppElements();
+		this.pAngularComponent = new AngularComponentElements();
+		this.pAngularService = new AngularServiceElements();
+		this.pAngularServiceMethod = new AngularServiceMethodElements();
+		this.pAngularModule = new AngularModuleElements();
+		this.pAngularModuleImport = new AngularModuleImportElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -1575,7 +2200,9 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 	//SpringBootProject:
 	//    'project' name=ID
 	//    configuration=ProjectConfiguration?
-	//    elements+=ProjectElement*;
+	//    elements+=ProjectElement*
+	//    dockerfile=Dockerfile?
+	//    angularApp=AngularApp?;
 	public SpringBootProjectElements getSpringBootProjectAccess() {
 		return pSpringBootProject;
 	}
@@ -1892,6 +2519,177 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	public ParserRule getParamTransferRule() {
 		return getParamTransferAccess().getRule();
+	}
+	
+	//Dockerfile:
+	//    'dockerfile' '{'
+	//        baseImage=BaseImage
+	//        instructions+=DockerInstruction*
+	//    '}';
+	public DockerfileElements getDockerfileAccess() {
+		return pDockerfile;
+	}
+	
+	public ParserRule getDockerfileRule() {
+		return getDockerfileAccess().getRule();
+	}
+	
+	//BaseImage:
+	//    'FROM' image=STRING;
+	public BaseImageElements getBaseImageAccess() {
+		return pBaseImage;
+	}
+	
+	public ParserRule getBaseImageRule() {
+		return getBaseImageAccess().getRule();
+	}
+	
+	//DockerInstruction:
+	//    RunInstruction | CopyInstruction | ExposeInstruction | EnvInstruction | WorkdirInstruction | CmdInstruction;
+	public DockerInstructionElements getDockerInstructionAccess() {
+		return pDockerInstruction;
+	}
+	
+	public ParserRule getDockerInstructionRule() {
+		return getDockerInstructionAccess().getRule();
+	}
+	
+	//RunInstruction:
+	//    'RUN' command=STRING;
+	public RunInstructionElements getRunInstructionAccess() {
+		return pRunInstruction;
+	}
+	
+	public ParserRule getRunInstructionRule() {
+		return getRunInstructionAccess().getRule();
+	}
+	
+	//CopyInstruction:
+	//    'COPY' source=STRING ':' target=STRING;
+	public CopyInstructionElements getCopyInstructionAccess() {
+		return pCopyInstruction;
+	}
+	
+	public ParserRule getCopyInstructionRule() {
+		return getCopyInstructionAccess().getRule();
+	}
+	
+	//ExposeInstruction:
+	//    'EXPOSE' port=INT;
+	public ExposeInstructionElements getExposeInstructionAccess() {
+		return pExposeInstruction;
+	}
+	
+	public ParserRule getExposeInstructionRule() {
+		return getExposeInstructionAccess().getRule();
+	}
+	
+	//EnvInstruction:
+	//    'ENV' key=ID value=STRING;
+	public EnvInstructionElements getEnvInstructionAccess() {
+		return pEnvInstruction;
+	}
+	
+	public ParserRule getEnvInstructionRule() {
+		return getEnvInstructionAccess().getRule();
+	}
+	
+	//WorkdirInstruction:
+	//    'WORKDIR' path=STRING;
+	public WorkdirInstructionElements getWorkdirInstructionAccess() {
+		return pWorkdirInstruction;
+	}
+	
+	public ParserRule getWorkdirInstructionRule() {
+		return getWorkdirInstructionAccess().getRule();
+	}
+	
+	//CmdInstruction:
+	//    'CMD' command=STRING;
+	public CmdInstructionElements getCmdInstructionAccess() {
+		return pCmdInstruction;
+	}
+	
+	public ParserRule getCmdInstructionRule() {
+		return getCmdInstructionAccess().getRule();
+	}
+	
+	//AngularApp:
+	//    'angularApp' '{'
+	//        name=ID
+	//        components+=AngularComponent*
+	//        services+=AngularService*
+	//        modules+=AngularModule*
+	//    '}';
+	public AngularAppElements getAngularAppAccess() {
+		return pAngularApp;
+	}
+	
+	public ParserRule getAngularAppRule() {
+		return getAngularAppAccess().getRule();
+	}
+	
+	//AngularComponent:
+	//    'component' name=ID '{'
+	//        selector=STRING
+	//        templateUrl=STRING
+	//        styleUrls=STRING
+	//    '}';
+	public AngularComponentElements getAngularComponentAccess() {
+		return pAngularComponent;
+	}
+	
+	public ParserRule getAngularComponentRule() {
+		return getAngularComponentAccess().getRule();
+	}
+	
+	//AngularService:
+	//    'service' name=ID '{'
+	//        methods+=AngularServiceMethod*
+	//    '}';
+	public AngularServiceElements getAngularServiceAccess() {
+		return pAngularService;
+	}
+	
+	public ParserRule getAngularServiceRule() {
+		return getAngularServiceAccess().getRule();
+	}
+	
+	//AngularServiceMethod:
+	//    'method' name=ID '{'
+	//        'returns' returnType=ReturnType
+	//        parameters+=ActionParameter*
+	//    '}';
+	public AngularServiceMethodElements getAngularServiceMethodAccess() {
+		return pAngularServiceMethod;
+	}
+	
+	public ParserRule getAngularServiceMethodRule() {
+		return getAngularServiceMethodAccess().getRule();
+	}
+	
+	//AngularModule:
+	//    'module' name=ID '{'
+	//        declarations+=AngularComponent*
+	//        imports+=AngularModuleImport*
+	//        providers+=AngularService*
+	//    '}';
+	public AngularModuleElements getAngularModuleAccess() {
+		return pAngularModule;
+	}
+	
+	public ParserRule getAngularModuleRule() {
+		return getAngularModuleAccess().getRule();
+	}
+	
+	//AngularModuleImport:
+	//    'import' module=ID;
+	public AngularModuleImportElements getAngularModuleImportAccess() {
+		return pAngularModuleImport;
+	}
+	
+	public ParserRule getAngularModuleImportRule() {
+		return getAngularModuleImportAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

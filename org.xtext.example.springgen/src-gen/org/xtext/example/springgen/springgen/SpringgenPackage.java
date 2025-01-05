@@ -95,13 +95,31 @@ public interface SpringgenPackage extends EPackage
   int SPRING_BOOT_PROJECT__ELEMENTS = 2;
 
   /**
+   * The feature id for the '<em><b>Dockerfile</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPRING_BOOT_PROJECT__DOCKERFILE = 3;
+
+  /**
+   * The feature id for the '<em><b>Angular App</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPRING_BOOT_PROJECT__ANGULAR_APP = 4;
+
+  /**
    * The number of structural features of the '<em>Spring Boot Project</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SPRING_BOOT_PROJECT_FEATURE_COUNT = 3;
+  int SPRING_BOOT_PROJECT_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.ProjectElementImpl <em>Project Element</em>}' class.
@@ -1327,6 +1345,552 @@ public interface SpringgenPackage extends EPackage
    */
   int PARAM_TRANSFER_FEATURE_COUNT = 3;
 
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.DockerfileImpl <em>Dockerfile</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.DockerfileImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getDockerfile()
+   * @generated
+   */
+  int DOCKERFILE = 28;
+
+  /**
+   * The feature id for the '<em><b>Base Image</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCKERFILE__BASE_IMAGE = 0;
+
+  /**
+   * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCKERFILE__INSTRUCTIONS = 1;
+
+  /**
+   * The number of structural features of the '<em>Dockerfile</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCKERFILE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.BaseImageImpl <em>Base Image</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.BaseImageImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getBaseImage()
+   * @generated
+   */
+  int BASE_IMAGE = 29;
+
+  /**
+   * The feature id for the '<em><b>Image</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BASE_IMAGE__IMAGE = 0;
+
+  /**
+   * The number of structural features of the '<em>Base Image</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BASE_IMAGE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.DockerInstructionImpl <em>Docker Instruction</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.DockerInstructionImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getDockerInstruction()
+   * @generated
+   */
+  int DOCKER_INSTRUCTION = 30;
+
+  /**
+   * The number of structural features of the '<em>Docker Instruction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOCKER_INSTRUCTION_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.RunInstructionImpl <em>Run Instruction</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.RunInstructionImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getRunInstruction()
+   * @generated
+   */
+  int RUN_INSTRUCTION = 31;
+
+  /**
+   * The feature id for the '<em><b>Command</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUN_INSTRUCTION__COMMAND = DOCKER_INSTRUCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Run Instruction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RUN_INSTRUCTION_FEATURE_COUNT = DOCKER_INSTRUCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.CopyInstructionImpl <em>Copy Instruction</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.CopyInstructionImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getCopyInstruction()
+   * @generated
+   */
+  int COPY_INSTRUCTION = 32;
+
+  /**
+   * The feature id for the '<em><b>Source</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COPY_INSTRUCTION__SOURCE = DOCKER_INSTRUCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COPY_INSTRUCTION__TARGET = DOCKER_INSTRUCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Copy Instruction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COPY_INSTRUCTION_FEATURE_COUNT = DOCKER_INSTRUCTION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.ExposeInstructionImpl <em>Expose Instruction</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.ExposeInstructionImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getExposeInstruction()
+   * @generated
+   */
+  int EXPOSE_INSTRUCTION = 33;
+
+  /**
+   * The feature id for the '<em><b>Port</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPOSE_INSTRUCTION__PORT = DOCKER_INSTRUCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Expose Instruction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPOSE_INSTRUCTION_FEATURE_COUNT = DOCKER_INSTRUCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.EnvInstructionImpl <em>Env Instruction</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.EnvInstructionImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getEnvInstruction()
+   * @generated
+   */
+  int ENV_INSTRUCTION = 34;
+
+  /**
+   * The feature id for the '<em><b>Key</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENV_INSTRUCTION__KEY = DOCKER_INSTRUCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENV_INSTRUCTION__VALUE = DOCKER_INSTRUCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Env Instruction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENV_INSTRUCTION_FEATURE_COUNT = DOCKER_INSTRUCTION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.WorkdirInstructionImpl <em>Workdir Instruction</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.WorkdirInstructionImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getWorkdirInstruction()
+   * @generated
+   */
+  int WORKDIR_INSTRUCTION = 35;
+
+  /**
+   * The feature id for the '<em><b>Path</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORKDIR_INSTRUCTION__PATH = DOCKER_INSTRUCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Workdir Instruction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORKDIR_INSTRUCTION_FEATURE_COUNT = DOCKER_INSTRUCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.CmdInstructionImpl <em>Cmd Instruction</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.CmdInstructionImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getCmdInstruction()
+   * @generated
+   */
+  int CMD_INSTRUCTION = 36;
+
+  /**
+   * The feature id for the '<em><b>Command</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CMD_INSTRUCTION__COMMAND = DOCKER_INSTRUCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Cmd Instruction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CMD_INSTRUCTION_FEATURE_COUNT = DOCKER_INSTRUCTION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.AngularAppImpl <em>Angular App</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.AngularAppImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularApp()
+   * @generated
+   */
+  int ANGULAR_APP = 37;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_APP__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Components</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_APP__COMPONENTS = 1;
+
+  /**
+   * The feature id for the '<em><b>Services</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_APP__SERVICES = 2;
+
+  /**
+   * The feature id for the '<em><b>Modules</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_APP__MODULES = 3;
+
+  /**
+   * The number of structural features of the '<em>Angular App</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_APP_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.AngularComponentImpl <em>Angular Component</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.AngularComponentImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularComponent()
+   * @generated
+   */
+  int ANGULAR_COMPONENT = 38;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_COMPONENT__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Selector</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_COMPONENT__SELECTOR = 1;
+
+  /**
+   * The feature id for the '<em><b>Template Url</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_COMPONENT__TEMPLATE_URL = 2;
+
+  /**
+   * The feature id for the '<em><b>Style Urls</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_COMPONENT__STYLE_URLS = 3;
+
+  /**
+   * The number of structural features of the '<em>Angular Component</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_COMPONENT_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.AngularServiceImpl <em>Angular Service</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.AngularServiceImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularService()
+   * @generated
+   */
+  int ANGULAR_SERVICE = 39;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_SERVICE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Methods</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_SERVICE__METHODS = 1;
+
+  /**
+   * The number of structural features of the '<em>Angular Service</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_SERVICE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.AngularServiceMethodImpl <em>Angular Service Method</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.AngularServiceMethodImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularServiceMethod()
+   * @generated
+   */
+  int ANGULAR_SERVICE_METHOD = 40;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_SERVICE_METHOD__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Return Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_SERVICE_METHOD__RETURN_TYPE = 1;
+
+  /**
+   * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_SERVICE_METHOD__PARAMETERS = 2;
+
+  /**
+   * The number of structural features of the '<em>Angular Service Method</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_SERVICE_METHOD_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.AngularModuleImpl <em>Angular Module</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.AngularModuleImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularModule()
+   * @generated
+   */
+  int ANGULAR_MODULE = 41;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_MODULE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Declarations</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_MODULE__DECLARATIONS = 1;
+
+  /**
+   * The feature id for the '<em><b>Imports</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_MODULE__IMPORTS = 2;
+
+  /**
+   * The feature id for the '<em><b>Providers</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_MODULE__PROVIDERS = 3;
+
+  /**
+   * The number of structural features of the '<em>Angular Module</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_MODULE_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.springgen.springgen.impl.AngularModuleImportImpl <em>Angular Module Import</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.springgen.springgen.impl.AngularModuleImportImpl
+   * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularModuleImport()
+   * @generated
+   */
+  int ANGULAR_MODULE_IMPORT = 42;
+
+  /**
+   * The feature id for the '<em><b>Module</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_MODULE_IMPORT__MODULE = 0;
+
+  /**
+   * The number of structural features of the '<em>Angular Module Import</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANGULAR_MODULE_IMPORT_FEATURE_COUNT = 1;
+
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.SpringBootProject <em>Spring Boot Project</em>}'.
@@ -1370,6 +1934,28 @@ public interface SpringgenPackage extends EPackage
    * @generated
    */
   EReference getSpringBootProject_Elements();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.springgen.springgen.SpringBootProject#getDockerfile <em>Dockerfile</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Dockerfile</em>'.
+   * @see org.xtext.example.springgen.springgen.SpringBootProject#getDockerfile()
+   * @see #getSpringBootProject()
+   * @generated
+   */
+  EReference getSpringBootProject_Dockerfile();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.springgen.springgen.SpringBootProject#getAngularApp <em>Angular App</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Angular App</em>'.
+   * @see org.xtext.example.springgen.springgen.SpringBootProject#getAngularApp()
+   * @see #getSpringBootProject()
+   * @generated
+   */
+  EReference getSpringBootProject_AngularApp();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.ProjectElement <em>Project Element</em>}'.
@@ -2511,6 +3097,475 @@ public interface SpringgenPackage extends EPackage
   EAttribute getParamTransfer_PATH_VARIABLE();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.Dockerfile <em>Dockerfile</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Dockerfile</em>'.
+   * @see org.xtext.example.springgen.springgen.Dockerfile
+   * @generated
+   */
+  EClass getDockerfile();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.springgen.springgen.Dockerfile#getBaseImage <em>Base Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Base Image</em>'.
+   * @see org.xtext.example.springgen.springgen.Dockerfile#getBaseImage()
+   * @see #getDockerfile()
+   * @generated
+   */
+  EReference getDockerfile_BaseImage();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.Dockerfile#getInstructions <em>Instructions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Instructions</em>'.
+   * @see org.xtext.example.springgen.springgen.Dockerfile#getInstructions()
+   * @see #getDockerfile()
+   * @generated
+   */
+  EReference getDockerfile_Instructions();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.BaseImage <em>Base Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Base Image</em>'.
+   * @see org.xtext.example.springgen.springgen.BaseImage
+   * @generated
+   */
+  EClass getBaseImage();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.BaseImage#getImage <em>Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Image</em>'.
+   * @see org.xtext.example.springgen.springgen.BaseImage#getImage()
+   * @see #getBaseImage()
+   * @generated
+   */
+  EAttribute getBaseImage_Image();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.DockerInstruction <em>Docker Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Docker Instruction</em>'.
+   * @see org.xtext.example.springgen.springgen.DockerInstruction
+   * @generated
+   */
+  EClass getDockerInstruction();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.RunInstruction <em>Run Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Run Instruction</em>'.
+   * @see org.xtext.example.springgen.springgen.RunInstruction
+   * @generated
+   */
+  EClass getRunInstruction();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.RunInstruction#getCommand <em>Command</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Command</em>'.
+   * @see org.xtext.example.springgen.springgen.RunInstruction#getCommand()
+   * @see #getRunInstruction()
+   * @generated
+   */
+  EAttribute getRunInstruction_Command();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.CopyInstruction <em>Copy Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Copy Instruction</em>'.
+   * @see org.xtext.example.springgen.springgen.CopyInstruction
+   * @generated
+   */
+  EClass getCopyInstruction();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.CopyInstruction#getSource <em>Source</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Source</em>'.
+   * @see org.xtext.example.springgen.springgen.CopyInstruction#getSource()
+   * @see #getCopyInstruction()
+   * @generated
+   */
+  EAttribute getCopyInstruction_Source();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.CopyInstruction#getTarget <em>Target</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Target</em>'.
+   * @see org.xtext.example.springgen.springgen.CopyInstruction#getTarget()
+   * @see #getCopyInstruction()
+   * @generated
+   */
+  EAttribute getCopyInstruction_Target();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.ExposeInstruction <em>Expose Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Expose Instruction</em>'.
+   * @see org.xtext.example.springgen.springgen.ExposeInstruction
+   * @generated
+   */
+  EClass getExposeInstruction();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.ExposeInstruction#getPort <em>Port</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Port</em>'.
+   * @see org.xtext.example.springgen.springgen.ExposeInstruction#getPort()
+   * @see #getExposeInstruction()
+   * @generated
+   */
+  EAttribute getExposeInstruction_Port();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.EnvInstruction <em>Env Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Env Instruction</em>'.
+   * @see org.xtext.example.springgen.springgen.EnvInstruction
+   * @generated
+   */
+  EClass getEnvInstruction();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.EnvInstruction#getKey <em>Key</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Key</em>'.
+   * @see org.xtext.example.springgen.springgen.EnvInstruction#getKey()
+   * @see #getEnvInstruction()
+   * @generated
+   */
+  EAttribute getEnvInstruction_Key();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.EnvInstruction#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.example.springgen.springgen.EnvInstruction#getValue()
+   * @see #getEnvInstruction()
+   * @generated
+   */
+  EAttribute getEnvInstruction_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.WorkdirInstruction <em>Workdir Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Workdir Instruction</em>'.
+   * @see org.xtext.example.springgen.springgen.WorkdirInstruction
+   * @generated
+   */
+  EClass getWorkdirInstruction();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.WorkdirInstruction#getPath <em>Path</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Path</em>'.
+   * @see org.xtext.example.springgen.springgen.WorkdirInstruction#getPath()
+   * @see #getWorkdirInstruction()
+   * @generated
+   */
+  EAttribute getWorkdirInstruction_Path();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.CmdInstruction <em>Cmd Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Cmd Instruction</em>'.
+   * @see org.xtext.example.springgen.springgen.CmdInstruction
+   * @generated
+   */
+  EClass getCmdInstruction();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.CmdInstruction#getCommand <em>Command</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Command</em>'.
+   * @see org.xtext.example.springgen.springgen.CmdInstruction#getCommand()
+   * @see #getCmdInstruction()
+   * @generated
+   */
+  EAttribute getCmdInstruction_Command();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.AngularApp <em>Angular App</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Angular App</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularApp
+   * @generated
+   */
+  EClass getAngularApp();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.AngularApp#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularApp#getName()
+   * @see #getAngularApp()
+   * @generated
+   */
+  EAttribute getAngularApp_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.AngularApp#getComponents <em>Components</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Components</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularApp#getComponents()
+   * @see #getAngularApp()
+   * @generated
+   */
+  EReference getAngularApp_Components();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.AngularApp#getServices <em>Services</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Services</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularApp#getServices()
+   * @see #getAngularApp()
+   * @generated
+   */
+  EReference getAngularApp_Services();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.AngularApp#getModules <em>Modules</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Modules</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularApp#getModules()
+   * @see #getAngularApp()
+   * @generated
+   */
+  EReference getAngularApp_Modules();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.AngularComponent <em>Angular Component</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Angular Component</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularComponent
+   * @generated
+   */
+  EClass getAngularComponent();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.AngularComponent#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularComponent#getName()
+   * @see #getAngularComponent()
+   * @generated
+   */
+  EAttribute getAngularComponent_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.AngularComponent#getSelector <em>Selector</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Selector</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularComponent#getSelector()
+   * @see #getAngularComponent()
+   * @generated
+   */
+  EAttribute getAngularComponent_Selector();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.AngularComponent#getTemplateUrl <em>Template Url</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Template Url</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularComponent#getTemplateUrl()
+   * @see #getAngularComponent()
+   * @generated
+   */
+  EAttribute getAngularComponent_TemplateUrl();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.AngularComponent#getStyleUrls <em>Style Urls</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Style Urls</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularComponent#getStyleUrls()
+   * @see #getAngularComponent()
+   * @generated
+   */
+  EAttribute getAngularComponent_StyleUrls();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.AngularService <em>Angular Service</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Angular Service</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularService
+   * @generated
+   */
+  EClass getAngularService();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.AngularService#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularService#getName()
+   * @see #getAngularService()
+   * @generated
+   */
+  EAttribute getAngularService_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.AngularService#getMethods <em>Methods</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Methods</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularService#getMethods()
+   * @see #getAngularService()
+   * @generated
+   */
+  EReference getAngularService_Methods();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.AngularServiceMethod <em>Angular Service Method</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Angular Service Method</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularServiceMethod
+   * @generated
+   */
+  EClass getAngularServiceMethod();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.AngularServiceMethod#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularServiceMethod#getName()
+   * @see #getAngularServiceMethod()
+   * @generated
+   */
+  EAttribute getAngularServiceMethod_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.springgen.springgen.AngularServiceMethod#getReturnType <em>Return Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Return Type</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularServiceMethod#getReturnType()
+   * @see #getAngularServiceMethod()
+   * @generated
+   */
+  EReference getAngularServiceMethod_ReturnType();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.AngularServiceMethod#getParameters <em>Parameters</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Parameters</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularServiceMethod#getParameters()
+   * @see #getAngularServiceMethod()
+   * @generated
+   */
+  EReference getAngularServiceMethod_Parameters();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.AngularModule <em>Angular Module</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Angular Module</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularModule
+   * @generated
+   */
+  EClass getAngularModule();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.AngularModule#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularModule#getName()
+   * @see #getAngularModule()
+   * @generated
+   */
+  EAttribute getAngularModule_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.AngularModule#getDeclarations <em>Declarations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Declarations</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularModule#getDeclarations()
+   * @see #getAngularModule()
+   * @generated
+   */
+  EReference getAngularModule_Declarations();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.AngularModule#getImports <em>Imports</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Imports</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularModule#getImports()
+   * @see #getAngularModule()
+   * @generated
+   */
+  EReference getAngularModule_Imports();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.AngularModule#getProviders <em>Providers</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Providers</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularModule#getProviders()
+   * @see #getAngularModule()
+   * @generated
+   */
+  EReference getAngularModule_Providers();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.AngularModuleImport <em>Angular Module Import</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Angular Module Import</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularModuleImport
+   * @generated
+   */
+  EClass getAngularModuleImport();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.AngularModuleImport#getModule <em>Module</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Module</em>'.
+   * @see org.xtext.example.springgen.springgen.AngularModuleImport#getModule()
+   * @see #getAngularModuleImport()
+   * @generated
+   */
+  EAttribute getAngularModuleImport_Module();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2566,6 +3621,22 @@ public interface SpringgenPackage extends EPackage
      * @generated
      */
     EReference SPRING_BOOT_PROJECT__ELEMENTS = eINSTANCE.getSpringBootProject_Elements();
+
+    /**
+     * The meta object literal for the '<em><b>Dockerfile</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SPRING_BOOT_PROJECT__DOCKERFILE = eINSTANCE.getSpringBootProject_Dockerfile();
+
+    /**
+     * The meta object literal for the '<em><b>Angular App</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SPRING_BOOT_PROJECT__ANGULAR_APP = eINSTANCE.getSpringBootProject_AngularApp();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.ProjectElementImpl <em>Project Element</em>}' class.
@@ -3468,6 +4539,388 @@ public interface SpringgenPackage extends EPackage
      * @generated
      */
     EAttribute PARAM_TRANSFER__PATH_VARIABLE = eINSTANCE.getParamTransfer_PATH_VARIABLE();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.DockerfileImpl <em>Dockerfile</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.DockerfileImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getDockerfile()
+     * @generated
+     */
+    EClass DOCKERFILE = eINSTANCE.getDockerfile();
+
+    /**
+     * The meta object literal for the '<em><b>Base Image</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DOCKERFILE__BASE_IMAGE = eINSTANCE.getDockerfile_BaseImage();
+
+    /**
+     * The meta object literal for the '<em><b>Instructions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DOCKERFILE__INSTRUCTIONS = eINSTANCE.getDockerfile_Instructions();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.BaseImageImpl <em>Base Image</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.BaseImageImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getBaseImage()
+     * @generated
+     */
+    EClass BASE_IMAGE = eINSTANCE.getBaseImage();
+
+    /**
+     * The meta object literal for the '<em><b>Image</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BASE_IMAGE__IMAGE = eINSTANCE.getBaseImage_Image();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.DockerInstructionImpl <em>Docker Instruction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.DockerInstructionImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getDockerInstruction()
+     * @generated
+     */
+    EClass DOCKER_INSTRUCTION = eINSTANCE.getDockerInstruction();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.RunInstructionImpl <em>Run Instruction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.RunInstructionImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getRunInstruction()
+     * @generated
+     */
+    EClass RUN_INSTRUCTION = eINSTANCE.getRunInstruction();
+
+    /**
+     * The meta object literal for the '<em><b>Command</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RUN_INSTRUCTION__COMMAND = eINSTANCE.getRunInstruction_Command();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.CopyInstructionImpl <em>Copy Instruction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.CopyInstructionImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getCopyInstruction()
+     * @generated
+     */
+    EClass COPY_INSTRUCTION = eINSTANCE.getCopyInstruction();
+
+    /**
+     * The meta object literal for the '<em><b>Source</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COPY_INSTRUCTION__SOURCE = eINSTANCE.getCopyInstruction_Source();
+
+    /**
+     * The meta object literal for the '<em><b>Target</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COPY_INSTRUCTION__TARGET = eINSTANCE.getCopyInstruction_Target();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.ExposeInstructionImpl <em>Expose Instruction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.ExposeInstructionImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getExposeInstruction()
+     * @generated
+     */
+    EClass EXPOSE_INSTRUCTION = eINSTANCE.getExposeInstruction();
+
+    /**
+     * The meta object literal for the '<em><b>Port</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXPOSE_INSTRUCTION__PORT = eINSTANCE.getExposeInstruction_Port();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.EnvInstructionImpl <em>Env Instruction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.EnvInstructionImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getEnvInstruction()
+     * @generated
+     */
+    EClass ENV_INSTRUCTION = eINSTANCE.getEnvInstruction();
+
+    /**
+     * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENV_INSTRUCTION__KEY = eINSTANCE.getEnvInstruction_Key();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENV_INSTRUCTION__VALUE = eINSTANCE.getEnvInstruction_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.WorkdirInstructionImpl <em>Workdir Instruction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.WorkdirInstructionImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getWorkdirInstruction()
+     * @generated
+     */
+    EClass WORKDIR_INSTRUCTION = eINSTANCE.getWorkdirInstruction();
+
+    /**
+     * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WORKDIR_INSTRUCTION__PATH = eINSTANCE.getWorkdirInstruction_Path();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.CmdInstructionImpl <em>Cmd Instruction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.CmdInstructionImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getCmdInstruction()
+     * @generated
+     */
+    EClass CMD_INSTRUCTION = eINSTANCE.getCmdInstruction();
+
+    /**
+     * The meta object literal for the '<em><b>Command</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CMD_INSTRUCTION__COMMAND = eINSTANCE.getCmdInstruction_Command();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.AngularAppImpl <em>Angular App</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.AngularAppImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularApp()
+     * @generated
+     */
+    EClass ANGULAR_APP = eINSTANCE.getAngularApp();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGULAR_APP__NAME = eINSTANCE.getAngularApp_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANGULAR_APP__COMPONENTS = eINSTANCE.getAngularApp_Components();
+
+    /**
+     * The meta object literal for the '<em><b>Services</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANGULAR_APP__SERVICES = eINSTANCE.getAngularApp_Services();
+
+    /**
+     * The meta object literal for the '<em><b>Modules</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANGULAR_APP__MODULES = eINSTANCE.getAngularApp_Modules();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.AngularComponentImpl <em>Angular Component</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.AngularComponentImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularComponent()
+     * @generated
+     */
+    EClass ANGULAR_COMPONENT = eINSTANCE.getAngularComponent();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGULAR_COMPONENT__NAME = eINSTANCE.getAngularComponent_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Selector</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGULAR_COMPONENT__SELECTOR = eINSTANCE.getAngularComponent_Selector();
+
+    /**
+     * The meta object literal for the '<em><b>Template Url</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGULAR_COMPONENT__TEMPLATE_URL = eINSTANCE.getAngularComponent_TemplateUrl();
+
+    /**
+     * The meta object literal for the '<em><b>Style Urls</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGULAR_COMPONENT__STYLE_URLS = eINSTANCE.getAngularComponent_StyleUrls();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.AngularServiceImpl <em>Angular Service</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.AngularServiceImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularService()
+     * @generated
+     */
+    EClass ANGULAR_SERVICE = eINSTANCE.getAngularService();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGULAR_SERVICE__NAME = eINSTANCE.getAngularService_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Methods</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANGULAR_SERVICE__METHODS = eINSTANCE.getAngularService_Methods();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.AngularServiceMethodImpl <em>Angular Service Method</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.AngularServiceMethodImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularServiceMethod()
+     * @generated
+     */
+    EClass ANGULAR_SERVICE_METHOD = eINSTANCE.getAngularServiceMethod();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGULAR_SERVICE_METHOD__NAME = eINSTANCE.getAngularServiceMethod_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Return Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANGULAR_SERVICE_METHOD__RETURN_TYPE = eINSTANCE.getAngularServiceMethod_ReturnType();
+
+    /**
+     * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANGULAR_SERVICE_METHOD__PARAMETERS = eINSTANCE.getAngularServiceMethod_Parameters();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.AngularModuleImpl <em>Angular Module</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.AngularModuleImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularModule()
+     * @generated
+     */
+    EClass ANGULAR_MODULE = eINSTANCE.getAngularModule();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGULAR_MODULE__NAME = eINSTANCE.getAngularModule_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Declarations</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANGULAR_MODULE__DECLARATIONS = eINSTANCE.getAngularModule_Declarations();
+
+    /**
+     * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANGULAR_MODULE__IMPORTS = eINSTANCE.getAngularModule_Imports();
+
+    /**
+     * The meta object literal for the '<em><b>Providers</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANGULAR_MODULE__PROVIDERS = eINSTANCE.getAngularModule_Providers();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.AngularModuleImportImpl <em>Angular Module Import</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.springgen.springgen.impl.AngularModuleImportImpl
+     * @see org.xtext.example.springgen.springgen.impl.SpringgenPackageImpl#getAngularModuleImport()
+     * @generated
+     */
+    EClass ANGULAR_MODULE_IMPORT = eINSTANCE.getAngularModuleImport();
+
+    /**
+     * The meta object literal for the '<em><b>Module</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ANGULAR_MODULE_IMPORT__MODULE = eINSTANCE.getAngularModuleImport_Module();
 
   }
 

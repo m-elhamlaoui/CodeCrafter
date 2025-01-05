@@ -10,6 +10,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//SpringBootProject/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//SpringBootProject/configuration"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//SpringBootProject/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//SpringBootProject/dockerfile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//SpringBootProject/angularApp"/>
     </genClasses>
     <genClasses ecoreClass="SpringGen.ecore#//ProjectElement"/>
     <genClasses ecoreClass="SpringGen.ecore#//EntityRelationship">
@@ -140,6 +142,64 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ParamTransfer/REQUEST_BODY"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ParamTransfer/REQUEST_PARAM"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ParamTransfer/PATH_VARIABLE"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//Dockerfile">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//Dockerfile/baseImage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//Dockerfile/instructions"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//BaseImage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//BaseImage/image"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//DockerInstruction"/>
+    <genClasses ecoreClass="SpringGen.ecore#//RunInstruction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//RunInstruction/command"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//CopyInstruction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//CopyInstruction/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//CopyInstruction/target"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//ExposeInstruction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ExposeInstruction/port"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//EnvInstruction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//EnvInstruction/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//EnvInstruction/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//WorkdirInstruction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//WorkdirInstruction/path"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//CmdInstruction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//CmdInstruction/command"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//AngularApp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//AngularApp/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//AngularApp/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//AngularApp/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//AngularApp/modules"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//AngularComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//AngularComponent/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//AngularComponent/selector"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//AngularComponent/templateUrl"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//AngularComponent/styleUrls"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//AngularService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//AngularService/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//AngularService/methods"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//AngularServiceMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//AngularServiceMethod/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//AngularServiceMethod/returnType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//AngularServiceMethod/parameters"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//AngularModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//AngularModule/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//AngularModule/declarations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//AngularModule/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//AngularModule/providers"/>
+    </genClasses>
+    <genClasses ecoreClass="SpringGen.ecore#//AngularModuleImport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//AngularModuleImport/module"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -216,6 +216,81 @@ public class SpringgenAdapterFactory extends AdapterFactoryImpl
         return createParamTransferAdapter();
       }
       @Override
+      public Adapter caseDockerfile(Dockerfile object)
+      {
+        return createDockerfileAdapter();
+      }
+      @Override
+      public Adapter caseBaseImage(BaseImage object)
+      {
+        return createBaseImageAdapter();
+      }
+      @Override
+      public Adapter caseDockerInstruction(DockerInstruction object)
+      {
+        return createDockerInstructionAdapter();
+      }
+      @Override
+      public Adapter caseRunInstruction(RunInstruction object)
+      {
+        return createRunInstructionAdapter();
+      }
+      @Override
+      public Adapter caseCopyInstruction(CopyInstruction object)
+      {
+        return createCopyInstructionAdapter();
+      }
+      @Override
+      public Adapter caseExposeInstruction(ExposeInstruction object)
+      {
+        return createExposeInstructionAdapter();
+      }
+      @Override
+      public Adapter caseEnvInstruction(EnvInstruction object)
+      {
+        return createEnvInstructionAdapter();
+      }
+      @Override
+      public Adapter caseWorkdirInstruction(WorkdirInstruction object)
+      {
+        return createWorkdirInstructionAdapter();
+      }
+      @Override
+      public Adapter caseCmdInstruction(CmdInstruction object)
+      {
+        return createCmdInstructionAdapter();
+      }
+      @Override
+      public Adapter caseAngularApp(AngularApp object)
+      {
+        return createAngularAppAdapter();
+      }
+      @Override
+      public Adapter caseAngularComponent(AngularComponent object)
+      {
+        return createAngularComponentAdapter();
+      }
+      @Override
+      public Adapter caseAngularService(AngularService object)
+      {
+        return createAngularServiceAdapter();
+      }
+      @Override
+      public Adapter caseAngularServiceMethod(AngularServiceMethod object)
+      {
+        return createAngularServiceMethodAdapter();
+      }
+      @Override
+      public Adapter caseAngularModule(AngularModule object)
+      {
+        return createAngularModuleAdapter();
+      }
+      @Override
+      public Adapter caseAngularModuleImport(AngularModuleImport object)
+      {
+        return createAngularModuleImportAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -653,6 +728,231 @@ public class SpringgenAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createParamTransferAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.Dockerfile <em>Dockerfile</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.Dockerfile
+   * @generated
+   */
+  public Adapter createDockerfileAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.BaseImage <em>Base Image</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.BaseImage
+   * @generated
+   */
+  public Adapter createBaseImageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.DockerInstruction <em>Docker Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.DockerInstruction
+   * @generated
+   */
+  public Adapter createDockerInstructionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.RunInstruction <em>Run Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.RunInstruction
+   * @generated
+   */
+  public Adapter createRunInstructionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.CopyInstruction <em>Copy Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.CopyInstruction
+   * @generated
+   */
+  public Adapter createCopyInstructionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.ExposeInstruction <em>Expose Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.ExposeInstruction
+   * @generated
+   */
+  public Adapter createExposeInstructionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.EnvInstruction <em>Env Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.EnvInstruction
+   * @generated
+   */
+  public Adapter createEnvInstructionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.WorkdirInstruction <em>Workdir Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.WorkdirInstruction
+   * @generated
+   */
+  public Adapter createWorkdirInstructionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.CmdInstruction <em>Cmd Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.CmdInstruction
+   * @generated
+   */
+  public Adapter createCmdInstructionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.AngularApp <em>Angular App</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.AngularApp
+   * @generated
+   */
+  public Adapter createAngularAppAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.AngularComponent <em>Angular Component</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.AngularComponent
+   * @generated
+   */
+  public Adapter createAngularComponentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.AngularService <em>Angular Service</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.AngularService
+   * @generated
+   */
+  public Adapter createAngularServiceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.AngularServiceMethod <em>Angular Service Method</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.AngularServiceMethod
+   * @generated
+   */
+  public Adapter createAngularServiceMethodAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.AngularModule <em>Angular Module</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.AngularModule
+   * @generated
+   */
+  public Adapter createAngularModuleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.springgen.springgen.AngularModuleImport <em>Angular Module Import</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.springgen.springgen.AngularModuleImport
+   * @generated
+   */
+  public Adapter createAngularModuleImportAdapter()
   {
     return null;
   }

@@ -276,6 +276,141 @@ public interface SpringgenFactory extends EFactory
   ParamTransfer createParamTransfer();
 
   /**
+   * Returns a new object of class '<em>Dockerfile</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dockerfile</em>'.
+   * @generated
+   */
+  Dockerfile createDockerfile();
+
+  /**
+   * Returns a new object of class '<em>Base Image</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Base Image</em>'.
+   * @generated
+   */
+  BaseImage createBaseImage();
+
+  /**
+   * Returns a new object of class '<em>Docker Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Docker Instruction</em>'.
+   * @generated
+   */
+  DockerInstruction createDockerInstruction();
+
+  /**
+   * Returns a new object of class '<em>Run Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Run Instruction</em>'.
+   * @generated
+   */
+  RunInstruction createRunInstruction();
+
+  /**
+   * Returns a new object of class '<em>Copy Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Copy Instruction</em>'.
+   * @generated
+   */
+  CopyInstruction createCopyInstruction();
+
+  /**
+   * Returns a new object of class '<em>Expose Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Expose Instruction</em>'.
+   * @generated
+   */
+  ExposeInstruction createExposeInstruction();
+
+  /**
+   * Returns a new object of class '<em>Env Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Env Instruction</em>'.
+   * @generated
+   */
+  EnvInstruction createEnvInstruction();
+
+  /**
+   * Returns a new object of class '<em>Workdir Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Workdir Instruction</em>'.
+   * @generated
+   */
+  WorkdirInstruction createWorkdirInstruction();
+
+  /**
+   * Returns a new object of class '<em>Cmd Instruction</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Cmd Instruction</em>'.
+   * @generated
+   */
+  CmdInstruction createCmdInstruction();
+
+  /**
+   * Returns a new object of class '<em>Angular App</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angular App</em>'.
+   * @generated
+   */
+  AngularApp createAngularApp();
+
+  /**
+   * Returns a new object of class '<em>Angular Component</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angular Component</em>'.
+   * @generated
+   */
+  AngularComponent createAngularComponent();
+
+  /**
+   * Returns a new object of class '<em>Angular Service</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angular Service</em>'.
+   * @generated
+   */
+  AngularService createAngularService();
+
+  /**
+   * Returns a new object of class '<em>Angular Service Method</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angular Service Method</em>'.
+   * @generated
+   */
+  AngularServiceMethod createAngularServiceMethod();
+
+  /**
+   * Returns a new object of class '<em>Angular Module</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angular Module</em>'.
+   * @generated
+   */
+  AngularModule createAngularModule();
+
+  /**
+   * Returns a new object of class '<em>Angular Module Import</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Angular Module Import</em>'.
+   * @generated
+   */
+  AngularModuleImport createAngularModuleImport();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

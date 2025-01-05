@@ -34,6 +34,15 @@ import org.xtext.example.springgen.springgen.HttpMethods
 import org.xtext.example.springgen.springgen.RDBMS
 import org.xtext.example.springgen.springgen.DatabaseRelations
 import org.xtext.example.springgen.springgen.ParamTransfer
+import org.xtext.example.springgen.springgen.Dockerfile
+import org.xtext.example.springgen.springgen.BaseImage
+import org.xtext.example.springgen.springgen.DockerInstruction
+import org.xtext.example.springgen.springgen.RunInstruction
+import org.xtext.example.springgen.springgen.CopyInstruction
+import org.xtext.example.springgen.springgen.ExposeInstruction
+import org.xtext.example.springgen.springgen.EnvInstruction
+import org.xtext.example.springgen.springgen.WorkdirInstruction
+import org.xtext.example.springgen.springgen.CmdInstruction
 import java.util.ArrayList
 
 /**
@@ -110,6 +119,13 @@ class SpringGenGenerator extends AbstractGenerator {
             }
         }
         generatePomXml(config, fsa, projectName)
+
+        // Generate Dockerfile
+        input.allContents.forEach[ element |
+            if (element instanceof Dockerfile) {
+                generateDockerfile(element as Dockerfile, fsa, input)
+            }
+        ]
     }
 
     def void generateController(Entity entity, IFileSystemAccess2 fsa, Resource input) {
@@ -654,5 +670,42 @@ class SpringGenGenerator extends AbstractGenerator {
         val filePath = folderPath + "/" + className + ".java"
 
         fsa.generateFile(filePath, content)
+    }
+
+    def void generateDockerfile(Dockerfile dockerfile, IFileSystemAccess2 fsa, Resource input) {
+        val projectNameHolder = new ArrayList<String>()
+        input.allContents.forEach[ element |
+            if (element instanceof SpringBootProject) {
+                projectNameHolder.add(element.name)
+            }
+        ]
+        
+        val projectName = projectNameHolder.get(0)
+
+        val content = '''
+            FROM «dockerfile.baseImage.image»
+            «FOR instruction : dockerfile.instructions»
+                «IF instruction instanceof RunInstruction»
+                    RUN «instruction.command»
+                «ENDIF»
+                «IF instruction instanceof CopyInstruction»
+                    COPY «instruction.source» «instruction.target»
+                «ENDIF»
+                «IF instruction instanceof ExposeInstruction»
+                    EXPOSE «instruction.port»
+                «ENDIF»
+                «IF instruction instanceof EnvInstruction»
+                    ENV «instruction.key» «instruction.value»
+                «ENDIF»
+                «IF instruction instanceof WorkdirInstruction»
+                    WORKDIR «instruction.path»
+                «ENDIF»
+                «IF instruction instanceof CmdInstruction»
+                    CMD «instruction.command»
+                «ENDIF»
+            «ENDFOR»
+        '''
+
+        fsa.generateFile("Dockerfile", content)
     }
 }

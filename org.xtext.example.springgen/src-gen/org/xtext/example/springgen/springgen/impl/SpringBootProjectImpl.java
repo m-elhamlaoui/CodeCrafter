@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.xtext.example.springgen.springgen.AngularApp;
+import org.xtext.example.springgen.springgen.Dockerfile;
 import org.xtext.example.springgen.springgen.ProjectConfiguration;
 import org.xtext.example.springgen.springgen.ProjectElement;
 import org.xtext.example.springgen.springgen.SpringBootProject;
@@ -35,6 +37,8 @@ import org.xtext.example.springgen.springgen.SpringgenPackage;
  *   <li>{@link org.xtext.example.springgen.springgen.impl.SpringBootProjectImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.springgen.springgen.impl.SpringBootProjectImpl#getConfiguration <em>Configuration</em>}</li>
  *   <li>{@link org.xtext.example.springgen.springgen.impl.SpringBootProjectImpl#getElements <em>Elements</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.SpringBootProjectImpl#getDockerfile <em>Dockerfile</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.SpringBootProjectImpl#getAngularApp <em>Angular App</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +84,26 @@ public class SpringBootProjectImpl extends MinimalEObjectImpl.Container implemen
    * @ordered
    */
   protected EList<ProjectElement> elements;
+
+  /**
+   * The cached value of the '{@link #getDockerfile() <em>Dockerfile</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDockerfile()
+   * @generated
+   * @ordered
+   */
+  protected Dockerfile dockerfile;
+
+  /**
+   * The cached value of the '{@link #getAngularApp() <em>Angular App</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAngularApp()
+   * @generated
+   * @ordered
+   */
+  protected AngularApp angularApp;
 
   /**
    * <!-- begin-user-doc -->
@@ -198,6 +222,106 @@ public class SpringBootProjectImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   @Override
+  public Dockerfile getDockerfile()
+  {
+    return dockerfile;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDockerfile(Dockerfile newDockerfile, NotificationChain msgs)
+  {
+    Dockerfile oldDockerfile = dockerfile;
+    dockerfile = newDockerfile;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SpringgenPackage.SPRING_BOOT_PROJECT__DOCKERFILE, oldDockerfile, newDockerfile);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDockerfile(Dockerfile newDockerfile)
+  {
+    if (newDockerfile != dockerfile)
+    {
+      NotificationChain msgs = null;
+      if (dockerfile != null)
+        msgs = ((InternalEObject)dockerfile).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SpringgenPackage.SPRING_BOOT_PROJECT__DOCKERFILE, null, msgs);
+      if (newDockerfile != null)
+        msgs = ((InternalEObject)newDockerfile).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SpringgenPackage.SPRING_BOOT_PROJECT__DOCKERFILE, null, msgs);
+      msgs = basicSetDockerfile(newDockerfile, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.SPRING_BOOT_PROJECT__DOCKERFILE, newDockerfile, newDockerfile));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AngularApp getAngularApp()
+  {
+    return angularApp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAngularApp(AngularApp newAngularApp, NotificationChain msgs)
+  {
+    AngularApp oldAngularApp = angularApp;
+    angularApp = newAngularApp;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SpringgenPackage.SPRING_BOOT_PROJECT__ANGULAR_APP, oldAngularApp, newAngularApp);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setAngularApp(AngularApp newAngularApp)
+  {
+    if (newAngularApp != angularApp)
+    {
+      NotificationChain msgs = null;
+      if (angularApp != null)
+        msgs = ((InternalEObject)angularApp).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SpringgenPackage.SPRING_BOOT_PROJECT__ANGULAR_APP, null, msgs);
+      if (newAngularApp != null)
+        msgs = ((InternalEObject)newAngularApp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SpringgenPackage.SPRING_BOOT_PROJECT__ANGULAR_APP, null, msgs);
+      msgs = basicSetAngularApp(newAngularApp, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.SPRING_BOOT_PROJECT__ANGULAR_APP, newAngularApp, newAngularApp));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -206,6 +330,10 @@ public class SpringBootProjectImpl extends MinimalEObjectImpl.Container implemen
         return basicSetConfiguration(null, msgs);
       case SpringgenPackage.SPRING_BOOT_PROJECT__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
+      case SpringgenPackage.SPRING_BOOT_PROJECT__DOCKERFILE:
+        return basicSetDockerfile(null, msgs);
+      case SpringgenPackage.SPRING_BOOT_PROJECT__ANGULAR_APP:
+        return basicSetAngularApp(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -226,6 +354,10 @@ public class SpringBootProjectImpl extends MinimalEObjectImpl.Container implemen
         return getConfiguration();
       case SpringgenPackage.SPRING_BOOT_PROJECT__ELEMENTS:
         return getElements();
+      case SpringgenPackage.SPRING_BOOT_PROJECT__DOCKERFILE:
+        return getDockerfile();
+      case SpringgenPackage.SPRING_BOOT_PROJECT__ANGULAR_APP:
+        return getAngularApp();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -251,6 +383,12 @@ public class SpringBootProjectImpl extends MinimalEObjectImpl.Container implemen
         getElements().clear();
         getElements().addAll((Collection<? extends ProjectElement>)newValue);
         return;
+      case SpringgenPackage.SPRING_BOOT_PROJECT__DOCKERFILE:
+        setDockerfile((Dockerfile)newValue);
+        return;
+      case SpringgenPackage.SPRING_BOOT_PROJECT__ANGULAR_APP:
+        setAngularApp((AngularApp)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -274,6 +412,12 @@ public class SpringBootProjectImpl extends MinimalEObjectImpl.Container implemen
       case SpringgenPackage.SPRING_BOOT_PROJECT__ELEMENTS:
         getElements().clear();
         return;
+      case SpringgenPackage.SPRING_BOOT_PROJECT__DOCKERFILE:
+        setDockerfile((Dockerfile)null);
+        return;
+      case SpringgenPackage.SPRING_BOOT_PROJECT__ANGULAR_APP:
+        setAngularApp((AngularApp)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -294,6 +438,10 @@ public class SpringBootProjectImpl extends MinimalEObjectImpl.Container implemen
         return configuration != null;
       case SpringgenPackage.SPRING_BOOT_PROJECT__ELEMENTS:
         return elements != null && !elements.isEmpty();
+      case SpringgenPackage.SPRING_BOOT_PROJECT__DOCKERFILE:
+        return dockerfile != null;
+      case SpringgenPackage.SPRING_BOOT_PROJECT__ANGULAR_APP:
+        return angularApp != null;
     }
     return super.eIsSet(featureID);
   }

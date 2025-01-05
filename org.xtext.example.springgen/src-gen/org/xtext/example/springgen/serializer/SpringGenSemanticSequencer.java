@@ -16,15 +16,27 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.example.springgen.services.SpringGenGrammarAccess;
 import org.xtext.example.springgen.springgen.ActionParameter;
+import org.xtext.example.springgen.springgen.AngularApp;
+import org.xtext.example.springgen.springgen.AngularComponent;
+import org.xtext.example.springgen.springgen.AngularModule;
+import org.xtext.example.springgen.springgen.AngularModuleImport;
+import org.xtext.example.springgen.springgen.AngularService;
+import org.xtext.example.springgen.springgen.AngularServiceMethod;
+import org.xtext.example.springgen.springgen.BaseImage;
+import org.xtext.example.springgen.springgen.CmdInstruction;
 import org.xtext.example.springgen.springgen.Controller;
+import org.xtext.example.springgen.springgen.CopyInstruction;
 import org.xtext.example.springgen.springgen.CustomAction;
 import org.xtext.example.springgen.springgen.CustomQueryMethod;
 import org.xtext.example.springgen.springgen.DTO;
 import org.xtext.example.springgen.springgen.DatabaseConfiguration;
 import org.xtext.example.springgen.springgen.DatabaseRelations;
 import org.xtext.example.springgen.springgen.DeleteByMethod;
+import org.xtext.example.springgen.springgen.Dockerfile;
 import org.xtext.example.springgen.springgen.Entity;
 import org.xtext.example.springgen.springgen.EntityRelationship;
+import org.xtext.example.springgen.springgen.EnvInstruction;
+import org.xtext.example.springgen.springgen.ExposeInstruction;
 import org.xtext.example.springgen.springgen.FindByMethod;
 import org.xtext.example.springgen.springgen.HttpMethods;
 import org.xtext.example.springgen.springgen.Identifier;
@@ -34,6 +46,7 @@ import org.xtext.example.springgen.springgen.ProjectConfiguration;
 import org.xtext.example.springgen.springgen.Property;
 import org.xtext.example.springgen.springgen.RDBMS;
 import org.xtext.example.springgen.springgen.Repository;
+import org.xtext.example.springgen.springgen.RunInstruction;
 import org.xtext.example.springgen.springgen.ServerConfiguration;
 import org.xtext.example.springgen.springgen.Service;
 import org.xtext.example.springgen.springgen.ServiceAction;
@@ -41,6 +54,7 @@ import org.xtext.example.springgen.springgen.SetType;
 import org.xtext.example.springgen.springgen.SpringBootProject;
 import org.xtext.example.springgen.springgen.SpringgenPackage;
 import org.xtext.example.springgen.springgen.ValueTypes;
+import org.xtext.example.springgen.springgen.WorkdirInstruction;
 
 @SuppressWarnings("all")
 public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -59,8 +73,35 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case SpringgenPackage.ACTION_PARAMETER:
 				sequence_ActionParameter(context, (ActionParameter) semanticObject); 
 				return; 
+			case SpringgenPackage.ANGULAR_APP:
+				sequence_AngularApp(context, (AngularApp) semanticObject); 
+				return; 
+			case SpringgenPackage.ANGULAR_COMPONENT:
+				sequence_AngularComponent(context, (AngularComponent) semanticObject); 
+				return; 
+			case SpringgenPackage.ANGULAR_MODULE:
+				sequence_AngularModule(context, (AngularModule) semanticObject); 
+				return; 
+			case SpringgenPackage.ANGULAR_MODULE_IMPORT:
+				sequence_AngularModuleImport(context, (AngularModuleImport) semanticObject); 
+				return; 
+			case SpringgenPackage.ANGULAR_SERVICE:
+				sequence_AngularService(context, (AngularService) semanticObject); 
+				return; 
+			case SpringgenPackage.ANGULAR_SERVICE_METHOD:
+				sequence_AngularServiceMethod(context, (AngularServiceMethod) semanticObject); 
+				return; 
+			case SpringgenPackage.BASE_IMAGE:
+				sequence_BaseImage(context, (BaseImage) semanticObject); 
+				return; 
+			case SpringgenPackage.CMD_INSTRUCTION:
+				sequence_CmdInstruction(context, (CmdInstruction) semanticObject); 
+				return; 
 			case SpringgenPackage.CONTROLLER:
 				sequence_Controller(context, (Controller) semanticObject); 
+				return; 
+			case SpringgenPackage.COPY_INSTRUCTION:
+				sequence_CopyInstruction(context, (CopyInstruction) semanticObject); 
 				return; 
 			case SpringgenPackage.CUSTOM_ACTION:
 				sequence_CustomAction(context, (CustomAction) semanticObject); 
@@ -80,11 +121,20 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case SpringgenPackage.DELETE_BY_METHOD:
 				sequence_DeleteByMethod(context, (DeleteByMethod) semanticObject); 
 				return; 
+			case SpringgenPackage.DOCKERFILE:
+				sequence_Dockerfile(context, (Dockerfile) semanticObject); 
+				return; 
 			case SpringgenPackage.ENTITY:
 				sequence_Entity(context, (Entity) semanticObject); 
 				return; 
 			case SpringgenPackage.ENTITY_RELATIONSHIP:
 				sequence_EntityRelationship(context, (EntityRelationship) semanticObject); 
+				return; 
+			case SpringgenPackage.ENV_INSTRUCTION:
+				sequence_EnvInstruction(context, (EnvInstruction) semanticObject); 
+				return; 
+			case SpringgenPackage.EXPOSE_INSTRUCTION:
+				sequence_ExposeInstruction(context, (ExposeInstruction) semanticObject); 
 				return; 
 			case SpringgenPackage.FIND_BY_METHOD:
 				sequence_FindByMethod(context, (FindByMethod) semanticObject); 
@@ -113,6 +163,9 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case SpringgenPackage.REPOSITORY:
 				sequence_Repository(context, (Repository) semanticObject); 
 				return; 
+			case SpringgenPackage.RUN_INSTRUCTION:
+				sequence_RunInstruction(context, (RunInstruction) semanticObject); 
+				return; 
 			case SpringgenPackage.SERVER_CONFIGURATION:
 				sequence_ServerConfiguration(context, (ServerConfiguration) semanticObject); 
 				return; 
@@ -131,6 +184,9 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case SpringgenPackage.VALUE_TYPES:
 				sequence_ValueTypes(context, (ValueTypes) semanticObject); 
 				return; 
+			case SpringgenPackage.WORKDIR_INSTRUCTION:
+				sequence_WorkdirInstruction(context, (WorkdirInstruction) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -147,6 +203,152 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 */
 	protected void sequence_ActionParameter(ISerializationContext context, ActionParameter semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AngularApp returns AngularApp
+	 *
+	 * Constraint:
+	 *     (name=ID components+=AngularComponent* services+=AngularService* modules+=AngularModule*)
+	 * </pre>
+	 */
+	protected void sequence_AngularApp(ISerializationContext context, AngularApp semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AngularComponent returns AngularComponent
+	 *
+	 * Constraint:
+	 *     (name=ID selector=STRING templateUrl=STRING styleUrls=STRING)
+	 * </pre>
+	 */
+	protected void sequence_AngularComponent(ISerializationContext context, AngularComponent semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.ANGULAR_COMPONENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.ANGULAR_COMPONENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.ANGULAR_COMPONENT__SELECTOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.ANGULAR_COMPONENT__SELECTOR));
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.ANGULAR_COMPONENT__TEMPLATE_URL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.ANGULAR_COMPONENT__TEMPLATE_URL));
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.ANGULAR_COMPONENT__STYLE_URLS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.ANGULAR_COMPONENT__STYLE_URLS));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAngularComponentAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getAngularComponentAccess().getSelectorSTRINGTerminalRuleCall_3_0(), semanticObject.getSelector());
+		feeder.accept(grammarAccess.getAngularComponentAccess().getTemplateUrlSTRINGTerminalRuleCall_4_0(), semanticObject.getTemplateUrl());
+		feeder.accept(grammarAccess.getAngularComponentAccess().getStyleUrlsSTRINGTerminalRuleCall_5_0(), semanticObject.getStyleUrls());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AngularModuleImport returns AngularModuleImport
+	 *
+	 * Constraint:
+	 *     module=ID
+	 * </pre>
+	 */
+	protected void sequence_AngularModuleImport(ISerializationContext context, AngularModuleImport semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.ANGULAR_MODULE_IMPORT__MODULE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.ANGULAR_MODULE_IMPORT__MODULE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAngularModuleImportAccess().getModuleIDTerminalRuleCall_1_0(), semanticObject.getModule());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AngularModule returns AngularModule
+	 *
+	 * Constraint:
+	 *     (name=ID declarations+=AngularComponent* imports+=AngularModuleImport* providers+=AngularService*)
+	 * </pre>
+	 */
+	protected void sequence_AngularModule(ISerializationContext context, AngularModule semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AngularServiceMethod returns AngularServiceMethod
+	 *
+	 * Constraint:
+	 *     (name=ID returnType=ReturnType parameters+=ActionParameter*)
+	 * </pre>
+	 */
+	protected void sequence_AngularServiceMethod(ISerializationContext context, AngularServiceMethod semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AngularService returns AngularService
+	 *
+	 * Constraint:
+	 *     (name=ID methods+=AngularServiceMethod*)
+	 * </pre>
+	 */
+	protected void sequence_AngularService(ISerializationContext context, AngularService semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     BaseImage returns BaseImage
+	 *
+	 * Constraint:
+	 *     image=STRING
+	 * </pre>
+	 */
+	protected void sequence_BaseImage(ISerializationContext context, BaseImage semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.BASE_IMAGE__IMAGE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.BASE_IMAGE__IMAGE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBaseImageAccess().getImageSTRINGTerminalRuleCall_1_0(), semanticObject.getImage());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     DockerInstruction returns CmdInstruction
+	 *     CmdInstruction returns CmdInstruction
+	 *
+	 * Constraint:
+	 *     command=STRING
+	 * </pre>
+	 */
+	protected void sequence_CmdInstruction(ISerializationContext context, CmdInstruction semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.CMD_INSTRUCTION__COMMAND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.CMD_INSTRUCTION__COMMAND));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCmdInstructionAccess().getCommandSTRINGTerminalRuleCall_1_0(), semanticObject.getCommand());
+		feeder.finish();
 	}
 	
 	
@@ -179,6 +381,30 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 */
 	protected void sequence_Controller(ISerializationContext context, Controller semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     DockerInstruction returns CopyInstruction
+	 *     CopyInstruction returns CopyInstruction
+	 *
+	 * Constraint:
+	 *     (source=STRING target=STRING)
+	 * </pre>
+	 */
+	protected void sequence_CopyInstruction(ISerializationContext context, CopyInstruction semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.COPY_INSTRUCTION__SOURCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.COPY_INSTRUCTION__SOURCE));
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.COPY_INSTRUCTION__TARGET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.COPY_INSTRUCTION__TARGET));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCopyInstructionAccess().getSourceSTRINGTerminalRuleCall_1_0(), semanticObject.getSource());
+		feeder.accept(grammarAccess.getCopyInstructionAccess().getTargetSTRINGTerminalRuleCall_3_0(), semanticObject.getTarget());
+		feeder.finish();
 	}
 	
 	
@@ -303,6 +529,20 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     Dockerfile returns Dockerfile
+	 *
+	 * Constraint:
+	 *     (baseImage=BaseImage instructions+=DockerInstruction*)
+	 * </pre>
+	 */
+	protected void sequence_Dockerfile(ISerializationContext context, Dockerfile semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     ProjectElement returns EntityRelationship
 	 *     EntityRelationship returns EntityRelationship
 	 *
@@ -347,6 +587,51 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 */
 	protected void sequence_Entity(ISerializationContext context, Entity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     DockerInstruction returns EnvInstruction
+	 *     EnvInstruction returns EnvInstruction
+	 *
+	 * Constraint:
+	 *     (key=ID value=STRING)
+	 * </pre>
+	 */
+	protected void sequence_EnvInstruction(ISerializationContext context, EnvInstruction semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.ENV_INSTRUCTION__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.ENV_INSTRUCTION__KEY));
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.ENV_INSTRUCTION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.ENV_INSTRUCTION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEnvInstructionAccess().getKeyIDTerminalRuleCall_1_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getEnvInstructionAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     DockerInstruction returns ExposeInstruction
+	 *     ExposeInstruction returns ExposeInstruction
+	 *
+	 * Constraint:
+	 *     port=INT
+	 * </pre>
+	 */
+	protected void sequence_ExposeInstruction(ISerializationContext context, ExposeInstruction semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.EXPOSE_INSTRUCTION__PORT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.EXPOSE_INSTRUCTION__PORT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExposeInstructionAccess().getPortINTTerminalRuleCall_1_0(), semanticObject.getPort());
+		feeder.finish();
 	}
 	
 	
@@ -510,6 +795,27 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     DockerInstruction returns RunInstruction
+	 *     RunInstruction returns RunInstruction
+	 *
+	 * Constraint:
+	 *     command=STRING
+	 * </pre>
+	 */
+	protected void sequence_RunInstruction(ISerializationContext context, RunInstruction semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.RUN_INSTRUCTION__COMMAND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.RUN_INSTRUCTION__COMMAND));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRunInstructionAccess().getCommandSTRINGTerminalRuleCall_1_0(), semanticObject.getCommand());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     ServerConfiguration returns ServerConfiguration
 	 *
 	 * Constraint:
@@ -577,7 +883,7 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     SpringBootProject returns SpringBootProject
 	 *
 	 * Constraint:
-	 *     (name=ID configuration=ProjectConfiguration? elements+=ProjectElement*)
+	 *     (name=ID configuration=ProjectConfiguration? elements+=ProjectElement* dockerfile=Dockerfile? angularApp=AngularApp?)
 	 * </pre>
 	 */
 	protected void sequence_SpringBootProject(ISerializationContext context, SpringBootProject semanticObject) {
@@ -606,6 +912,27 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 */
 	protected void sequence_ValueTypes(ISerializationContext context, ValueTypes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     DockerInstruction returns WorkdirInstruction
+	 *     WorkdirInstruction returns WorkdirInstruction
+	 *
+	 * Constraint:
+	 *     path=STRING
+	 * </pre>
+	 */
+	protected void sequence_WorkdirInstruction(ISerializationContext context, WorkdirInstruction semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.WORKDIR_INSTRUCTION__PATH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.WORKDIR_INSTRUCTION__PATH));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getWorkdirInstructionAccess().getPathSTRINGTerminalRuleCall_1_0(), semanticObject.getPath());
+		feeder.finish();
 	}
 	
 	

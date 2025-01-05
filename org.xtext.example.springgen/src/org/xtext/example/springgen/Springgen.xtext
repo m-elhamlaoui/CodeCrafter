@@ -5,7 +5,8 @@ generate springgen "http://www.xtext.org/example/springgen/springgen"
 SpringBootProject:
     'project' name=ID
     configuration=ProjectConfiguration?
-    elements+=ProjectElement*;
+    elements+=ProjectElement*
+    dockerfile=Dockerfile?;
 
 ProjectElement:
     Entity | EntityRelationship | DTO | Service | Repository | Controller;
@@ -127,3 +128,33 @@ DatabaseRelations:
 
 ParamTransfer:
     REQUEST_BODY="RequestBody" | REQUEST_PARAM="RequestParam" | PATH_VARIABLE="PathVariable";
+
+Dockerfile:
+    'dockerfile' '{'
+        baseImage=BaseImage
+        instructions+=DockerInstruction*
+    '}';
+
+BaseImage:
+    'FROM' image=STRING;
+
+DockerInstruction:
+    RunInstruction | CopyInstruction | ExposeInstruction | EnvInstruction | WorkdirInstruction | CmdInstruction;
+
+RunInstruction:
+    'RUN' command=STRING;
+
+CopyInstruction:
+    'COPY' source=STRING ':' target=STRING;
+
+ExposeInstruction:
+    'EXPOSE' port=INT;
+
+EnvInstruction:
+    'ENV' key=ID value=STRING;
+
+WorkdirInstruction:
+    'WORKDIR' path=STRING;
+
+CmdInstruction:
+    'CMD' command=STRING;

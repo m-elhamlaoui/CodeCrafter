@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.example.springgen.springgen.SpringBootProject#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.springgen.springgen.SpringBootProject#getConfiguration <em>Configuration</em>}</li>
  *   <li>{@link org.xtext.example.springgen.springgen.SpringBootProject#getElements <em>Elements</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.SpringBootProject#getDockerfile <em>Dockerfile</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.SpringBootProject#getAngularApp <em>Angular App</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.springgen.springgen.SpringgenPackage#getSpringBootProject()
@@ -82,5 +84,49 @@ public interface SpringBootProject extends EObject
    * @generated
    */
   EList<ProjectElement> getElements();
+
+  /**
+   * Returns the value of the '<em><b>Dockerfile</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Dockerfile</em>' containment reference.
+   * @see #setDockerfile(Dockerfile)
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getSpringBootProject_Dockerfile()
+   * @model containment="true"
+   * @generated
+   */
+  Dockerfile getDockerfile();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.springgen.springgen.SpringBootProject#getDockerfile <em>Dockerfile</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Dockerfile</em>' containment reference.
+   * @see #getDockerfile()
+   * @generated
+   */
+  void setDockerfile(Dockerfile value);
+
+  /**
+   * Returns the value of the '<em><b>Angular App</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Angular App</em>' containment reference.
+   * @see #setAngularApp(AngularApp)
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getSpringBootProject_AngularApp()
+   * @model containment="true"
+   * @generated
+   */
+  AngularApp getAngularApp();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.springgen.springgen.SpringBootProject#getAngularApp <em>Angular App</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Angular App</em>' containment reference.
+   * @see #getAngularApp()
+   * @generated
+   */
+  void setAngularApp(AngularApp value);
 
 } // SpringBootProject

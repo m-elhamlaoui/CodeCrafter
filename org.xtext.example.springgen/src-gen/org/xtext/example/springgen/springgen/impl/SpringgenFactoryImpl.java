@@ -93,6 +93,21 @@ public class SpringgenFactoryImpl extends EFactoryImpl implements SpringgenFacto
       case SpringgenPackage.RDBMS: return createRDBMS();
       case SpringgenPackage.DATABASE_RELATIONS: return createDatabaseRelations();
       case SpringgenPackage.PARAM_TRANSFER: return createParamTransfer();
+      case SpringgenPackage.DOCKERFILE: return createDockerfile();
+      case SpringgenPackage.BASE_IMAGE: return createBaseImage();
+      case SpringgenPackage.DOCKER_INSTRUCTION: return createDockerInstruction();
+      case SpringgenPackage.RUN_INSTRUCTION: return createRunInstruction();
+      case SpringgenPackage.COPY_INSTRUCTION: return createCopyInstruction();
+      case SpringgenPackage.EXPOSE_INSTRUCTION: return createExposeInstruction();
+      case SpringgenPackage.ENV_INSTRUCTION: return createEnvInstruction();
+      case SpringgenPackage.WORKDIR_INSTRUCTION: return createWorkdirInstruction();
+      case SpringgenPackage.CMD_INSTRUCTION: return createCmdInstruction();
+      case SpringgenPackage.ANGULAR_APP: return createAngularApp();
+      case SpringgenPackage.ANGULAR_COMPONENT: return createAngularComponent();
+      case SpringgenPackage.ANGULAR_SERVICE: return createAngularService();
+      case SpringgenPackage.ANGULAR_SERVICE_METHOD: return createAngularServiceMethod();
+      case SpringgenPackage.ANGULAR_MODULE: return createAngularModule();
+      case SpringgenPackage.ANGULAR_MODULE_IMPORT: return createAngularModuleImport();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -432,6 +447,186 @@ public class SpringgenFactoryImpl extends EFactoryImpl implements SpringgenFacto
   {
     ParamTransferImpl paramTransfer = new ParamTransferImpl();
     return paramTransfer;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Dockerfile createDockerfile()
+  {
+    DockerfileImpl dockerfile = new DockerfileImpl();
+    return dockerfile;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BaseImage createBaseImage()
+  {
+    BaseImageImpl baseImage = new BaseImageImpl();
+    return baseImage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DockerInstruction createDockerInstruction()
+  {
+    DockerInstructionImpl dockerInstruction = new DockerInstructionImpl();
+    return dockerInstruction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RunInstruction createRunInstruction()
+  {
+    RunInstructionImpl runInstruction = new RunInstructionImpl();
+    return runInstruction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CopyInstruction createCopyInstruction()
+  {
+    CopyInstructionImpl copyInstruction = new CopyInstructionImpl();
+    return copyInstruction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ExposeInstruction createExposeInstruction()
+  {
+    ExposeInstructionImpl exposeInstruction = new ExposeInstructionImpl();
+    return exposeInstruction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EnvInstruction createEnvInstruction()
+  {
+    EnvInstructionImpl envInstruction = new EnvInstructionImpl();
+    return envInstruction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public WorkdirInstruction createWorkdirInstruction()
+  {
+    WorkdirInstructionImpl workdirInstruction = new WorkdirInstructionImpl();
+    return workdirInstruction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CmdInstruction createCmdInstruction()
+  {
+    CmdInstructionImpl cmdInstruction = new CmdInstructionImpl();
+    return cmdInstruction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AngularApp createAngularApp()
+  {
+    AngularAppImpl angularApp = new AngularAppImpl();
+    return angularApp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AngularComponent createAngularComponent()
+  {
+    AngularComponentImpl angularComponent = new AngularComponentImpl();
+    return angularComponent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AngularService createAngularService()
+  {
+    AngularServiceImpl angularService = new AngularServiceImpl();
+    return angularService;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AngularServiceMethod createAngularServiceMethod()
+  {
+    AngularServiceMethodImpl angularServiceMethod = new AngularServiceMethodImpl();
+    return angularServiceMethod;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AngularModule createAngularModule()
+  {
+    AngularModuleImpl angularModule = new AngularModuleImpl();
+    return angularModule;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AngularModuleImport createAngularModuleImport()
+  {
+    AngularModuleImportImpl angularModuleImport = new AngularModuleImportImpl();
+    return angularModuleImport;
   }
 
   /**
