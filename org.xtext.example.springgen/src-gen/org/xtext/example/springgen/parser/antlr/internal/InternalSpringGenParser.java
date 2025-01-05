@@ -3383,29 +3383,29 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRepository"
-    // InternalSpringGen.g:1466:1: ruleRepository returns [EObject current=null] : (otherlv_0= 'repository' otherlv_1= '{' ( (lv_findByMethods_2_0= ruleFindByMethod ) )* ( (lv_deleteByMethods_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethods_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}' ) ;
+    // InternalSpringGen.g:1466:1: ruleRepository returns [EObject current=null] : (otherlv_0= 'repository' otherlv_1= '{' ( (lv_findBy_2_0= ruleFindByMethod ) )* ( (lv_deleteBy_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethod_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}' ) ;
     public final EObject ruleRepository() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
         Token otherlv_5=null;
-        EObject lv_findByMethods_2_0 = null;
+        EObject lv_findBy_2_0 = null;
 
-        EObject lv_deleteByMethods_3_0 = null;
+        EObject lv_deleteBy_3_0 = null;
 
-        EObject lv_customQueryMethods_4_0 = null;
+        EObject lv_customQueryMethod_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSpringGen.g:1472:2: ( (otherlv_0= 'repository' otherlv_1= '{' ( (lv_findByMethods_2_0= ruleFindByMethod ) )* ( (lv_deleteByMethods_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethods_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}' ) )
-            // InternalSpringGen.g:1473:2: (otherlv_0= 'repository' otherlv_1= '{' ( (lv_findByMethods_2_0= ruleFindByMethod ) )* ( (lv_deleteByMethods_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethods_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}' )
+            // InternalSpringGen.g:1472:2: ( (otherlv_0= 'repository' otherlv_1= '{' ( (lv_findBy_2_0= ruleFindByMethod ) )* ( (lv_deleteBy_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethod_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}' ) )
+            // InternalSpringGen.g:1473:2: (otherlv_0= 'repository' otherlv_1= '{' ( (lv_findBy_2_0= ruleFindByMethod ) )* ( (lv_deleteBy_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethod_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}' )
             {
-            // InternalSpringGen.g:1473:2: (otherlv_0= 'repository' otherlv_1= '{' ( (lv_findByMethods_2_0= ruleFindByMethod ) )* ( (lv_deleteByMethods_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethods_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}' )
-            // InternalSpringGen.g:1474:3: otherlv_0= 'repository' otherlv_1= '{' ( (lv_findByMethods_2_0= ruleFindByMethod ) )* ( (lv_deleteByMethods_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethods_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}'
+            // InternalSpringGen.g:1473:2: (otherlv_0= 'repository' otherlv_1= '{' ( (lv_findBy_2_0= ruleFindByMethod ) )* ( (lv_deleteBy_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethod_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}' )
+            // InternalSpringGen.g:1474:3: otherlv_0= 'repository' otherlv_1= '{' ( (lv_findBy_2_0= ruleFindByMethod ) )* ( (lv_deleteBy_3_0= ruleDeleteByMethod ) )* ( (lv_customQueryMethod_4_0= ruleCustomQueryMethod ) )* otherlv_5= '}'
             {
             otherlv_0=(Token)match(input,48,FOLLOW_9); 
 
@@ -3415,7 +3415,7 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getRepositoryAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalSpringGen.g:1482:3: ( (lv_findByMethods_2_0= ruleFindByMethod ) )*
+            // InternalSpringGen.g:1482:3: ( (lv_findBy_2_0= ruleFindByMethod ) )*
             loop25:
             do {
                 int alt25=2;
@@ -3428,16 +3428,16 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
                 switch (alt25) {
             	case 1 :
-            	    // InternalSpringGen.g:1483:4: (lv_findByMethods_2_0= ruleFindByMethod )
+            	    // InternalSpringGen.g:1483:4: (lv_findBy_2_0= ruleFindByMethod )
             	    {
-            	    // InternalSpringGen.g:1483:4: (lv_findByMethods_2_0= ruleFindByMethod )
-            	    // InternalSpringGen.g:1484:5: lv_findByMethods_2_0= ruleFindByMethod
+            	    // InternalSpringGen.g:1483:4: (lv_findBy_2_0= ruleFindByMethod )
+            	    // InternalSpringGen.g:1484:5: lv_findBy_2_0= ruleFindByMethod
             	    {
 
-            	    					newCompositeNode(grammarAccess.getRepositoryAccess().getFindByMethodsFindByMethodParserRuleCall_2_0());
+            	    					newCompositeNode(grammarAccess.getRepositoryAccess().getFindByFindByMethodParserRuleCall_2_0());
             	    				
             	    pushFollow(FOLLOW_47);
-            	    lv_findByMethods_2_0=ruleFindByMethod();
+            	    lv_findBy_2_0=ruleFindByMethod();
 
             	    state._fsp--;
 
@@ -3447,8 +3447,8 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
             	    					}
             	    					add(
             	    						current,
-            	    						"findByMethods",
-            	    						lv_findByMethods_2_0,
+            	    						"findBy",
+            	    						lv_findBy_2_0,
             	    						"org.xtext.example.springgen.SpringGen.FindByMethod");
             	    					afterParserOrEnumRuleCall();
             	    				
@@ -3464,7 +3464,7 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalSpringGen.g:1501:3: ( (lv_deleteByMethods_3_0= ruleDeleteByMethod ) )*
+            // InternalSpringGen.g:1501:3: ( (lv_deleteBy_3_0= ruleDeleteByMethod ) )*
             loop26:
             do {
                 int alt26=2;
@@ -3477,16 +3477,16 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
                 switch (alt26) {
             	case 1 :
-            	    // InternalSpringGen.g:1502:4: (lv_deleteByMethods_3_0= ruleDeleteByMethod )
+            	    // InternalSpringGen.g:1502:4: (lv_deleteBy_3_0= ruleDeleteByMethod )
             	    {
-            	    // InternalSpringGen.g:1502:4: (lv_deleteByMethods_3_0= ruleDeleteByMethod )
-            	    // InternalSpringGen.g:1503:5: lv_deleteByMethods_3_0= ruleDeleteByMethod
+            	    // InternalSpringGen.g:1502:4: (lv_deleteBy_3_0= ruleDeleteByMethod )
+            	    // InternalSpringGen.g:1503:5: lv_deleteBy_3_0= ruleDeleteByMethod
             	    {
 
-            	    					newCompositeNode(grammarAccess.getRepositoryAccess().getDeleteByMethodsDeleteByMethodParserRuleCall_3_0());
+            	    					newCompositeNode(grammarAccess.getRepositoryAccess().getDeleteByDeleteByMethodParserRuleCall_3_0());
             	    				
             	    pushFollow(FOLLOW_48);
-            	    lv_deleteByMethods_3_0=ruleDeleteByMethod();
+            	    lv_deleteBy_3_0=ruleDeleteByMethod();
 
             	    state._fsp--;
 
@@ -3496,8 +3496,8 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
             	    					}
             	    					add(
             	    						current,
-            	    						"deleteByMethods",
-            	    						lv_deleteByMethods_3_0,
+            	    						"deleteBy",
+            	    						lv_deleteBy_3_0,
             	    						"org.xtext.example.springgen.SpringGen.DeleteByMethod");
             	    					afterParserOrEnumRuleCall();
             	    				
@@ -3513,7 +3513,7 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // InternalSpringGen.g:1520:3: ( (lv_customQueryMethods_4_0= ruleCustomQueryMethod ) )*
+            // InternalSpringGen.g:1520:3: ( (lv_customQueryMethod_4_0= ruleCustomQueryMethod ) )*
             loop27:
             do {
                 int alt27=2;
@@ -3526,16 +3526,16 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
                 switch (alt27) {
             	case 1 :
-            	    // InternalSpringGen.g:1521:4: (lv_customQueryMethods_4_0= ruleCustomQueryMethod )
+            	    // InternalSpringGen.g:1521:4: (lv_customQueryMethod_4_0= ruleCustomQueryMethod )
             	    {
-            	    // InternalSpringGen.g:1521:4: (lv_customQueryMethods_4_0= ruleCustomQueryMethod )
-            	    // InternalSpringGen.g:1522:5: lv_customQueryMethods_4_0= ruleCustomQueryMethod
+            	    // InternalSpringGen.g:1521:4: (lv_customQueryMethod_4_0= ruleCustomQueryMethod )
+            	    // InternalSpringGen.g:1522:5: lv_customQueryMethod_4_0= ruleCustomQueryMethod
             	    {
 
-            	    					newCompositeNode(grammarAccess.getRepositoryAccess().getCustomQueryMethodsCustomQueryMethodParserRuleCall_4_0());
+            	    					newCompositeNode(grammarAccess.getRepositoryAccess().getCustomQueryMethodCustomQueryMethodParserRuleCall_4_0());
             	    				
             	    pushFollow(FOLLOW_49);
-            	    lv_customQueryMethods_4_0=ruleCustomQueryMethod();
+            	    lv_customQueryMethod_4_0=ruleCustomQueryMethod();
 
             	    state._fsp--;
 
@@ -3545,8 +3545,8 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
             	    					}
             	    					add(
             	    						current,
-            	    						"customQueryMethods",
-            	    						lv_customQueryMethods_4_0,
+            	    						"customQueryMethod",
+            	    						lv_customQueryMethod_4_0,
             	    						"org.xtext.example.springgen.SpringGen.CustomQueryMethod");
             	    					afterParserOrEnumRuleCall();
             	    				
@@ -3625,7 +3625,7 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFindByMethod"
-    // InternalSpringGen.g:1554:1: ruleFindByMethod returns [EObject current=null] : (otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) ) ) ;
+    // InternalSpringGen.g:1554:1: ruleFindByMethod returns [EObject current=null] : (otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) ) ) ;
     public final EObject ruleFindByMethod() throws RecognitionException {
         EObject current = null;
 
@@ -3633,18 +3633,18 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token lv_property_2_0=null;
         Token otherlv_3=null;
-        EObject lv_ptype_4_0 = null;
+        EObject lv_propertyType_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSpringGen.g:1560:2: ( (otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) ) ) )
-            // InternalSpringGen.g:1561:2: (otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) ) )
+            // InternalSpringGen.g:1560:2: ( (otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) ) ) )
+            // InternalSpringGen.g:1561:2: (otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) ) )
             {
-            // InternalSpringGen.g:1561:2: (otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) ) )
-            // InternalSpringGen.g:1562:3: otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) )
+            // InternalSpringGen.g:1561:2: (otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) ) )
+            // InternalSpringGen.g:1562:3: otherlv_0= 'find' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) )
             {
             otherlv_0=(Token)match(input,35,FOLLOW_50); 
 
@@ -3684,17 +3684,17 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getFindByMethodAccess().getColonKeyword_3());
             		
-            // InternalSpringGen.g:1592:3: ( (lv_ptype_4_0= ruleValueTypes ) )
-            // InternalSpringGen.g:1593:4: (lv_ptype_4_0= ruleValueTypes )
+            // InternalSpringGen.g:1592:3: ( (lv_propertyType_4_0= ruleValueTypes ) )
+            // InternalSpringGen.g:1593:4: (lv_propertyType_4_0= ruleValueTypes )
             {
-            // InternalSpringGen.g:1593:4: (lv_ptype_4_0= ruleValueTypes )
-            // InternalSpringGen.g:1594:5: lv_ptype_4_0= ruleValueTypes
+            // InternalSpringGen.g:1593:4: (lv_propertyType_4_0= ruleValueTypes )
+            // InternalSpringGen.g:1594:5: lv_propertyType_4_0= ruleValueTypes
             {
 
-            					newCompositeNode(grammarAccess.getFindByMethodAccess().getPtypeValueTypesParserRuleCall_4_0());
+            					newCompositeNode(grammarAccess.getFindByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0());
             				
             pushFollow(FOLLOW_2);
-            lv_ptype_4_0=ruleValueTypes();
+            lv_propertyType_4_0=ruleValueTypes();
 
             state._fsp--;
 
@@ -3704,8 +3704,8 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"ptype",
-            						lv_ptype_4_0,
+            						"propertyType",
+            						lv_propertyType_4_0,
             						"org.xtext.example.springgen.SpringGen.ValueTypes");
             					afterParserOrEnumRuleCall();
             				
@@ -3774,7 +3774,7 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDeleteByMethod"
-    // InternalSpringGen.g:1622:1: ruleDeleteByMethod returns [EObject current=null] : (otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) ) ) ;
+    // InternalSpringGen.g:1622:1: ruleDeleteByMethod returns [EObject current=null] : (otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) ) ) ;
     public final EObject ruleDeleteByMethod() throws RecognitionException {
         EObject current = null;
 
@@ -3782,18 +3782,18 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token lv_property_2_0=null;
         Token otherlv_3=null;
-        EObject lv_ptype_4_0 = null;
+        EObject lv_propertyType_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSpringGen.g:1628:2: ( (otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) ) ) )
-            // InternalSpringGen.g:1629:2: (otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) ) )
+            // InternalSpringGen.g:1628:2: ( (otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) ) ) )
+            // InternalSpringGen.g:1629:2: (otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) ) )
             {
-            // InternalSpringGen.g:1629:2: (otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) ) )
-            // InternalSpringGen.g:1630:3: otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_ptype_4_0= ruleValueTypes ) )
+            // InternalSpringGen.g:1629:2: (otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) ) )
+            // InternalSpringGen.g:1630:3: otherlv_0= 'delete' otherlv_1= 'by' ( (lv_property_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_propertyType_4_0= ruleValueTypes ) )
             {
             otherlv_0=(Token)match(input,36,FOLLOW_50); 
 
@@ -3833,17 +3833,17 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getDeleteByMethodAccess().getColonKeyword_3());
             		
-            // InternalSpringGen.g:1660:3: ( (lv_ptype_4_0= ruleValueTypes ) )
-            // InternalSpringGen.g:1661:4: (lv_ptype_4_0= ruleValueTypes )
+            // InternalSpringGen.g:1660:3: ( (lv_propertyType_4_0= ruleValueTypes ) )
+            // InternalSpringGen.g:1661:4: (lv_propertyType_4_0= ruleValueTypes )
             {
-            // InternalSpringGen.g:1661:4: (lv_ptype_4_0= ruleValueTypes )
-            // InternalSpringGen.g:1662:5: lv_ptype_4_0= ruleValueTypes
+            // InternalSpringGen.g:1661:4: (lv_propertyType_4_0= ruleValueTypes )
+            // InternalSpringGen.g:1662:5: lv_propertyType_4_0= ruleValueTypes
             {
 
-            					newCompositeNode(grammarAccess.getDeleteByMethodAccess().getPtypeValueTypesParserRuleCall_4_0());
+            					newCompositeNode(grammarAccess.getDeleteByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0());
             				
             pushFollow(FOLLOW_2);
-            lv_ptype_4_0=ruleValueTypes();
+            lv_propertyType_4_0=ruleValueTypes();
 
             state._fsp--;
 
@@ -3853,8 +3853,8 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
             					}
             					set(
             						current,
-            						"ptype",
-            						lv_ptype_4_0,
+            						"propertyType",
+            						lv_propertyType_4_0,
             						"org.xtext.example.springgen.SpringGen.ValueTypes");
             					afterParserOrEnumRuleCall();
             				
@@ -5602,22 +5602,22 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDatabaseRelations"
-    // InternalSpringGen.g:2310:1: ruleDatabaseRelations returns [EObject current=null] : ( ( (lv_M2M_0_0= 'ManyToMany' ) ) | ( (lv_M2O_1_0= 'ManyToOne' ) ) | ( (lv_O2M_2_0= 'OneToMany' ) ) ) ;
+    // InternalSpringGen.g:2310:1: ruleDatabaseRelations returns [EObject current=null] : ( ( (lv_MANY_TO_MANY_0_0= 'ManyToMany' ) ) | ( (lv_MANY_TO_ONE_1_0= 'ManyToOne' ) ) | ( (lv_ONE_TO_MANY_2_0= 'OneToMany' ) ) ) ;
     public final EObject ruleDatabaseRelations() throws RecognitionException {
         EObject current = null;
 
-        Token lv_M2M_0_0=null;
-        Token lv_M2O_1_0=null;
-        Token lv_O2M_2_0=null;
+        Token lv_MANY_TO_MANY_0_0=null;
+        Token lv_MANY_TO_ONE_1_0=null;
+        Token lv_ONE_TO_MANY_2_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalSpringGen.g:2316:2: ( ( ( (lv_M2M_0_0= 'ManyToMany' ) ) | ( (lv_M2O_1_0= 'ManyToOne' ) ) | ( (lv_O2M_2_0= 'OneToMany' ) ) ) )
-            // InternalSpringGen.g:2317:2: ( ( (lv_M2M_0_0= 'ManyToMany' ) ) | ( (lv_M2O_1_0= 'ManyToOne' ) ) | ( (lv_O2M_2_0= 'OneToMany' ) ) )
+            // InternalSpringGen.g:2316:2: ( ( ( (lv_MANY_TO_MANY_0_0= 'ManyToMany' ) ) | ( (lv_MANY_TO_ONE_1_0= 'ManyToOne' ) ) | ( (lv_ONE_TO_MANY_2_0= 'OneToMany' ) ) ) )
+            // InternalSpringGen.g:2317:2: ( ( (lv_MANY_TO_MANY_0_0= 'ManyToMany' ) ) | ( (lv_MANY_TO_ONE_1_0= 'ManyToOne' ) ) | ( (lv_ONE_TO_MANY_2_0= 'OneToMany' ) ) )
             {
-            // InternalSpringGen.g:2317:2: ( ( (lv_M2M_0_0= 'ManyToMany' ) ) | ( (lv_M2O_1_0= 'ManyToOne' ) ) | ( (lv_O2M_2_0= 'OneToMany' ) ) )
+            // InternalSpringGen.g:2317:2: ( ( (lv_MANY_TO_MANY_0_0= 'ManyToMany' ) ) | ( (lv_MANY_TO_ONE_1_0= 'ManyToOne' ) ) | ( (lv_ONE_TO_MANY_2_0= 'OneToMany' ) ) )
             int alt34=3;
             switch ( input.LA(1) ) {
             case 71:
@@ -5644,23 +5644,23 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
             switch (alt34) {
                 case 1 :
-                    // InternalSpringGen.g:2318:3: ( (lv_M2M_0_0= 'ManyToMany' ) )
+                    // InternalSpringGen.g:2318:3: ( (lv_MANY_TO_MANY_0_0= 'ManyToMany' ) )
                     {
-                    // InternalSpringGen.g:2318:3: ( (lv_M2M_0_0= 'ManyToMany' ) )
-                    // InternalSpringGen.g:2319:4: (lv_M2M_0_0= 'ManyToMany' )
+                    // InternalSpringGen.g:2318:3: ( (lv_MANY_TO_MANY_0_0= 'ManyToMany' ) )
+                    // InternalSpringGen.g:2319:4: (lv_MANY_TO_MANY_0_0= 'ManyToMany' )
                     {
-                    // InternalSpringGen.g:2319:4: (lv_M2M_0_0= 'ManyToMany' )
-                    // InternalSpringGen.g:2320:5: lv_M2M_0_0= 'ManyToMany'
+                    // InternalSpringGen.g:2319:4: (lv_MANY_TO_MANY_0_0= 'ManyToMany' )
+                    // InternalSpringGen.g:2320:5: lv_MANY_TO_MANY_0_0= 'ManyToMany'
                     {
-                    lv_M2M_0_0=(Token)match(input,71,FOLLOW_2); 
+                    lv_MANY_TO_MANY_0_0=(Token)match(input,71,FOLLOW_2); 
 
-                    					newLeafNode(lv_M2M_0_0, grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0());
+                    					newLeafNode(lv_MANY_TO_MANY_0_0, grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0());
                     				
 
                     					if (current==null) {
                     						current = createModelElement(grammarAccess.getDatabaseRelationsRule());
                     					}
-                    					setWithLastConsumed(current, "M2M", lv_M2M_0_0, "ManyToMany");
+                    					setWithLastConsumed(current, "MANY_TO_MANY", lv_MANY_TO_MANY_0_0, "ManyToMany");
                     				
 
                     }
@@ -5672,23 +5672,23 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSpringGen.g:2333:3: ( (lv_M2O_1_0= 'ManyToOne' ) )
+                    // InternalSpringGen.g:2333:3: ( (lv_MANY_TO_ONE_1_0= 'ManyToOne' ) )
                     {
-                    // InternalSpringGen.g:2333:3: ( (lv_M2O_1_0= 'ManyToOne' ) )
-                    // InternalSpringGen.g:2334:4: (lv_M2O_1_0= 'ManyToOne' )
+                    // InternalSpringGen.g:2333:3: ( (lv_MANY_TO_ONE_1_0= 'ManyToOne' ) )
+                    // InternalSpringGen.g:2334:4: (lv_MANY_TO_ONE_1_0= 'ManyToOne' )
                     {
-                    // InternalSpringGen.g:2334:4: (lv_M2O_1_0= 'ManyToOne' )
-                    // InternalSpringGen.g:2335:5: lv_M2O_1_0= 'ManyToOne'
+                    // InternalSpringGen.g:2334:4: (lv_MANY_TO_ONE_1_0= 'ManyToOne' )
+                    // InternalSpringGen.g:2335:5: lv_MANY_TO_ONE_1_0= 'ManyToOne'
                     {
-                    lv_M2O_1_0=(Token)match(input,72,FOLLOW_2); 
+                    lv_MANY_TO_ONE_1_0=(Token)match(input,72,FOLLOW_2); 
 
-                    					newLeafNode(lv_M2O_1_0, grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0());
+                    					newLeafNode(lv_MANY_TO_ONE_1_0, grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0());
                     				
 
                     					if (current==null) {
                     						current = createModelElement(grammarAccess.getDatabaseRelationsRule());
                     					}
-                    					setWithLastConsumed(current, "M2O", lv_M2O_1_0, "ManyToOne");
+                    					setWithLastConsumed(current, "MANY_TO_ONE", lv_MANY_TO_ONE_1_0, "ManyToOne");
                     				
 
                     }
@@ -5700,23 +5700,23 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalSpringGen.g:2348:3: ( (lv_O2M_2_0= 'OneToMany' ) )
+                    // InternalSpringGen.g:2348:3: ( (lv_ONE_TO_MANY_2_0= 'OneToMany' ) )
                     {
-                    // InternalSpringGen.g:2348:3: ( (lv_O2M_2_0= 'OneToMany' ) )
-                    // InternalSpringGen.g:2349:4: (lv_O2M_2_0= 'OneToMany' )
+                    // InternalSpringGen.g:2348:3: ( (lv_ONE_TO_MANY_2_0= 'OneToMany' ) )
+                    // InternalSpringGen.g:2349:4: (lv_ONE_TO_MANY_2_0= 'OneToMany' )
                     {
-                    // InternalSpringGen.g:2349:4: (lv_O2M_2_0= 'OneToMany' )
-                    // InternalSpringGen.g:2350:5: lv_O2M_2_0= 'OneToMany'
+                    // InternalSpringGen.g:2349:4: (lv_ONE_TO_MANY_2_0= 'OneToMany' )
+                    // InternalSpringGen.g:2350:5: lv_ONE_TO_MANY_2_0= 'OneToMany'
                     {
-                    lv_O2M_2_0=(Token)match(input,73,FOLLOW_2); 
+                    lv_ONE_TO_MANY_2_0=(Token)match(input,73,FOLLOW_2); 
 
-                    					newLeafNode(lv_O2M_2_0, grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0());
+                    					newLeafNode(lv_ONE_TO_MANY_2_0, grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0());
                     				
 
                     					if (current==null) {
                     						current = createModelElement(grammarAccess.getDatabaseRelationsRule());
                     					}
-                    					setWithLastConsumed(current, "O2M", lv_O2M_2_0, "OneToMany");
+                    					setWithLastConsumed(current, "ONE_TO_MANY", lv_ONE_TO_MANY_2_0, "OneToMany");
                     				
 
                     }
@@ -5786,22 +5786,22 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParamTransfer"
-    // InternalSpringGen.g:2373:1: ruleParamTransfer returns [EObject current=null] : ( ( (lv_RequestBody_0_0= 'RequestBody' ) ) | ( (lv_RequestParam_1_0= 'RequestParam' ) ) | ( (lv_PathVariable_2_0= 'PathVariable' ) ) ) ;
+    // InternalSpringGen.g:2373:1: ruleParamTransfer returns [EObject current=null] : ( ( (lv_REQUEST_BODY_0_0= 'RequestBody' ) ) | ( (lv_REQUEST_PARAM_1_0= 'RequestParam' ) ) | ( (lv_PATH_VARIABLE_2_0= 'PathVariable' ) ) ) ;
     public final EObject ruleParamTransfer() throws RecognitionException {
         EObject current = null;
 
-        Token lv_RequestBody_0_0=null;
-        Token lv_RequestParam_1_0=null;
-        Token lv_PathVariable_2_0=null;
+        Token lv_REQUEST_BODY_0_0=null;
+        Token lv_REQUEST_PARAM_1_0=null;
+        Token lv_PATH_VARIABLE_2_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalSpringGen.g:2379:2: ( ( ( (lv_RequestBody_0_0= 'RequestBody' ) ) | ( (lv_RequestParam_1_0= 'RequestParam' ) ) | ( (lv_PathVariable_2_0= 'PathVariable' ) ) ) )
-            // InternalSpringGen.g:2380:2: ( ( (lv_RequestBody_0_0= 'RequestBody' ) ) | ( (lv_RequestParam_1_0= 'RequestParam' ) ) | ( (lv_PathVariable_2_0= 'PathVariable' ) ) )
+            // InternalSpringGen.g:2379:2: ( ( ( (lv_REQUEST_BODY_0_0= 'RequestBody' ) ) | ( (lv_REQUEST_PARAM_1_0= 'RequestParam' ) ) | ( (lv_PATH_VARIABLE_2_0= 'PathVariable' ) ) ) )
+            // InternalSpringGen.g:2380:2: ( ( (lv_REQUEST_BODY_0_0= 'RequestBody' ) ) | ( (lv_REQUEST_PARAM_1_0= 'RequestParam' ) ) | ( (lv_PATH_VARIABLE_2_0= 'PathVariable' ) ) )
             {
-            // InternalSpringGen.g:2380:2: ( ( (lv_RequestBody_0_0= 'RequestBody' ) ) | ( (lv_RequestParam_1_0= 'RequestParam' ) ) | ( (lv_PathVariable_2_0= 'PathVariable' ) ) )
+            // InternalSpringGen.g:2380:2: ( ( (lv_REQUEST_BODY_0_0= 'RequestBody' ) ) | ( (lv_REQUEST_PARAM_1_0= 'RequestParam' ) ) | ( (lv_PATH_VARIABLE_2_0= 'PathVariable' ) ) )
             int alt35=3;
             switch ( input.LA(1) ) {
             case 74:
@@ -5828,23 +5828,23 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
 
             switch (alt35) {
                 case 1 :
-                    // InternalSpringGen.g:2381:3: ( (lv_RequestBody_0_0= 'RequestBody' ) )
+                    // InternalSpringGen.g:2381:3: ( (lv_REQUEST_BODY_0_0= 'RequestBody' ) )
                     {
-                    // InternalSpringGen.g:2381:3: ( (lv_RequestBody_0_0= 'RequestBody' ) )
-                    // InternalSpringGen.g:2382:4: (lv_RequestBody_0_0= 'RequestBody' )
+                    // InternalSpringGen.g:2381:3: ( (lv_REQUEST_BODY_0_0= 'RequestBody' ) )
+                    // InternalSpringGen.g:2382:4: (lv_REQUEST_BODY_0_0= 'RequestBody' )
                     {
-                    // InternalSpringGen.g:2382:4: (lv_RequestBody_0_0= 'RequestBody' )
-                    // InternalSpringGen.g:2383:5: lv_RequestBody_0_0= 'RequestBody'
+                    // InternalSpringGen.g:2382:4: (lv_REQUEST_BODY_0_0= 'RequestBody' )
+                    // InternalSpringGen.g:2383:5: lv_REQUEST_BODY_0_0= 'RequestBody'
                     {
-                    lv_RequestBody_0_0=(Token)match(input,74,FOLLOW_2); 
+                    lv_REQUEST_BODY_0_0=(Token)match(input,74,FOLLOW_2); 
 
-                    					newLeafNode(lv_RequestBody_0_0, grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0());
+                    					newLeafNode(lv_REQUEST_BODY_0_0, grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0());
                     				
 
                     					if (current==null) {
                     						current = createModelElement(grammarAccess.getParamTransferRule());
                     					}
-                    					setWithLastConsumed(current, "RequestBody", lv_RequestBody_0_0, "RequestBody");
+                    					setWithLastConsumed(current, "REQUEST_BODY", lv_REQUEST_BODY_0_0, "RequestBody");
                     				
 
                     }
@@ -5856,23 +5856,23 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSpringGen.g:2396:3: ( (lv_RequestParam_1_0= 'RequestParam' ) )
+                    // InternalSpringGen.g:2396:3: ( (lv_REQUEST_PARAM_1_0= 'RequestParam' ) )
                     {
-                    // InternalSpringGen.g:2396:3: ( (lv_RequestParam_1_0= 'RequestParam' ) )
-                    // InternalSpringGen.g:2397:4: (lv_RequestParam_1_0= 'RequestParam' )
+                    // InternalSpringGen.g:2396:3: ( (lv_REQUEST_PARAM_1_0= 'RequestParam' ) )
+                    // InternalSpringGen.g:2397:4: (lv_REQUEST_PARAM_1_0= 'RequestParam' )
                     {
-                    // InternalSpringGen.g:2397:4: (lv_RequestParam_1_0= 'RequestParam' )
-                    // InternalSpringGen.g:2398:5: lv_RequestParam_1_0= 'RequestParam'
+                    // InternalSpringGen.g:2397:4: (lv_REQUEST_PARAM_1_0= 'RequestParam' )
+                    // InternalSpringGen.g:2398:5: lv_REQUEST_PARAM_1_0= 'RequestParam'
                     {
-                    lv_RequestParam_1_0=(Token)match(input,75,FOLLOW_2); 
+                    lv_REQUEST_PARAM_1_0=(Token)match(input,75,FOLLOW_2); 
 
-                    					newLeafNode(lv_RequestParam_1_0, grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0());
+                    					newLeafNode(lv_REQUEST_PARAM_1_0, grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0());
                     				
 
                     					if (current==null) {
                     						current = createModelElement(grammarAccess.getParamTransferRule());
                     					}
-                    					setWithLastConsumed(current, "RequestParam", lv_RequestParam_1_0, "RequestParam");
+                    					setWithLastConsumed(current, "REQUEST_PARAM", lv_REQUEST_PARAM_1_0, "RequestParam");
                     				
 
                     }
@@ -5884,23 +5884,23 @@ public class InternalSpringGenParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalSpringGen.g:2411:3: ( (lv_PathVariable_2_0= 'PathVariable' ) )
+                    // InternalSpringGen.g:2411:3: ( (lv_PATH_VARIABLE_2_0= 'PathVariable' ) )
                     {
-                    // InternalSpringGen.g:2411:3: ( (lv_PathVariable_2_0= 'PathVariable' ) )
-                    // InternalSpringGen.g:2412:4: (lv_PathVariable_2_0= 'PathVariable' )
+                    // InternalSpringGen.g:2411:3: ( (lv_PATH_VARIABLE_2_0= 'PathVariable' ) )
+                    // InternalSpringGen.g:2412:4: (lv_PATH_VARIABLE_2_0= 'PathVariable' )
                     {
-                    // InternalSpringGen.g:2412:4: (lv_PathVariable_2_0= 'PathVariable' )
-                    // InternalSpringGen.g:2413:5: lv_PathVariable_2_0= 'PathVariable'
+                    // InternalSpringGen.g:2412:4: (lv_PATH_VARIABLE_2_0= 'PathVariable' )
+                    // InternalSpringGen.g:2413:5: lv_PATH_VARIABLE_2_0= 'PathVariable'
                     {
-                    lv_PathVariable_2_0=(Token)match(input,76,FOLLOW_2); 
+                    lv_PATH_VARIABLE_2_0=(Token)match(input,76,FOLLOW_2); 
 
-                    					newLeafNode(lv_PathVariable_2_0, grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0());
+                    					newLeafNode(lv_PATH_VARIABLE_2_0, grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0());
                     				
 
                     					if (current==null) {
                     						current = createModelElement(grammarAccess.getParamTransferRule());
                     					}
-                    					setWithLastConsumed(current, "PathVariable", lv_PathVariable_2_0, "PathVariable");
+                    					setWithLastConsumed(current, "PATH_VARIABLE", lv_PATH_VARIABLE_2_0, "PathVariable");
                     				
 
                     }

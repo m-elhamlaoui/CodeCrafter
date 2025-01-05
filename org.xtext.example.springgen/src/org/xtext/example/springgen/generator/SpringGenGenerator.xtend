@@ -584,15 +584,15 @@ class SpringGenGenerator extends AbstractGenerator {
 
             @Repository
             public interface «className»Repository extends JpaRepository<«className», «idType»> {
-                «FOR method : entity.repository.findByMethods»
+                «FOR method : entity.repository.findBy»
                     List<«entity.name»> findBy«method.property.toFirstUpper»(«extractValueType(method.propertyType.toString())» «method.property»);
                 «ENDFOR»
 
-                «FOR method : entity.repository.deleteByMethods»
+                «FOR method : entity.repository.deleteBy»
                     void deleteBy«method.property.toFirstUpper»(«extractValueType(method.propertyType.toString())» «method.property»);
                 «ENDFOR»
 
-                «FOR method : entity.repository.customQueryMethods»
+                «FOR method : entity.repository.customQueryMethod»
                     «method.query»
                 «ENDFOR»
             }
@@ -628,7 +628,6 @@ class SpringGenGenerator extends AbstractGenerator {
             @Table(name = "«className»")
             @Builder
             public class «className» «IF extendsClause !== null»extends «extendsClause» «ENDIF»{
-
                 @Id
                 private «idType» «idName»;
                 «FOR property : properties»

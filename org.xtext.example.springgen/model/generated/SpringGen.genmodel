@@ -80,17 +80,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ActionParameter/defaultValue"/>
     </genClasses>
     <genClasses ecoreClass="SpringGen.ecore#//Repository">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//Repository/findByMethods"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//Repository/deleteByMethods"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//Repository/customQueryMethods"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//Repository/findBy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//Repository/deleteBy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//Repository/customQueryMethod"/>
     </genClasses>
     <genClasses ecoreClass="SpringGen.ecore#//FindByMethod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//FindByMethod/property"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//FindByMethod/ptype"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//FindByMethod/propertyType"/>
     </genClasses>
     <genClasses ecoreClass="SpringGen.ecore#//DeleteByMethod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//DeleteByMethod/property"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//DeleteByMethod/ptype"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SpringGen.ecore#//DeleteByMethod/propertyType"/>
     </genClasses>
     <genClasses ecoreClass="SpringGen.ecore#//CustomQueryMethod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//CustomQueryMethod/query"/>
@@ -132,14 +132,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//RDBMS/ORACLE"/>
     </genClasses>
     <genClasses ecoreClass="SpringGen.ecore#//DatabaseRelations">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//DatabaseRelations/M2M"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//DatabaseRelations/M2O"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//DatabaseRelations/O2M"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//DatabaseRelations/MANY_TO_MANY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//DatabaseRelations/MANY_TO_ONE"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//DatabaseRelations/ONE_TO_MANY"/>
     </genClasses>
     <genClasses ecoreClass="SpringGen.ecore#//ParamTransfer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ParamTransfer/RequestBody"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ParamTransfer/RequestParam"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ParamTransfer/PathVariable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ParamTransfer/REQUEST_BODY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ParamTransfer/REQUEST_PARAM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SpringGen.ecore#//ParamTransfer/PATH_VARIABLE"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

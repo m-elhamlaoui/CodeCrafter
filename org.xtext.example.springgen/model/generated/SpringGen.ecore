@@ -99,21 +99,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Repository" eSuperTypes="#//ProjectElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="findByMethods" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="findBy" upperBound="-1"
         eType="#//FindByMethod" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="deleteByMethods" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deleteBy" upperBound="-1"
         eType="#//DeleteByMethod" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customQueryMethods" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customQueryMethod" upperBound="-1"
         eType="#//CustomQueryMethod" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FindByMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="property" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ptype" eType="#//ValueTypes"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyType" eType="#//ValueTypes"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DeleteByMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="property" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ptype" eType="#//ValueTypes"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyType" eType="#//ValueTypes"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CustomQueryMethod">
@@ -156,13 +156,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ORACLE" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DatabaseRelations">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="M2M" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="M2O" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="O2M" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MANY_TO_MANY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="MANY_TO_ONE" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ONE_TO_MANY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParamTransfer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RequestBody" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RequestParam" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PathVariable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="REQUEST_BODY" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="REQUEST_PARAM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PATH_VARIABLE" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

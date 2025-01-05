@@ -84,16 +84,16 @@ ActionParameter:
 
 Repository:
     'repository' '{'
-        findByMethods+=FindByMethod*
-        deleteByMethods+=DeleteByMethod*
-        customQueryMethods+=CustomQueryMethod*
+        findBy+=FindByMethod*
+        deleteBy+=DeleteByMethod*
+        customQueryMethod+=CustomQueryMethod*
     '}';
 
 FindByMethod:
-    'find' 'by' property=ID ':' ptype=ValueTypes;
+    'find' 'by' property=ID ':' propertyType=ValueTypes;
 
 DeleteByMethod:
-    'delete' 'by' property=ID ':' ptype=ValueTypes;
+    'delete' 'by' property=ID ':' propertyType=ValueTypes;
 
 CustomQueryMethod:
     'customQuery' '{' query=STRING '}';
@@ -123,7 +123,7 @@ RDBMS:
     MYSQL="MySQL" | POSTGRES="Postgres" | MARIADB="MariaDB" | H2="H2" | ORACLE="Oracle";
 
 DatabaseRelations:
-    M2M="ManyToMany" | M2O="ManyToOne" | O2M="OneToMany";
+    MANY_TO_MANY="ManyToMany" | MANY_TO_ONE="ManyToOne" | ONE_TO_MANY="OneToMany";
 
 ParamTransfer:
-    RequestBody="RequestBody" | RequestParam="RequestParam" | PathVariable="PathVariable";
+    REQUEST_BODY="RequestBody" | REQUEST_PARAM="RequestParam" | PATH_VARIABLE="PathVariable";

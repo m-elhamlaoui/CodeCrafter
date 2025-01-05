@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.springgen.springgen.DatabaseRelations#getM2M <em>M2M</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.DatabaseRelations#getM2O <em>M2O</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.DatabaseRelations#getO2M <em>O2M</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.DatabaseRelations#getMANY_TO_MANY <em>MANY TO MANY</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.DatabaseRelations#getMANY_TO_ONE <em>MANY TO ONE</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.DatabaseRelations#getONE_TO_MANY <em>ONE TO MANY</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.springgen.springgen.SpringgenPackage#getDatabaseRelations()
@@ -26,69 +26,69 @@ import org.eclipse.emf.ecore.EObject;
 public interface DatabaseRelations extends EObject
 {
   /**
-   * Returns the value of the '<em><b>M2M</b></em>' attribute.
+   * Returns the value of the '<em><b>MANY TO MANY</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>M2M</em>' attribute.
-   * @see #setM2M(String)
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getDatabaseRelations_M2M()
+   * @return the value of the '<em>MANY TO MANY</em>' attribute.
+   * @see #setMANY_TO_MANY(String)
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getDatabaseRelations_MANY_TO_MANY()
    * @model
    * @generated
    */
-  String getM2M();
+  String getMANY_TO_MANY();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getM2M <em>M2M</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getMANY_TO_MANY <em>MANY TO MANY</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>M2M</em>' attribute.
-   * @see #getM2M()
+   * @param value the new value of the '<em>MANY TO MANY</em>' attribute.
+   * @see #getMANY_TO_MANY()
    * @generated
    */
-  void setM2M(String value);
+  void setMANY_TO_MANY(String value);
 
   /**
-   * Returns the value of the '<em><b>M2O</b></em>' attribute.
+   * Returns the value of the '<em><b>MANY TO ONE</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>M2O</em>' attribute.
-   * @see #setM2O(String)
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getDatabaseRelations_M2O()
+   * @return the value of the '<em>MANY TO ONE</em>' attribute.
+   * @see #setMANY_TO_ONE(String)
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getDatabaseRelations_MANY_TO_ONE()
    * @model
    * @generated
    */
-  String getM2O();
+  String getMANY_TO_ONE();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getM2O <em>M2O</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getMANY_TO_ONE <em>MANY TO ONE</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>M2O</em>' attribute.
-   * @see #getM2O()
+   * @param value the new value of the '<em>MANY TO ONE</em>' attribute.
+   * @see #getMANY_TO_ONE()
    * @generated
    */
-  void setM2O(String value);
+  void setMANY_TO_ONE(String value);
 
   /**
-   * Returns the value of the '<em><b>O2M</b></em>' attribute.
+   * Returns the value of the '<em><b>ONE TO MANY</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>O2M</em>' attribute.
-   * @see #setO2M(String)
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getDatabaseRelations_O2M()
+   * @return the value of the '<em>ONE TO MANY</em>' attribute.
+   * @see #setONE_TO_MANY(String)
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getDatabaseRelations_ONE_TO_MANY()
    * @model
    * @generated
    */
-  String getO2M();
+  String getONE_TO_MANY();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getO2M <em>O2M</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getONE_TO_MANY <em>ONE TO MANY</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>O2M</em>' attribute.
-   * @see #getO2M()
+   * @param value the new value of the '<em>ONE TO MANY</em>' attribute.
+   * @see #getONE_TO_MANY()
    * @generated
    */
-  void setO2M(String value);
+  void setONE_TO_MANY(String value);
 
 } // DatabaseRelations

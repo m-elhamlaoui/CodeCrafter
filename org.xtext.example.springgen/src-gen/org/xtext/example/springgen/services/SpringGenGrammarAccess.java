@@ -930,26 +930,26 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRepositoryKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cFindByMethodsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cFindByMethodsFindByMethodParserRuleCall_2_0 = (RuleCall)cFindByMethodsAssignment_2.eContents().get(0);
-		private final Assignment cDeleteByMethodsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDeleteByMethodsDeleteByMethodParserRuleCall_3_0 = (RuleCall)cDeleteByMethodsAssignment_3.eContents().get(0);
-		private final Assignment cCustomQueryMethodsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cCustomQueryMethodsCustomQueryMethodParserRuleCall_4_0 = (RuleCall)cCustomQueryMethodsAssignment_4.eContents().get(0);
+		private final Assignment cFindByAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFindByFindByMethodParserRuleCall_2_0 = (RuleCall)cFindByAssignment_2.eContents().get(0);
+		private final Assignment cDeleteByAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDeleteByDeleteByMethodParserRuleCall_3_0 = (RuleCall)cDeleteByAssignment_3.eContents().get(0);
+		private final Assignment cCustomQueryMethodAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cCustomQueryMethodCustomQueryMethodParserRuleCall_4_0 = (RuleCall)cCustomQueryMethodAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Repository:
 		//    'repository' '{'
-		//        findByMethods+=FindByMethod*
-		//        deleteByMethods+=DeleteByMethod*
-		//        customQueryMethods+=CustomQueryMethod*
+		//        findBy+=FindByMethod*
+		//        deleteBy+=DeleteByMethod*
+		//        customQueryMethod+=CustomQueryMethod*
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'repository' '{'
-		//    findByMethods+=FindByMethod*
-		//    deleteByMethods+=DeleteByMethod*
-		//    customQueryMethods+=CustomQueryMethod*
+		//    findBy+=FindByMethod*
+		//    deleteBy+=DeleteByMethod*
+		//    customQueryMethod+=CustomQueryMethod*
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -959,23 +959,23 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//findByMethods+=FindByMethod*
-		public Assignment getFindByMethodsAssignment_2() { return cFindByMethodsAssignment_2; }
+		//findBy+=FindByMethod*
+		public Assignment getFindByAssignment_2() { return cFindByAssignment_2; }
 		
 		//FindByMethod
-		public RuleCall getFindByMethodsFindByMethodParserRuleCall_2_0() { return cFindByMethodsFindByMethodParserRuleCall_2_0; }
+		public RuleCall getFindByFindByMethodParserRuleCall_2_0() { return cFindByFindByMethodParserRuleCall_2_0; }
 		
-		//deleteByMethods+=DeleteByMethod*
-		public Assignment getDeleteByMethodsAssignment_3() { return cDeleteByMethodsAssignment_3; }
+		//deleteBy+=DeleteByMethod*
+		public Assignment getDeleteByAssignment_3() { return cDeleteByAssignment_3; }
 		
 		//DeleteByMethod
-		public RuleCall getDeleteByMethodsDeleteByMethodParserRuleCall_3_0() { return cDeleteByMethodsDeleteByMethodParserRuleCall_3_0; }
+		public RuleCall getDeleteByDeleteByMethodParserRuleCall_3_0() { return cDeleteByDeleteByMethodParserRuleCall_3_0; }
 		
-		//customQueryMethods+=CustomQueryMethod*
-		public Assignment getCustomQueryMethodsAssignment_4() { return cCustomQueryMethodsAssignment_4; }
+		//customQueryMethod+=CustomQueryMethod*
+		public Assignment getCustomQueryMethodAssignment_4() { return cCustomQueryMethodAssignment_4; }
 		
 		//CustomQueryMethod
-		public RuleCall getCustomQueryMethodsCustomQueryMethodParserRuleCall_4_0() { return cCustomQueryMethodsCustomQueryMethodParserRuleCall_4_0; }
+		public RuleCall getCustomQueryMethodCustomQueryMethodParserRuleCall_4_0() { return cCustomQueryMethodCustomQueryMethodParserRuleCall_4_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
@@ -988,14 +988,14 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final Assignment cPropertyAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cPropertyIDTerminalRuleCall_2_0 = (RuleCall)cPropertyAssignment_2.eContents().get(0);
 		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cPtypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cPtypeValueTypesParserRuleCall_4_0 = (RuleCall)cPtypeAssignment_4.eContents().get(0);
+		private final Assignment cPropertyTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPropertyTypeValueTypesParserRuleCall_4_0 = (RuleCall)cPropertyTypeAssignment_4.eContents().get(0);
 		
 		//FindByMethod:
-		//    'find' 'by' property=ID ':' ptype=ValueTypes;
+		//    'find' 'by' property=ID ':' propertyType=ValueTypes;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'find' 'by' property=ID ':' ptype=ValueTypes
+		//'find' 'by' property=ID ':' propertyType=ValueTypes
 		public Group getGroup() { return cGroup; }
 		
 		//'find'
@@ -1013,11 +1013,11 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 		
-		//ptype=ValueTypes
-		public Assignment getPtypeAssignment_4() { return cPtypeAssignment_4; }
+		//propertyType=ValueTypes
+		public Assignment getPropertyTypeAssignment_4() { return cPropertyTypeAssignment_4; }
 		
 		//ValueTypes
-		public RuleCall getPtypeValueTypesParserRuleCall_4_0() { return cPtypeValueTypesParserRuleCall_4_0; }
+		public RuleCall getPropertyTypeValueTypesParserRuleCall_4_0() { return cPropertyTypeValueTypesParserRuleCall_4_0; }
 	}
 	public class DeleteByMethodElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.DeleteByMethod");
@@ -1027,14 +1027,14 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		private final Assignment cPropertyAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cPropertyIDTerminalRuleCall_2_0 = (RuleCall)cPropertyAssignment_2.eContents().get(0);
 		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cPtypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cPtypeValueTypesParserRuleCall_4_0 = (RuleCall)cPtypeAssignment_4.eContents().get(0);
+		private final Assignment cPropertyTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPropertyTypeValueTypesParserRuleCall_4_0 = (RuleCall)cPropertyTypeAssignment_4.eContents().get(0);
 		
 		//DeleteByMethod:
-		//    'delete' 'by' property=ID ':' ptype=ValueTypes;
+		//    'delete' 'by' property=ID ':' propertyType=ValueTypes;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'delete' 'by' property=ID ':' ptype=ValueTypes
+		//'delete' 'by' property=ID ':' propertyType=ValueTypes
 		public Group getGroup() { return cGroup; }
 		
 		//'delete'
@@ -1052,11 +1052,11 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//':'
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 		
-		//ptype=ValueTypes
-		public Assignment getPtypeAssignment_4() { return cPtypeAssignment_4; }
+		//propertyType=ValueTypes
+		public Assignment getPropertyTypeAssignment_4() { return cPropertyTypeAssignment_4; }
 		
 		//ValueTypes
-		public RuleCall getPtypeValueTypesParserRuleCall_4_0() { return cPtypeValueTypesParserRuleCall_4_0; }
+		public RuleCall getPropertyTypeValueTypesParserRuleCall_4_0() { return cPropertyTypeValueTypesParserRuleCall_4_0; }
 	}
 	public class CustomQueryMethodElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.CustomQueryMethod");
@@ -1408,72 +1408,72 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 	public class DatabaseRelationsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.DatabaseRelations");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cM2MAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final Keyword cM2MManyToManyKeyword_0_0 = (Keyword)cM2MAssignment_0.eContents().get(0);
-		private final Assignment cM2OAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final Keyword cM2OManyToOneKeyword_1_0 = (Keyword)cM2OAssignment_1.eContents().get(0);
-		private final Assignment cO2MAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final Keyword cO2MOneToManyKeyword_2_0 = (Keyword)cO2MAssignment_2.eContents().get(0);
+		private final Assignment cMANY_TO_MANYAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cMANY_TO_MANYManyToManyKeyword_0_0 = (Keyword)cMANY_TO_MANYAssignment_0.eContents().get(0);
+		private final Assignment cMANY_TO_ONEAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final Keyword cMANY_TO_ONEManyToOneKeyword_1_0 = (Keyword)cMANY_TO_ONEAssignment_1.eContents().get(0);
+		private final Assignment cONE_TO_MANYAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final Keyword cONE_TO_MANYOneToManyKeyword_2_0 = (Keyword)cONE_TO_MANYAssignment_2.eContents().get(0);
 		
 		//DatabaseRelations:
-		//    M2M="ManyToMany" | M2O="ManyToOne" | O2M="OneToMany";
+		//    MANY_TO_MANY="ManyToMany" | MANY_TO_ONE="ManyToOne" | ONE_TO_MANY="OneToMany";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//M2M="ManyToMany" | M2O="ManyToOne" | O2M="OneToMany"
+		//MANY_TO_MANY="ManyToMany" | MANY_TO_ONE="ManyToOne" | ONE_TO_MANY="OneToMany"
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//M2M="ManyToMany"
-		public Assignment getM2MAssignment_0() { return cM2MAssignment_0; }
+		//MANY_TO_MANY="ManyToMany"
+		public Assignment getMANY_TO_MANYAssignment_0() { return cMANY_TO_MANYAssignment_0; }
 		
 		//"ManyToMany"
-		public Keyword getM2MManyToManyKeyword_0_0() { return cM2MManyToManyKeyword_0_0; }
+		public Keyword getMANY_TO_MANYManyToManyKeyword_0_0() { return cMANY_TO_MANYManyToManyKeyword_0_0; }
 		
-		//M2O="ManyToOne"
-		public Assignment getM2OAssignment_1() { return cM2OAssignment_1; }
+		//MANY_TO_ONE="ManyToOne"
+		public Assignment getMANY_TO_ONEAssignment_1() { return cMANY_TO_ONEAssignment_1; }
 		
 		//"ManyToOne"
-		public Keyword getM2OManyToOneKeyword_1_0() { return cM2OManyToOneKeyword_1_0; }
+		public Keyword getMANY_TO_ONEManyToOneKeyword_1_0() { return cMANY_TO_ONEManyToOneKeyword_1_0; }
 		
-		//O2M="OneToMany"
-		public Assignment getO2MAssignment_2() { return cO2MAssignment_2; }
+		//ONE_TO_MANY="OneToMany"
+		public Assignment getONE_TO_MANYAssignment_2() { return cONE_TO_MANYAssignment_2; }
 		
 		//"OneToMany"
-		public Keyword getO2MOneToManyKeyword_2_0() { return cO2MOneToManyKeyword_2_0; }
+		public Keyword getONE_TO_MANYOneToManyKeyword_2_0() { return cONE_TO_MANYOneToManyKeyword_2_0; }
 	}
 	public class ParamTransferElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.springgen.SpringGen.ParamTransfer");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cRequestBodyAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final Keyword cRequestBodyRequestBodyKeyword_0_0 = (Keyword)cRequestBodyAssignment_0.eContents().get(0);
-		private final Assignment cRequestParamAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final Keyword cRequestParamRequestParamKeyword_1_0 = (Keyword)cRequestParamAssignment_1.eContents().get(0);
-		private final Assignment cPathVariableAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final Keyword cPathVariablePathVariableKeyword_2_0 = (Keyword)cPathVariableAssignment_2.eContents().get(0);
+		private final Assignment cREQUEST_BODYAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cREQUEST_BODYRequestBodyKeyword_0_0 = (Keyword)cREQUEST_BODYAssignment_0.eContents().get(0);
+		private final Assignment cREQUEST_PARAMAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final Keyword cREQUEST_PARAMRequestParamKeyword_1_0 = (Keyword)cREQUEST_PARAMAssignment_1.eContents().get(0);
+		private final Assignment cPATH_VARIABLEAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final Keyword cPATH_VARIABLEPathVariableKeyword_2_0 = (Keyword)cPATH_VARIABLEAssignment_2.eContents().get(0);
 		
 		//ParamTransfer:
-		//    RequestBody="RequestBody" | RequestParam="RequestParam" | PathVariable="PathVariable";
+		//    REQUEST_BODY="RequestBody" | REQUEST_PARAM="RequestParam" | PATH_VARIABLE="PathVariable";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//RequestBody="RequestBody" | RequestParam="RequestParam" | PathVariable="PathVariable"
+		//REQUEST_BODY="RequestBody" | REQUEST_PARAM="RequestParam" | PATH_VARIABLE="PathVariable"
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//RequestBody="RequestBody"
-		public Assignment getRequestBodyAssignment_0() { return cRequestBodyAssignment_0; }
+		//REQUEST_BODY="RequestBody"
+		public Assignment getREQUEST_BODYAssignment_0() { return cREQUEST_BODYAssignment_0; }
 		
 		//"RequestBody"
-		public Keyword getRequestBodyRequestBodyKeyword_0_0() { return cRequestBodyRequestBodyKeyword_0_0; }
+		public Keyword getREQUEST_BODYRequestBodyKeyword_0_0() { return cREQUEST_BODYRequestBodyKeyword_0_0; }
 		
-		//RequestParam="RequestParam"
-		public Assignment getRequestParamAssignment_1() { return cRequestParamAssignment_1; }
+		//REQUEST_PARAM="RequestParam"
+		public Assignment getREQUEST_PARAMAssignment_1() { return cREQUEST_PARAMAssignment_1; }
 		
 		//"RequestParam"
-		public Keyword getRequestParamRequestParamKeyword_1_0() { return cRequestParamRequestParamKeyword_1_0; }
+		public Keyword getREQUEST_PARAMRequestParamKeyword_1_0() { return cREQUEST_PARAMRequestParamKeyword_1_0; }
 		
-		//PathVariable="PathVariable"
-		public Assignment getPathVariableAssignment_2() { return cPathVariableAssignment_2; }
+		//PATH_VARIABLE="PathVariable"
+		public Assignment getPATH_VARIABLEAssignment_2() { return cPATH_VARIABLEAssignment_2; }
 		
 		//"PathVariable"
-		public Keyword getPathVariablePathVariableKeyword_2_0() { return cPathVariablePathVariableKeyword_2_0; }
+		public Keyword getPATH_VARIABLEPathVariableKeyword_2_0() { return cPATH_VARIABLEPathVariableKeyword_2_0; }
 	}
 	
 	
@@ -1752,9 +1752,9 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	//Repository:
 	//    'repository' '{'
-	//        findByMethods+=FindByMethod*
-	//        deleteByMethods+=DeleteByMethod*
-	//        customQueryMethods+=CustomQueryMethod*
+	//        findBy+=FindByMethod*
+	//        deleteBy+=DeleteByMethod*
+	//        customQueryMethod+=CustomQueryMethod*
 	//    '}';
 	public RepositoryElements getRepositoryAccess() {
 		return pRepository;
@@ -1765,7 +1765,7 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 	}
 	
 	//FindByMethod:
-	//    'find' 'by' property=ID ':' ptype=ValueTypes;
+	//    'find' 'by' property=ID ':' propertyType=ValueTypes;
 	public FindByMethodElements getFindByMethodAccess() {
 		return pFindByMethod;
 	}
@@ -1775,7 +1775,7 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 	}
 	
 	//DeleteByMethod:
-	//    'delete' 'by' property=ID ':' ptype=ValueTypes;
+	//    'delete' 'by' property=ID ':' propertyType=ValueTypes;
 	public DeleteByMethodElements getDeleteByMethodAccess() {
 		return pDeleteByMethod;
 	}
@@ -1875,7 +1875,7 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 	}
 	
 	//DatabaseRelations:
-	//    M2M="ManyToMany" | M2O="ManyToOne" | O2M="OneToMany";
+	//    MANY_TO_MANY="ManyToMany" | MANY_TO_ONE="ManyToOne" | ONE_TO_MANY="OneToMany";
 	public DatabaseRelationsElements getDatabaseRelationsAccess() {
 		return pDatabaseRelations;
 	}
@@ -1885,7 +1885,7 @@ public class SpringGenGrammarAccess extends AbstractElementFinder.AbstractGramma
 	}
 	
 	//ParamTransfer:
-	//    RequestBody="RequestBody" | RequestParam="RequestParam" | PathVariable="PathVariable";
+	//    REQUEST_BODY="RequestBody" | REQUEST_PARAM="RequestParam" | PATH_VARIABLE="PathVariable";
 	public ParamTransferElements getParamTransferAccess() {
 		return pParamTransfer;
 	}

@@ -21,9 +21,9 @@ import org.xtext.example.springgen.springgen.SpringgenPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.DatabaseRelationsImpl#getM2M <em>M2M</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.DatabaseRelationsImpl#getM2O <em>M2O</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.DatabaseRelationsImpl#getO2M <em>O2M</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.DatabaseRelationsImpl#getMANY_TO_MANY <em>MANY TO MANY</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.DatabaseRelationsImpl#getMANY_TO_ONE <em>MANY TO ONE</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.DatabaseRelationsImpl#getONE_TO_MANY <em>ONE TO MANY</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,64 +31,64 @@ import org.xtext.example.springgen.springgen.SpringgenPackage;
 public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implements DatabaseRelations
 {
   /**
-   * The default value of the '{@link #getM2M() <em>M2M</em>}' attribute.
+   * The default value of the '{@link #getMANY_TO_MANY() <em>MANY TO MANY</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getM2M()
+   * @see #getMANY_TO_MANY()
    * @generated
    * @ordered
    */
-  protected static final String M2M_EDEFAULT = null;
+  protected static final String MANY_TO_MANY_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getM2M() <em>M2M</em>}' attribute.
+   * The cached value of the '{@link #getMANY_TO_MANY() <em>MANY TO MANY</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getM2M()
+   * @see #getMANY_TO_MANY()
    * @generated
    * @ordered
    */
-  protected String m2M = M2M_EDEFAULT;
+  protected String manY_TO_MANY = MANY_TO_MANY_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getM2O() <em>M2O</em>}' attribute.
+   * The default value of the '{@link #getMANY_TO_ONE() <em>MANY TO ONE</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getM2O()
+   * @see #getMANY_TO_ONE()
    * @generated
    * @ordered
    */
-  protected static final String M2O_EDEFAULT = null;
+  protected static final String MANY_TO_ONE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getM2O() <em>M2O</em>}' attribute.
+   * The cached value of the '{@link #getMANY_TO_ONE() <em>MANY TO ONE</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getM2O()
+   * @see #getMANY_TO_ONE()
    * @generated
    * @ordered
    */
-  protected String m2O = M2O_EDEFAULT;
+  protected String manY_TO_ONE = MANY_TO_ONE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getO2M() <em>O2M</em>}' attribute.
+   * The default value of the '{@link #getONE_TO_MANY() <em>ONE TO MANY</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getO2M()
+   * @see #getONE_TO_MANY()
    * @generated
    * @ordered
    */
-  protected static final String O2M_EDEFAULT = null;
+  protected static final String ONE_TO_MANY_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getO2M() <em>O2M</em>}' attribute.
+   * The cached value of the '{@link #getONE_TO_MANY() <em>ONE TO MANY</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getO2M()
+   * @see #getONE_TO_MANY()
    * @generated
    * @ordered
    */
-  protected String o2M = O2M_EDEFAULT;
+  protected String onE_TO_MANY = ONE_TO_MANY_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,9 +117,9 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   @Override
-  public String getM2M()
+  public String getMANY_TO_MANY()
   {
-    return m2M;
+    return manY_TO_MANY;
   }
 
   /**
@@ -128,12 +128,12 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   @Override
-  public void setM2M(String newM2M)
+  public void setMANY_TO_MANY(String newMANY_TO_MANY)
   {
-    String oldM2M = m2M;
-    m2M = newM2M;
+    String oldMANY_TO_MANY = manY_TO_MANY;
+    manY_TO_MANY = newMANY_TO_MANY;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.DATABASE_RELATIONS__M2M, oldM2M, m2M));
+      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.DATABASE_RELATIONS__MANY_TO_MANY, oldMANY_TO_MANY, manY_TO_MANY));
   }
 
   /**
@@ -142,9 +142,9 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   @Override
-  public String getM2O()
+  public String getMANY_TO_ONE()
   {
-    return m2O;
+    return manY_TO_ONE;
   }
 
   /**
@@ -153,12 +153,12 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   @Override
-  public void setM2O(String newM2O)
+  public void setMANY_TO_ONE(String newMANY_TO_ONE)
   {
-    String oldM2O = m2O;
-    m2O = newM2O;
+    String oldMANY_TO_ONE = manY_TO_ONE;
+    manY_TO_ONE = newMANY_TO_ONE;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.DATABASE_RELATIONS__M2O, oldM2O, m2O));
+      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.DATABASE_RELATIONS__MANY_TO_ONE, oldMANY_TO_ONE, manY_TO_ONE));
   }
 
   /**
@@ -167,9 +167,9 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   @Override
-  public String getO2M()
+  public String getONE_TO_MANY()
   {
-    return o2M;
+    return onE_TO_MANY;
   }
 
   /**
@@ -178,12 +178,12 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   @Override
-  public void setO2M(String newO2M)
+  public void setONE_TO_MANY(String newONE_TO_MANY)
   {
-    String oldO2M = o2M;
-    o2M = newO2M;
+    String oldONE_TO_MANY = onE_TO_MANY;
+    onE_TO_MANY = newONE_TO_MANY;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.DATABASE_RELATIONS__O2M, oldO2M, o2M));
+      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.DATABASE_RELATIONS__ONE_TO_MANY, oldONE_TO_MANY, onE_TO_MANY));
   }
 
   /**
@@ -196,12 +196,12 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case SpringgenPackage.DATABASE_RELATIONS__M2M:
-        return getM2M();
-      case SpringgenPackage.DATABASE_RELATIONS__M2O:
-        return getM2O();
-      case SpringgenPackage.DATABASE_RELATIONS__O2M:
-        return getO2M();
+      case SpringgenPackage.DATABASE_RELATIONS__MANY_TO_MANY:
+        return getMANY_TO_MANY();
+      case SpringgenPackage.DATABASE_RELATIONS__MANY_TO_ONE:
+        return getMANY_TO_ONE();
+      case SpringgenPackage.DATABASE_RELATIONS__ONE_TO_MANY:
+        return getONE_TO_MANY();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -216,14 +216,14 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case SpringgenPackage.DATABASE_RELATIONS__M2M:
-        setM2M((String)newValue);
+      case SpringgenPackage.DATABASE_RELATIONS__MANY_TO_MANY:
+        setMANY_TO_MANY((String)newValue);
         return;
-      case SpringgenPackage.DATABASE_RELATIONS__M2O:
-        setM2O((String)newValue);
+      case SpringgenPackage.DATABASE_RELATIONS__MANY_TO_ONE:
+        setMANY_TO_ONE((String)newValue);
         return;
-      case SpringgenPackage.DATABASE_RELATIONS__O2M:
-        setO2M((String)newValue);
+      case SpringgenPackage.DATABASE_RELATIONS__ONE_TO_MANY:
+        setONE_TO_MANY((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -239,14 +239,14 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case SpringgenPackage.DATABASE_RELATIONS__M2M:
-        setM2M(M2M_EDEFAULT);
+      case SpringgenPackage.DATABASE_RELATIONS__MANY_TO_MANY:
+        setMANY_TO_MANY(MANY_TO_MANY_EDEFAULT);
         return;
-      case SpringgenPackage.DATABASE_RELATIONS__M2O:
-        setM2O(M2O_EDEFAULT);
+      case SpringgenPackage.DATABASE_RELATIONS__MANY_TO_ONE:
+        setMANY_TO_ONE(MANY_TO_ONE_EDEFAULT);
         return;
-      case SpringgenPackage.DATABASE_RELATIONS__O2M:
-        setO2M(O2M_EDEFAULT);
+      case SpringgenPackage.DATABASE_RELATIONS__ONE_TO_MANY:
+        setONE_TO_MANY(ONE_TO_MANY_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -262,12 +262,12 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case SpringgenPackage.DATABASE_RELATIONS__M2M:
-        return M2M_EDEFAULT == null ? m2M != null : !M2M_EDEFAULT.equals(m2M);
-      case SpringgenPackage.DATABASE_RELATIONS__M2O:
-        return M2O_EDEFAULT == null ? m2O != null : !M2O_EDEFAULT.equals(m2O);
-      case SpringgenPackage.DATABASE_RELATIONS__O2M:
-        return O2M_EDEFAULT == null ? o2M != null : !O2M_EDEFAULT.equals(o2M);
+      case SpringgenPackage.DATABASE_RELATIONS__MANY_TO_MANY:
+        return MANY_TO_MANY_EDEFAULT == null ? manY_TO_MANY != null : !MANY_TO_MANY_EDEFAULT.equals(manY_TO_MANY);
+      case SpringgenPackage.DATABASE_RELATIONS__MANY_TO_ONE:
+        return MANY_TO_ONE_EDEFAULT == null ? manY_TO_ONE != null : !MANY_TO_ONE_EDEFAULT.equals(manY_TO_ONE);
+      case SpringgenPackage.DATABASE_RELATIONS__ONE_TO_MANY:
+        return ONE_TO_MANY_EDEFAULT == null ? onE_TO_MANY != null : !ONE_TO_MANY_EDEFAULT.equals(onE_TO_MANY);
     }
     return super.eIsSet(featureID);
   }
@@ -283,12 +283,12 @@ public class DatabaseRelationsImpl extends MinimalEObjectImpl.Container implemen
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (M2M: ");
-    result.append(m2M);
-    result.append(", M2O: ");
-    result.append(m2O);
-    result.append(", O2M: ");
-    result.append(o2M);
+    result.append(" (MANY_TO_MANY: ");
+    result.append(manY_TO_MANY);
+    result.append(", MANY_TO_ONE: ");
+    result.append(manY_TO_ONE);
+    result.append(", ONE_TO_MANY: ");
+    result.append(onE_TO_MANY);
     result.append(')');
     return result.toString();
   }

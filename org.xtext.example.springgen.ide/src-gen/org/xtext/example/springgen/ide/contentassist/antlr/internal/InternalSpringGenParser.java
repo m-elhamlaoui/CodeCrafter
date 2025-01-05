@@ -3307,13 +3307,13 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__DatabaseRelations__Alternatives"
-    // InternalSpringGen.g:980:1: rule__DatabaseRelations__Alternatives : ( ( ( rule__DatabaseRelations__M2MAssignment_0 ) ) | ( ( rule__DatabaseRelations__M2OAssignment_1 ) ) | ( ( rule__DatabaseRelations__O2MAssignment_2 ) ) );
+    // InternalSpringGen.g:980:1: rule__DatabaseRelations__Alternatives : ( ( ( rule__DatabaseRelations__MANY_TO_MANYAssignment_0 ) ) | ( ( rule__DatabaseRelations__MANY_TO_ONEAssignment_1 ) ) | ( ( rule__DatabaseRelations__ONE_TO_MANYAssignment_2 ) ) );
     public final void rule__DatabaseRelations__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSpringGen.g:984:1: ( ( ( rule__DatabaseRelations__M2MAssignment_0 ) ) | ( ( rule__DatabaseRelations__M2OAssignment_1 ) ) | ( ( rule__DatabaseRelations__O2MAssignment_2 ) ) )
+            // InternalSpringGen.g:984:1: ( ( ( rule__DatabaseRelations__MANY_TO_MANYAssignment_0 ) ) | ( ( rule__DatabaseRelations__MANY_TO_ONEAssignment_1 ) ) | ( ( rule__DatabaseRelations__ONE_TO_MANYAssignment_2 ) ) )
             int alt7=3;
             switch ( input.LA(1) ) {
             case 71:
@@ -3340,24 +3340,24 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
             switch (alt7) {
                 case 1 :
-                    // InternalSpringGen.g:985:2: ( ( rule__DatabaseRelations__M2MAssignment_0 ) )
+                    // InternalSpringGen.g:985:2: ( ( rule__DatabaseRelations__MANY_TO_MANYAssignment_0 ) )
                     {
-                    // InternalSpringGen.g:985:2: ( ( rule__DatabaseRelations__M2MAssignment_0 ) )
-                    // InternalSpringGen.g:986:3: ( rule__DatabaseRelations__M2MAssignment_0 )
+                    // InternalSpringGen.g:985:2: ( ( rule__DatabaseRelations__MANY_TO_MANYAssignment_0 ) )
+                    // InternalSpringGen.g:986:3: ( rule__DatabaseRelations__MANY_TO_MANYAssignment_0 )
                     {
-                     before(grammarAccess.getDatabaseRelationsAccess().getM2MAssignment_0()); 
-                    // InternalSpringGen.g:987:3: ( rule__DatabaseRelations__M2MAssignment_0 )
-                    // InternalSpringGen.g:987:4: rule__DatabaseRelations__M2MAssignment_0
+                     before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYAssignment_0()); 
+                    // InternalSpringGen.g:987:3: ( rule__DatabaseRelations__MANY_TO_MANYAssignment_0 )
+                    // InternalSpringGen.g:987:4: rule__DatabaseRelations__MANY_TO_MANYAssignment_0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__DatabaseRelations__M2MAssignment_0();
+                    rule__DatabaseRelations__MANY_TO_MANYAssignment_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getDatabaseRelationsAccess().getM2MAssignment_0()); 
+                     after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYAssignment_0()); 
 
                     }
 
@@ -3365,24 +3365,24 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalSpringGen.g:991:2: ( ( rule__DatabaseRelations__M2OAssignment_1 ) )
+                    // InternalSpringGen.g:991:2: ( ( rule__DatabaseRelations__MANY_TO_ONEAssignment_1 ) )
                     {
-                    // InternalSpringGen.g:991:2: ( ( rule__DatabaseRelations__M2OAssignment_1 ) )
-                    // InternalSpringGen.g:992:3: ( rule__DatabaseRelations__M2OAssignment_1 )
+                    // InternalSpringGen.g:991:2: ( ( rule__DatabaseRelations__MANY_TO_ONEAssignment_1 ) )
+                    // InternalSpringGen.g:992:3: ( rule__DatabaseRelations__MANY_TO_ONEAssignment_1 )
                     {
-                     before(grammarAccess.getDatabaseRelationsAccess().getM2OAssignment_1()); 
-                    // InternalSpringGen.g:993:3: ( rule__DatabaseRelations__M2OAssignment_1 )
-                    // InternalSpringGen.g:993:4: rule__DatabaseRelations__M2OAssignment_1
+                     before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEAssignment_1()); 
+                    // InternalSpringGen.g:993:3: ( rule__DatabaseRelations__MANY_TO_ONEAssignment_1 )
+                    // InternalSpringGen.g:993:4: rule__DatabaseRelations__MANY_TO_ONEAssignment_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__DatabaseRelations__M2OAssignment_1();
+                    rule__DatabaseRelations__MANY_TO_ONEAssignment_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getDatabaseRelationsAccess().getM2OAssignment_1()); 
+                     after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEAssignment_1()); 
 
                     }
 
@@ -3390,24 +3390,24 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 3 :
-                    // InternalSpringGen.g:997:2: ( ( rule__DatabaseRelations__O2MAssignment_2 ) )
+                    // InternalSpringGen.g:997:2: ( ( rule__DatabaseRelations__ONE_TO_MANYAssignment_2 ) )
                     {
-                    // InternalSpringGen.g:997:2: ( ( rule__DatabaseRelations__O2MAssignment_2 ) )
-                    // InternalSpringGen.g:998:3: ( rule__DatabaseRelations__O2MAssignment_2 )
+                    // InternalSpringGen.g:997:2: ( ( rule__DatabaseRelations__ONE_TO_MANYAssignment_2 ) )
+                    // InternalSpringGen.g:998:3: ( rule__DatabaseRelations__ONE_TO_MANYAssignment_2 )
                     {
-                     before(grammarAccess.getDatabaseRelationsAccess().getO2MAssignment_2()); 
-                    // InternalSpringGen.g:999:3: ( rule__DatabaseRelations__O2MAssignment_2 )
-                    // InternalSpringGen.g:999:4: rule__DatabaseRelations__O2MAssignment_2
+                     before(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYAssignment_2()); 
+                    // InternalSpringGen.g:999:3: ( rule__DatabaseRelations__ONE_TO_MANYAssignment_2 )
+                    // InternalSpringGen.g:999:4: rule__DatabaseRelations__ONE_TO_MANYAssignment_2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__DatabaseRelations__O2MAssignment_2();
+                    rule__DatabaseRelations__ONE_TO_MANYAssignment_2();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getDatabaseRelationsAccess().getO2MAssignment_2()); 
+                     after(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYAssignment_2()); 
 
                     }
 
@@ -3432,13 +3432,13 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ParamTransfer__Alternatives"
-    // InternalSpringGen.g:1007:1: rule__ParamTransfer__Alternatives : ( ( ( rule__ParamTransfer__RequestBodyAssignment_0 ) ) | ( ( rule__ParamTransfer__RequestParamAssignment_1 ) ) | ( ( rule__ParamTransfer__PathVariableAssignment_2 ) ) );
+    // InternalSpringGen.g:1007:1: rule__ParamTransfer__Alternatives : ( ( ( rule__ParamTransfer__REQUEST_BODYAssignment_0 ) ) | ( ( rule__ParamTransfer__REQUEST_PARAMAssignment_1 ) ) | ( ( rule__ParamTransfer__PATH_VARIABLEAssignment_2 ) ) );
     public final void rule__ParamTransfer__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSpringGen.g:1011:1: ( ( ( rule__ParamTransfer__RequestBodyAssignment_0 ) ) | ( ( rule__ParamTransfer__RequestParamAssignment_1 ) ) | ( ( rule__ParamTransfer__PathVariableAssignment_2 ) ) )
+            // InternalSpringGen.g:1011:1: ( ( ( rule__ParamTransfer__REQUEST_BODYAssignment_0 ) ) | ( ( rule__ParamTransfer__REQUEST_PARAMAssignment_1 ) ) | ( ( rule__ParamTransfer__PATH_VARIABLEAssignment_2 ) ) )
             int alt8=3;
             switch ( input.LA(1) ) {
             case 74:
@@ -3465,24 +3465,24 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
             switch (alt8) {
                 case 1 :
-                    // InternalSpringGen.g:1012:2: ( ( rule__ParamTransfer__RequestBodyAssignment_0 ) )
+                    // InternalSpringGen.g:1012:2: ( ( rule__ParamTransfer__REQUEST_BODYAssignment_0 ) )
                     {
-                    // InternalSpringGen.g:1012:2: ( ( rule__ParamTransfer__RequestBodyAssignment_0 ) )
-                    // InternalSpringGen.g:1013:3: ( rule__ParamTransfer__RequestBodyAssignment_0 )
+                    // InternalSpringGen.g:1012:2: ( ( rule__ParamTransfer__REQUEST_BODYAssignment_0 ) )
+                    // InternalSpringGen.g:1013:3: ( rule__ParamTransfer__REQUEST_BODYAssignment_0 )
                     {
-                     before(grammarAccess.getParamTransferAccess().getRequestBodyAssignment_0()); 
-                    // InternalSpringGen.g:1014:3: ( rule__ParamTransfer__RequestBodyAssignment_0 )
-                    // InternalSpringGen.g:1014:4: rule__ParamTransfer__RequestBodyAssignment_0
+                     before(grammarAccess.getParamTransferAccess().getREQUEST_BODYAssignment_0()); 
+                    // InternalSpringGen.g:1014:3: ( rule__ParamTransfer__REQUEST_BODYAssignment_0 )
+                    // InternalSpringGen.g:1014:4: rule__ParamTransfer__REQUEST_BODYAssignment_0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__ParamTransfer__RequestBodyAssignment_0();
+                    rule__ParamTransfer__REQUEST_BODYAssignment_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getParamTransferAccess().getRequestBodyAssignment_0()); 
+                     after(grammarAccess.getParamTransferAccess().getREQUEST_BODYAssignment_0()); 
 
                     }
 
@@ -3490,24 +3490,24 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalSpringGen.g:1018:2: ( ( rule__ParamTransfer__RequestParamAssignment_1 ) )
+                    // InternalSpringGen.g:1018:2: ( ( rule__ParamTransfer__REQUEST_PARAMAssignment_1 ) )
                     {
-                    // InternalSpringGen.g:1018:2: ( ( rule__ParamTransfer__RequestParamAssignment_1 ) )
-                    // InternalSpringGen.g:1019:3: ( rule__ParamTransfer__RequestParamAssignment_1 )
+                    // InternalSpringGen.g:1018:2: ( ( rule__ParamTransfer__REQUEST_PARAMAssignment_1 ) )
+                    // InternalSpringGen.g:1019:3: ( rule__ParamTransfer__REQUEST_PARAMAssignment_1 )
                     {
-                     before(grammarAccess.getParamTransferAccess().getRequestParamAssignment_1()); 
-                    // InternalSpringGen.g:1020:3: ( rule__ParamTransfer__RequestParamAssignment_1 )
-                    // InternalSpringGen.g:1020:4: rule__ParamTransfer__RequestParamAssignment_1
+                     before(grammarAccess.getParamTransferAccess().getREQUEST_PARAMAssignment_1()); 
+                    // InternalSpringGen.g:1020:3: ( rule__ParamTransfer__REQUEST_PARAMAssignment_1 )
+                    // InternalSpringGen.g:1020:4: rule__ParamTransfer__REQUEST_PARAMAssignment_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__ParamTransfer__RequestParamAssignment_1();
+                    rule__ParamTransfer__REQUEST_PARAMAssignment_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getParamTransferAccess().getRequestParamAssignment_1()); 
+                     after(grammarAccess.getParamTransferAccess().getREQUEST_PARAMAssignment_1()); 
 
                     }
 
@@ -3515,24 +3515,24 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 3 :
-                    // InternalSpringGen.g:1024:2: ( ( rule__ParamTransfer__PathVariableAssignment_2 ) )
+                    // InternalSpringGen.g:1024:2: ( ( rule__ParamTransfer__PATH_VARIABLEAssignment_2 ) )
                     {
-                    // InternalSpringGen.g:1024:2: ( ( rule__ParamTransfer__PathVariableAssignment_2 ) )
-                    // InternalSpringGen.g:1025:3: ( rule__ParamTransfer__PathVariableAssignment_2 )
+                    // InternalSpringGen.g:1024:2: ( ( rule__ParamTransfer__PATH_VARIABLEAssignment_2 ) )
+                    // InternalSpringGen.g:1025:3: ( rule__ParamTransfer__PATH_VARIABLEAssignment_2 )
                     {
-                     before(grammarAccess.getParamTransferAccess().getPathVariableAssignment_2()); 
-                    // InternalSpringGen.g:1026:3: ( rule__ParamTransfer__PathVariableAssignment_2 )
-                    // InternalSpringGen.g:1026:4: rule__ParamTransfer__PathVariableAssignment_2
+                     before(grammarAccess.getParamTransferAccess().getPATH_VARIABLEAssignment_2()); 
+                    // InternalSpringGen.g:1026:3: ( rule__ParamTransfer__PATH_VARIABLEAssignment_2 )
+                    // InternalSpringGen.g:1026:4: rule__ParamTransfer__PATH_VARIABLEAssignment_2
                     {
                     pushFollow(FOLLOW_2);
-                    rule__ParamTransfer__PathVariableAssignment_2();
+                    rule__ParamTransfer__PATH_VARIABLEAssignment_2();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getParamTransferAccess().getPathVariableAssignment_2()); 
+                     after(grammarAccess.getParamTransferAccess().getPATH_VARIABLEAssignment_2()); 
 
                     }
 
@@ -12899,20 +12899,20 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Repository__Group__2__Impl"
-    // InternalSpringGen.g:4124:1: rule__Repository__Group__2__Impl : ( ( rule__Repository__FindByMethodsAssignment_2 )* ) ;
+    // InternalSpringGen.g:4124:1: rule__Repository__Group__2__Impl : ( ( rule__Repository__FindByAssignment_2 )* ) ;
     public final void rule__Repository__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSpringGen.g:4128:1: ( ( ( rule__Repository__FindByMethodsAssignment_2 )* ) )
-            // InternalSpringGen.g:4129:1: ( ( rule__Repository__FindByMethodsAssignment_2 )* )
+            // InternalSpringGen.g:4128:1: ( ( ( rule__Repository__FindByAssignment_2 )* ) )
+            // InternalSpringGen.g:4129:1: ( ( rule__Repository__FindByAssignment_2 )* )
             {
-            // InternalSpringGen.g:4129:1: ( ( rule__Repository__FindByMethodsAssignment_2 )* )
-            // InternalSpringGen.g:4130:2: ( rule__Repository__FindByMethodsAssignment_2 )*
+            // InternalSpringGen.g:4129:1: ( ( rule__Repository__FindByAssignment_2 )* )
+            // InternalSpringGen.g:4130:2: ( rule__Repository__FindByAssignment_2 )*
             {
-             before(grammarAccess.getRepositoryAccess().getFindByMethodsAssignment_2()); 
-            // InternalSpringGen.g:4131:2: ( rule__Repository__FindByMethodsAssignment_2 )*
+             before(grammarAccess.getRepositoryAccess().getFindByAssignment_2()); 
+            // InternalSpringGen.g:4131:2: ( rule__Repository__FindByAssignment_2 )*
             loop32:
             do {
                 int alt32=2;
@@ -12925,10 +12925,10 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
                 switch (alt32) {
             	case 1 :
-            	    // InternalSpringGen.g:4131:3: rule__Repository__FindByMethodsAssignment_2
+            	    // InternalSpringGen.g:4131:3: rule__Repository__FindByAssignment_2
             	    {
             	    pushFollow(FOLLOW_46);
-            	    rule__Repository__FindByMethodsAssignment_2();
+            	    rule__Repository__FindByAssignment_2();
 
             	    state._fsp--;
 
@@ -12941,7 +12941,7 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
                 }
             } while (true);
 
-             after(grammarAccess.getRepositoryAccess().getFindByMethodsAssignment_2()); 
+             after(grammarAccess.getRepositoryAccess().getFindByAssignment_2()); 
 
             }
 
@@ -13002,20 +13002,20 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Repository__Group__3__Impl"
-    // InternalSpringGen.g:4151:1: rule__Repository__Group__3__Impl : ( ( rule__Repository__DeleteByMethodsAssignment_3 )* ) ;
+    // InternalSpringGen.g:4151:1: rule__Repository__Group__3__Impl : ( ( rule__Repository__DeleteByAssignment_3 )* ) ;
     public final void rule__Repository__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSpringGen.g:4155:1: ( ( ( rule__Repository__DeleteByMethodsAssignment_3 )* ) )
-            // InternalSpringGen.g:4156:1: ( ( rule__Repository__DeleteByMethodsAssignment_3 )* )
+            // InternalSpringGen.g:4155:1: ( ( ( rule__Repository__DeleteByAssignment_3 )* ) )
+            // InternalSpringGen.g:4156:1: ( ( rule__Repository__DeleteByAssignment_3 )* )
             {
-            // InternalSpringGen.g:4156:1: ( ( rule__Repository__DeleteByMethodsAssignment_3 )* )
-            // InternalSpringGen.g:4157:2: ( rule__Repository__DeleteByMethodsAssignment_3 )*
+            // InternalSpringGen.g:4156:1: ( ( rule__Repository__DeleteByAssignment_3 )* )
+            // InternalSpringGen.g:4157:2: ( rule__Repository__DeleteByAssignment_3 )*
             {
-             before(grammarAccess.getRepositoryAccess().getDeleteByMethodsAssignment_3()); 
-            // InternalSpringGen.g:4158:2: ( rule__Repository__DeleteByMethodsAssignment_3 )*
+             before(grammarAccess.getRepositoryAccess().getDeleteByAssignment_3()); 
+            // InternalSpringGen.g:4158:2: ( rule__Repository__DeleteByAssignment_3 )*
             loop33:
             do {
                 int alt33=2;
@@ -13028,10 +13028,10 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
                 switch (alt33) {
             	case 1 :
-            	    // InternalSpringGen.g:4158:3: rule__Repository__DeleteByMethodsAssignment_3
+            	    // InternalSpringGen.g:4158:3: rule__Repository__DeleteByAssignment_3
             	    {
             	    pushFollow(FOLLOW_47);
-            	    rule__Repository__DeleteByMethodsAssignment_3();
+            	    rule__Repository__DeleteByAssignment_3();
 
             	    state._fsp--;
 
@@ -13044,7 +13044,7 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
                 }
             } while (true);
 
-             after(grammarAccess.getRepositoryAccess().getDeleteByMethodsAssignment_3()); 
+             after(grammarAccess.getRepositoryAccess().getDeleteByAssignment_3()); 
 
             }
 
@@ -13105,20 +13105,20 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Repository__Group__4__Impl"
-    // InternalSpringGen.g:4178:1: rule__Repository__Group__4__Impl : ( ( rule__Repository__CustomQueryMethodsAssignment_4 )* ) ;
+    // InternalSpringGen.g:4178:1: rule__Repository__Group__4__Impl : ( ( rule__Repository__CustomQueryMethodAssignment_4 )* ) ;
     public final void rule__Repository__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSpringGen.g:4182:1: ( ( ( rule__Repository__CustomQueryMethodsAssignment_4 )* ) )
-            // InternalSpringGen.g:4183:1: ( ( rule__Repository__CustomQueryMethodsAssignment_4 )* )
+            // InternalSpringGen.g:4182:1: ( ( ( rule__Repository__CustomQueryMethodAssignment_4 )* ) )
+            // InternalSpringGen.g:4183:1: ( ( rule__Repository__CustomQueryMethodAssignment_4 )* )
             {
-            // InternalSpringGen.g:4183:1: ( ( rule__Repository__CustomQueryMethodsAssignment_4 )* )
-            // InternalSpringGen.g:4184:2: ( rule__Repository__CustomQueryMethodsAssignment_4 )*
+            // InternalSpringGen.g:4183:1: ( ( rule__Repository__CustomQueryMethodAssignment_4 )* )
+            // InternalSpringGen.g:4184:2: ( rule__Repository__CustomQueryMethodAssignment_4 )*
             {
-             before(grammarAccess.getRepositoryAccess().getCustomQueryMethodsAssignment_4()); 
-            // InternalSpringGen.g:4185:2: ( rule__Repository__CustomQueryMethodsAssignment_4 )*
+             before(grammarAccess.getRepositoryAccess().getCustomQueryMethodAssignment_4()); 
+            // InternalSpringGen.g:4185:2: ( rule__Repository__CustomQueryMethodAssignment_4 )*
             loop34:
             do {
                 int alt34=2;
@@ -13131,10 +13131,10 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
                 switch (alt34) {
             	case 1 :
-            	    // InternalSpringGen.g:4185:3: rule__Repository__CustomQueryMethodsAssignment_4
+            	    // InternalSpringGen.g:4185:3: rule__Repository__CustomQueryMethodAssignment_4
             	    {
             	    pushFollow(FOLLOW_48);
-            	    rule__Repository__CustomQueryMethodsAssignment_4();
+            	    rule__Repository__CustomQueryMethodAssignment_4();
 
             	    state._fsp--;
 
@@ -13147,7 +13147,7 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
                 }
             } while (true);
 
-             after(grammarAccess.getRepositoryAccess().getCustomQueryMethodsAssignment_4()); 
+             after(grammarAccess.getRepositoryAccess().getCustomQueryMethodAssignment_4()); 
 
             }
 
@@ -13583,31 +13583,31 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__FindByMethod__Group__4__Impl"
-    // InternalSpringGen.g:4339:1: rule__FindByMethod__Group__4__Impl : ( ( rule__FindByMethod__PtypeAssignment_4 ) ) ;
+    // InternalSpringGen.g:4339:1: rule__FindByMethod__Group__4__Impl : ( ( rule__FindByMethod__PropertyTypeAssignment_4 ) ) ;
     public final void rule__FindByMethod__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSpringGen.g:4343:1: ( ( ( rule__FindByMethod__PtypeAssignment_4 ) ) )
-            // InternalSpringGen.g:4344:1: ( ( rule__FindByMethod__PtypeAssignment_4 ) )
+            // InternalSpringGen.g:4343:1: ( ( ( rule__FindByMethod__PropertyTypeAssignment_4 ) ) )
+            // InternalSpringGen.g:4344:1: ( ( rule__FindByMethod__PropertyTypeAssignment_4 ) )
             {
-            // InternalSpringGen.g:4344:1: ( ( rule__FindByMethod__PtypeAssignment_4 ) )
-            // InternalSpringGen.g:4345:2: ( rule__FindByMethod__PtypeAssignment_4 )
+            // InternalSpringGen.g:4344:1: ( ( rule__FindByMethod__PropertyTypeAssignment_4 ) )
+            // InternalSpringGen.g:4345:2: ( rule__FindByMethod__PropertyTypeAssignment_4 )
             {
-             before(grammarAccess.getFindByMethodAccess().getPtypeAssignment_4()); 
-            // InternalSpringGen.g:4346:2: ( rule__FindByMethod__PtypeAssignment_4 )
-            // InternalSpringGen.g:4346:3: rule__FindByMethod__PtypeAssignment_4
+             before(grammarAccess.getFindByMethodAccess().getPropertyTypeAssignment_4()); 
+            // InternalSpringGen.g:4346:2: ( rule__FindByMethod__PropertyTypeAssignment_4 )
+            // InternalSpringGen.g:4346:3: rule__FindByMethod__PropertyTypeAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__FindByMethod__PtypeAssignment_4();
+            rule__FindByMethod__PropertyTypeAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getFindByMethodAccess().getPtypeAssignment_4()); 
+             after(grammarAccess.getFindByMethodAccess().getPropertyTypeAssignment_4()); 
 
             }
 
@@ -13973,31 +13973,31 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__DeleteByMethod__Group__4__Impl"
-    // InternalSpringGen.g:4474:1: rule__DeleteByMethod__Group__4__Impl : ( ( rule__DeleteByMethod__PtypeAssignment_4 ) ) ;
+    // InternalSpringGen.g:4474:1: rule__DeleteByMethod__Group__4__Impl : ( ( rule__DeleteByMethod__PropertyTypeAssignment_4 ) ) ;
     public final void rule__DeleteByMethod__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSpringGen.g:4478:1: ( ( ( rule__DeleteByMethod__PtypeAssignment_4 ) ) )
-            // InternalSpringGen.g:4479:1: ( ( rule__DeleteByMethod__PtypeAssignment_4 ) )
+            // InternalSpringGen.g:4478:1: ( ( ( rule__DeleteByMethod__PropertyTypeAssignment_4 ) ) )
+            // InternalSpringGen.g:4479:1: ( ( rule__DeleteByMethod__PropertyTypeAssignment_4 ) )
             {
-            // InternalSpringGen.g:4479:1: ( ( rule__DeleteByMethod__PtypeAssignment_4 ) )
-            // InternalSpringGen.g:4480:2: ( rule__DeleteByMethod__PtypeAssignment_4 )
+            // InternalSpringGen.g:4479:1: ( ( rule__DeleteByMethod__PropertyTypeAssignment_4 ) )
+            // InternalSpringGen.g:4480:2: ( rule__DeleteByMethod__PropertyTypeAssignment_4 )
             {
-             before(grammarAccess.getDeleteByMethodAccess().getPtypeAssignment_4()); 
-            // InternalSpringGen.g:4481:2: ( rule__DeleteByMethod__PtypeAssignment_4 )
-            // InternalSpringGen.g:4481:3: rule__DeleteByMethod__PtypeAssignment_4
+             before(grammarAccess.getDeleteByMethodAccess().getPropertyTypeAssignment_4()); 
+            // InternalSpringGen.g:4481:2: ( rule__DeleteByMethod__PropertyTypeAssignment_4 )
+            // InternalSpringGen.g:4481:3: rule__DeleteByMethod__PropertyTypeAssignment_4
             {
             pushFollow(FOLLOW_2);
-            rule__DeleteByMethod__PtypeAssignment_4();
+            rule__DeleteByMethod__PropertyTypeAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDeleteByMethodAccess().getPtypeAssignment_4()); 
+             after(grammarAccess.getDeleteByMethodAccess().getPropertyTypeAssignment_4()); 
 
             }
 
@@ -17105,9 +17105,9 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__ActionParameter__DefaultValueAssignment_3_1"
 
 
-    // $ANTLR start "rule__Repository__FindByMethodsAssignment_2"
-    // InternalSpringGen.g:5628:1: rule__Repository__FindByMethodsAssignment_2 : ( ruleFindByMethod ) ;
-    public final void rule__Repository__FindByMethodsAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Repository__FindByAssignment_2"
+    // InternalSpringGen.g:5628:1: rule__Repository__FindByAssignment_2 : ( ruleFindByMethod ) ;
+    public final void rule__Repository__FindByAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17118,13 +17118,13 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:5633:2: ( ruleFindByMethod )
             // InternalSpringGen.g:5634:3: ruleFindByMethod
             {
-             before(grammarAccess.getRepositoryAccess().getFindByMethodsFindByMethodParserRuleCall_2_0()); 
+             before(grammarAccess.getRepositoryAccess().getFindByFindByMethodParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleFindByMethod();
 
             state._fsp--;
 
-             after(grammarAccess.getRepositoryAccess().getFindByMethodsFindByMethodParserRuleCall_2_0()); 
+             after(grammarAccess.getRepositoryAccess().getFindByFindByMethodParserRuleCall_2_0()); 
 
             }
 
@@ -17143,12 +17143,12 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__Repository__FindByMethodsAssignment_2"
+    // $ANTLR end "rule__Repository__FindByAssignment_2"
 
 
-    // $ANTLR start "rule__Repository__DeleteByMethodsAssignment_3"
-    // InternalSpringGen.g:5643:1: rule__Repository__DeleteByMethodsAssignment_3 : ( ruleDeleteByMethod ) ;
-    public final void rule__Repository__DeleteByMethodsAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Repository__DeleteByAssignment_3"
+    // InternalSpringGen.g:5643:1: rule__Repository__DeleteByAssignment_3 : ( ruleDeleteByMethod ) ;
+    public final void rule__Repository__DeleteByAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17159,13 +17159,13 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:5648:2: ( ruleDeleteByMethod )
             // InternalSpringGen.g:5649:3: ruleDeleteByMethod
             {
-             before(grammarAccess.getRepositoryAccess().getDeleteByMethodsDeleteByMethodParserRuleCall_3_0()); 
+             before(grammarAccess.getRepositoryAccess().getDeleteByDeleteByMethodParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
             ruleDeleteByMethod();
 
             state._fsp--;
 
-             after(grammarAccess.getRepositoryAccess().getDeleteByMethodsDeleteByMethodParserRuleCall_3_0()); 
+             after(grammarAccess.getRepositoryAccess().getDeleteByDeleteByMethodParserRuleCall_3_0()); 
 
             }
 
@@ -17184,12 +17184,12 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__Repository__DeleteByMethodsAssignment_3"
+    // $ANTLR end "rule__Repository__DeleteByAssignment_3"
 
 
-    // $ANTLR start "rule__Repository__CustomQueryMethodsAssignment_4"
-    // InternalSpringGen.g:5658:1: rule__Repository__CustomQueryMethodsAssignment_4 : ( ruleCustomQueryMethod ) ;
-    public final void rule__Repository__CustomQueryMethodsAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Repository__CustomQueryMethodAssignment_4"
+    // InternalSpringGen.g:5658:1: rule__Repository__CustomQueryMethodAssignment_4 : ( ruleCustomQueryMethod ) ;
+    public final void rule__Repository__CustomQueryMethodAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17200,13 +17200,13 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:5663:2: ( ruleCustomQueryMethod )
             // InternalSpringGen.g:5664:3: ruleCustomQueryMethod
             {
-             before(grammarAccess.getRepositoryAccess().getCustomQueryMethodsCustomQueryMethodParserRuleCall_4_0()); 
+             before(grammarAccess.getRepositoryAccess().getCustomQueryMethodCustomQueryMethodParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleCustomQueryMethod();
 
             state._fsp--;
 
-             after(grammarAccess.getRepositoryAccess().getCustomQueryMethodsCustomQueryMethodParserRuleCall_4_0()); 
+             after(grammarAccess.getRepositoryAccess().getCustomQueryMethodCustomQueryMethodParserRuleCall_4_0()); 
 
             }
 
@@ -17225,7 +17225,7 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__Repository__CustomQueryMethodsAssignment_4"
+    // $ANTLR end "rule__Repository__CustomQueryMethodAssignment_4"
 
 
     // $ANTLR start "rule__FindByMethod__PropertyAssignment_2"
@@ -17265,9 +17265,9 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__FindByMethod__PropertyAssignment_2"
 
 
-    // $ANTLR start "rule__FindByMethod__PtypeAssignment_4"
-    // InternalSpringGen.g:5688:1: rule__FindByMethod__PtypeAssignment_4 : ( ruleValueTypes ) ;
-    public final void rule__FindByMethod__PtypeAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__FindByMethod__PropertyTypeAssignment_4"
+    // InternalSpringGen.g:5688:1: rule__FindByMethod__PropertyTypeAssignment_4 : ( ruleValueTypes ) ;
+    public final void rule__FindByMethod__PropertyTypeAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17278,13 +17278,13 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:5693:2: ( ruleValueTypes )
             // InternalSpringGen.g:5694:3: ruleValueTypes
             {
-             before(grammarAccess.getFindByMethodAccess().getPtypeValueTypesParserRuleCall_4_0()); 
+             before(grammarAccess.getFindByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleValueTypes();
 
             state._fsp--;
 
-             after(grammarAccess.getFindByMethodAccess().getPtypeValueTypesParserRuleCall_4_0()); 
+             after(grammarAccess.getFindByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0()); 
 
             }
 
@@ -17303,7 +17303,7 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__FindByMethod__PtypeAssignment_4"
+    // $ANTLR end "rule__FindByMethod__PropertyTypeAssignment_4"
 
 
     // $ANTLR start "rule__DeleteByMethod__PropertyAssignment_2"
@@ -17343,9 +17343,9 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__DeleteByMethod__PropertyAssignment_2"
 
 
-    // $ANTLR start "rule__DeleteByMethod__PtypeAssignment_4"
-    // InternalSpringGen.g:5718:1: rule__DeleteByMethod__PtypeAssignment_4 : ( ruleValueTypes ) ;
-    public final void rule__DeleteByMethod__PtypeAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__DeleteByMethod__PropertyTypeAssignment_4"
+    // InternalSpringGen.g:5718:1: rule__DeleteByMethod__PropertyTypeAssignment_4 : ( ruleValueTypes ) ;
+    public final void rule__DeleteByMethod__PropertyTypeAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -17356,13 +17356,13 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:5723:2: ( ruleValueTypes )
             // InternalSpringGen.g:5724:3: ruleValueTypes
             {
-             before(grammarAccess.getDeleteByMethodAccess().getPtypeValueTypesParserRuleCall_4_0()); 
+             before(grammarAccess.getDeleteByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleValueTypes();
 
             state._fsp--;
 
-             after(grammarAccess.getDeleteByMethodAccess().getPtypeValueTypesParserRuleCall_4_0()); 
+             after(grammarAccess.getDeleteByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0()); 
 
             }
 
@@ -17381,7 +17381,7 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__DeleteByMethod__PtypeAssignment_4"
+    // $ANTLR end "rule__DeleteByMethod__PropertyTypeAssignment_4"
 
 
     // $ANTLR start "rule__CustomQueryMethod__QueryAssignment_2"
@@ -18383,9 +18383,9 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__RDBMS__ORACLEAssignment_4"
 
 
-    // $ANTLR start "rule__DatabaseRelations__M2MAssignment_0"
-    // InternalSpringGen.g:6146:1: rule__DatabaseRelations__M2MAssignment_0 : ( ( 'ManyToMany' ) ) ;
-    public final void rule__DatabaseRelations__M2MAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__DatabaseRelations__MANY_TO_MANYAssignment_0"
+    // InternalSpringGen.g:6146:1: rule__DatabaseRelations__MANY_TO_MANYAssignment_0 : ( ( 'ManyToMany' ) ) ;
+    public final void rule__DatabaseRelations__MANY_TO_MANYAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18396,17 +18396,17 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:6151:2: ( ( 'ManyToMany' ) )
             // InternalSpringGen.g:6152:3: ( 'ManyToMany' )
             {
-             before(grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0()); 
+             before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0()); 
             // InternalSpringGen.g:6153:3: ( 'ManyToMany' )
             // InternalSpringGen.g:6154:4: 'ManyToMany'
             {
-             before(grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0()); 
+             before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0()); 
             match(input,71,FOLLOW_2); 
-             after(grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0()); 
+             after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0()); 
+             after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0()); 
 
             }
 
@@ -18425,12 +18425,12 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__DatabaseRelations__M2MAssignment_0"
+    // $ANTLR end "rule__DatabaseRelations__MANY_TO_MANYAssignment_0"
 
 
-    // $ANTLR start "rule__DatabaseRelations__M2OAssignment_1"
-    // InternalSpringGen.g:6165:1: rule__DatabaseRelations__M2OAssignment_1 : ( ( 'ManyToOne' ) ) ;
-    public final void rule__DatabaseRelations__M2OAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__DatabaseRelations__MANY_TO_ONEAssignment_1"
+    // InternalSpringGen.g:6165:1: rule__DatabaseRelations__MANY_TO_ONEAssignment_1 : ( ( 'ManyToOne' ) ) ;
+    public final void rule__DatabaseRelations__MANY_TO_ONEAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18441,17 +18441,17 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:6170:2: ( ( 'ManyToOne' ) )
             // InternalSpringGen.g:6171:3: ( 'ManyToOne' )
             {
-             before(grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0()); 
+             before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0()); 
             // InternalSpringGen.g:6172:3: ( 'ManyToOne' )
             // InternalSpringGen.g:6173:4: 'ManyToOne'
             {
-             before(grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0()); 
+             before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0()); 
             match(input,72,FOLLOW_2); 
-             after(grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0()); 
+             after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0()); 
+             after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0()); 
 
             }
 
@@ -18470,12 +18470,12 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__DatabaseRelations__M2OAssignment_1"
+    // $ANTLR end "rule__DatabaseRelations__MANY_TO_ONEAssignment_1"
 
 
-    // $ANTLR start "rule__DatabaseRelations__O2MAssignment_2"
-    // InternalSpringGen.g:6184:1: rule__DatabaseRelations__O2MAssignment_2 : ( ( 'OneToMany' ) ) ;
-    public final void rule__DatabaseRelations__O2MAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__DatabaseRelations__ONE_TO_MANYAssignment_2"
+    // InternalSpringGen.g:6184:1: rule__DatabaseRelations__ONE_TO_MANYAssignment_2 : ( ( 'OneToMany' ) ) ;
+    public final void rule__DatabaseRelations__ONE_TO_MANYAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18486,17 +18486,17 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:6189:2: ( ( 'OneToMany' ) )
             // InternalSpringGen.g:6190:3: ( 'OneToMany' )
             {
-             before(grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0()); 
+             before(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0()); 
             // InternalSpringGen.g:6191:3: ( 'OneToMany' )
             // InternalSpringGen.g:6192:4: 'OneToMany'
             {
-             before(grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0()); 
+             before(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0()); 
             match(input,73,FOLLOW_2); 
-             after(grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0()); 
+             after(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0()); 
 
             }
 
-             after(grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0()); 
+             after(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0()); 
 
             }
 
@@ -18515,12 +18515,12 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__DatabaseRelations__O2MAssignment_2"
+    // $ANTLR end "rule__DatabaseRelations__ONE_TO_MANYAssignment_2"
 
 
-    // $ANTLR start "rule__ParamTransfer__RequestBodyAssignment_0"
-    // InternalSpringGen.g:6203:1: rule__ParamTransfer__RequestBodyAssignment_0 : ( ( 'RequestBody' ) ) ;
-    public final void rule__ParamTransfer__RequestBodyAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__ParamTransfer__REQUEST_BODYAssignment_0"
+    // InternalSpringGen.g:6203:1: rule__ParamTransfer__REQUEST_BODYAssignment_0 : ( ( 'RequestBody' ) ) ;
+    public final void rule__ParamTransfer__REQUEST_BODYAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18531,17 +18531,17 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:6208:2: ( ( 'RequestBody' ) )
             // InternalSpringGen.g:6209:3: ( 'RequestBody' )
             {
-             before(grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0()); 
+             before(grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0()); 
             // InternalSpringGen.g:6210:3: ( 'RequestBody' )
             // InternalSpringGen.g:6211:4: 'RequestBody'
             {
-             before(grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0()); 
+             before(grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0()); 
             match(input,74,FOLLOW_2); 
-             after(grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0()); 
+             after(grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0()); 
+             after(grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0()); 
 
             }
 
@@ -18560,12 +18560,12 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ParamTransfer__RequestBodyAssignment_0"
+    // $ANTLR end "rule__ParamTransfer__REQUEST_BODYAssignment_0"
 
 
-    // $ANTLR start "rule__ParamTransfer__RequestParamAssignment_1"
-    // InternalSpringGen.g:6222:1: rule__ParamTransfer__RequestParamAssignment_1 : ( ( 'RequestParam' ) ) ;
-    public final void rule__ParamTransfer__RequestParamAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__ParamTransfer__REQUEST_PARAMAssignment_1"
+    // InternalSpringGen.g:6222:1: rule__ParamTransfer__REQUEST_PARAMAssignment_1 : ( ( 'RequestParam' ) ) ;
+    public final void rule__ParamTransfer__REQUEST_PARAMAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18576,17 +18576,17 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:6227:2: ( ( 'RequestParam' ) )
             // InternalSpringGen.g:6228:3: ( 'RequestParam' )
             {
-             before(grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0()); 
+             before(grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0()); 
             // InternalSpringGen.g:6229:3: ( 'RequestParam' )
             // InternalSpringGen.g:6230:4: 'RequestParam'
             {
-             before(grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0()); 
+             before(grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0()); 
             match(input,75,FOLLOW_2); 
-             after(grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0()); 
+             after(grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0()); 
+             after(grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0()); 
 
             }
 
@@ -18605,12 +18605,12 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ParamTransfer__RequestParamAssignment_1"
+    // $ANTLR end "rule__ParamTransfer__REQUEST_PARAMAssignment_1"
 
 
-    // $ANTLR start "rule__ParamTransfer__PathVariableAssignment_2"
-    // InternalSpringGen.g:6241:1: rule__ParamTransfer__PathVariableAssignment_2 : ( ( 'PathVariable' ) ) ;
-    public final void rule__ParamTransfer__PathVariableAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__ParamTransfer__PATH_VARIABLEAssignment_2"
+    // InternalSpringGen.g:6241:1: rule__ParamTransfer__PATH_VARIABLEAssignment_2 : ( ( 'PathVariable' ) ) ;
+    public final void rule__ParamTransfer__PATH_VARIABLEAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18621,17 +18621,17 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
             // InternalSpringGen.g:6246:2: ( ( 'PathVariable' ) )
             // InternalSpringGen.g:6247:3: ( 'PathVariable' )
             {
-             before(grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0()); 
+             before(grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0()); 
             // InternalSpringGen.g:6248:3: ( 'PathVariable' )
             // InternalSpringGen.g:6249:4: 'PathVariable'
             {
-             before(grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0()); 
+             before(grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0()); 
             match(input,76,FOLLOW_2); 
-             after(grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0()); 
+             after(grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0()); 
 
             }
 
-             after(grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0()); 
+             after(grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0()); 
 
             }
 
@@ -18650,7 +18650,7 @@ public class InternalSpringGenParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__ParamTransfer__PathVariableAssignment_2"
+    // $ANTLR end "rule__ParamTransfer__PATH_VARIABLEAssignment_2"
 
     // Delegated rules
 

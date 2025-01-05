@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.springgen.springgen.FindByMethod#getProperty <em>Property</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.FindByMethod#getPtype <em>Ptype</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.FindByMethod#getPropertyType <em>Property Type</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.springgen.springgen.SpringgenPackage#getFindByMethod()
@@ -47,25 +47,25 @@ public interface FindByMethod extends EObject
   void setProperty(String value);
 
   /**
-   * Returns the value of the '<em><b>Ptype</b></em>' containment reference.
+   * Returns the value of the '<em><b>Property Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ptype</em>' containment reference.
-   * @see #setPtype(ValueTypes)
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getFindByMethod_Ptype()
+   * @return the value of the '<em>Property Type</em>' containment reference.
+   * @see #setPropertyType(ValueTypes)
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getFindByMethod_PropertyType()
    * @model containment="true"
    * @generated
    */
-  ValueTypes getPtype();
+  ValueTypes getPropertyType();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.springgen.springgen.FindByMethod#getPtype <em>Ptype</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.springgen.springgen.FindByMethod#getPropertyType <em>Property Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ptype</em>' containment reference.
-   * @see #getPtype()
+   * @param value the new value of the '<em>Property Type</em>' containment reference.
+   * @see #getPropertyType()
    * @generated
    */
-  void setPtype(ValueTypes value);
+  void setPropertyType(ValueTypes value);
 
 } // FindByMethod

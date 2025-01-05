@@ -29,9 +29,9 @@ import org.xtext.example.springgen.springgen.SpringgenPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.RepositoryImpl#getFindByMethods <em>Find By Methods</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.RepositoryImpl#getDeleteByMethods <em>Delete By Methods</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.RepositoryImpl#getCustomQueryMethods <em>Custom Query Methods</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.RepositoryImpl#getFindBy <em>Find By</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.RepositoryImpl#getDeleteBy <em>Delete By</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.RepositoryImpl#getCustomQueryMethod <em>Custom Query Method</em>}</li>
  * </ul>
  *
  * @generated
@@ -39,34 +39,34 @@ import org.xtext.example.springgen.springgen.SpringgenPackage;
 public class RepositoryImpl extends ProjectElementImpl implements Repository
 {
   /**
-   * The cached value of the '{@link #getFindByMethods() <em>Find By Methods</em>}' containment reference list.
+   * The cached value of the '{@link #getFindBy() <em>Find By</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFindByMethods()
+   * @see #getFindBy()
    * @generated
    * @ordered
    */
-  protected EList<FindByMethod> findByMethods;
+  protected EList<FindByMethod> findBy;
 
   /**
-   * The cached value of the '{@link #getDeleteByMethods() <em>Delete By Methods</em>}' containment reference list.
+   * The cached value of the '{@link #getDeleteBy() <em>Delete By</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDeleteByMethods()
+   * @see #getDeleteBy()
    * @generated
    * @ordered
    */
-  protected EList<DeleteByMethod> deleteByMethods;
+  protected EList<DeleteByMethod> deleteBy;
 
   /**
-   * The cached value of the '{@link #getCustomQueryMethods() <em>Custom Query Methods</em>}' containment reference list.
+   * The cached value of the '{@link #getCustomQueryMethod() <em>Custom Query Method</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCustomQueryMethods()
+   * @see #getCustomQueryMethod()
    * @generated
    * @ordered
    */
-  protected EList<CustomQueryMethod> customQueryMethods;
+  protected EList<CustomQueryMethod> customQueryMethod;
 
   /**
    * <!-- begin-user-doc -->
@@ -95,13 +95,13 @@ public class RepositoryImpl extends ProjectElementImpl implements Repository
    * @generated
    */
   @Override
-  public EList<FindByMethod> getFindByMethods()
+  public EList<FindByMethod> getFindBy()
   {
-    if (findByMethods == null)
+    if (findBy == null)
     {
-      findByMethods = new EObjectContainmentEList<FindByMethod>(FindByMethod.class, this, SpringgenPackage.REPOSITORY__FIND_BY_METHODS);
+      findBy = new EObjectContainmentEList<FindByMethod>(FindByMethod.class, this, SpringgenPackage.REPOSITORY__FIND_BY);
     }
-    return findByMethods;
+    return findBy;
   }
 
   /**
@@ -110,13 +110,13 @@ public class RepositoryImpl extends ProjectElementImpl implements Repository
    * @generated
    */
   @Override
-  public EList<DeleteByMethod> getDeleteByMethods()
+  public EList<DeleteByMethod> getDeleteBy()
   {
-    if (deleteByMethods == null)
+    if (deleteBy == null)
     {
-      deleteByMethods = new EObjectContainmentEList<DeleteByMethod>(DeleteByMethod.class, this, SpringgenPackage.REPOSITORY__DELETE_BY_METHODS);
+      deleteBy = new EObjectContainmentEList<DeleteByMethod>(DeleteByMethod.class, this, SpringgenPackage.REPOSITORY__DELETE_BY);
     }
-    return deleteByMethods;
+    return deleteBy;
   }
 
   /**
@@ -125,13 +125,13 @@ public class RepositoryImpl extends ProjectElementImpl implements Repository
    * @generated
    */
   @Override
-  public EList<CustomQueryMethod> getCustomQueryMethods()
+  public EList<CustomQueryMethod> getCustomQueryMethod()
   {
-    if (customQueryMethods == null)
+    if (customQueryMethod == null)
     {
-      customQueryMethods = new EObjectContainmentEList<CustomQueryMethod>(CustomQueryMethod.class, this, SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHODS);
+      customQueryMethod = new EObjectContainmentEList<CustomQueryMethod>(CustomQueryMethod.class, this, SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHOD);
     }
-    return customQueryMethods;
+    return customQueryMethod;
   }
 
   /**
@@ -144,12 +144,12 @@ public class RepositoryImpl extends ProjectElementImpl implements Repository
   {
     switch (featureID)
     {
-      case SpringgenPackage.REPOSITORY__FIND_BY_METHODS:
-        return ((InternalEList<?>)getFindByMethods()).basicRemove(otherEnd, msgs);
-      case SpringgenPackage.REPOSITORY__DELETE_BY_METHODS:
-        return ((InternalEList<?>)getDeleteByMethods()).basicRemove(otherEnd, msgs);
-      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHODS:
-        return ((InternalEList<?>)getCustomQueryMethods()).basicRemove(otherEnd, msgs);
+      case SpringgenPackage.REPOSITORY__FIND_BY:
+        return ((InternalEList<?>)getFindBy()).basicRemove(otherEnd, msgs);
+      case SpringgenPackage.REPOSITORY__DELETE_BY:
+        return ((InternalEList<?>)getDeleteBy()).basicRemove(otherEnd, msgs);
+      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHOD:
+        return ((InternalEList<?>)getCustomQueryMethod()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -164,12 +164,12 @@ public class RepositoryImpl extends ProjectElementImpl implements Repository
   {
     switch (featureID)
     {
-      case SpringgenPackage.REPOSITORY__FIND_BY_METHODS:
-        return getFindByMethods();
-      case SpringgenPackage.REPOSITORY__DELETE_BY_METHODS:
-        return getDeleteByMethods();
-      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHODS:
-        return getCustomQueryMethods();
+      case SpringgenPackage.REPOSITORY__FIND_BY:
+        return getFindBy();
+      case SpringgenPackage.REPOSITORY__DELETE_BY:
+        return getDeleteBy();
+      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHOD:
+        return getCustomQueryMethod();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -185,17 +185,17 @@ public class RepositoryImpl extends ProjectElementImpl implements Repository
   {
     switch (featureID)
     {
-      case SpringgenPackage.REPOSITORY__FIND_BY_METHODS:
-        getFindByMethods().clear();
-        getFindByMethods().addAll((Collection<? extends FindByMethod>)newValue);
+      case SpringgenPackage.REPOSITORY__FIND_BY:
+        getFindBy().clear();
+        getFindBy().addAll((Collection<? extends FindByMethod>)newValue);
         return;
-      case SpringgenPackage.REPOSITORY__DELETE_BY_METHODS:
-        getDeleteByMethods().clear();
-        getDeleteByMethods().addAll((Collection<? extends DeleteByMethod>)newValue);
+      case SpringgenPackage.REPOSITORY__DELETE_BY:
+        getDeleteBy().clear();
+        getDeleteBy().addAll((Collection<? extends DeleteByMethod>)newValue);
         return;
-      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHODS:
-        getCustomQueryMethods().clear();
-        getCustomQueryMethods().addAll((Collection<? extends CustomQueryMethod>)newValue);
+      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHOD:
+        getCustomQueryMethod().clear();
+        getCustomQueryMethod().addAll((Collection<? extends CustomQueryMethod>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -211,14 +211,14 @@ public class RepositoryImpl extends ProjectElementImpl implements Repository
   {
     switch (featureID)
     {
-      case SpringgenPackage.REPOSITORY__FIND_BY_METHODS:
-        getFindByMethods().clear();
+      case SpringgenPackage.REPOSITORY__FIND_BY:
+        getFindBy().clear();
         return;
-      case SpringgenPackage.REPOSITORY__DELETE_BY_METHODS:
-        getDeleteByMethods().clear();
+      case SpringgenPackage.REPOSITORY__DELETE_BY:
+        getDeleteBy().clear();
         return;
-      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHODS:
-        getCustomQueryMethods().clear();
+      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHOD:
+        getCustomQueryMethod().clear();
         return;
     }
     super.eUnset(featureID);
@@ -234,12 +234,12 @@ public class RepositoryImpl extends ProjectElementImpl implements Repository
   {
     switch (featureID)
     {
-      case SpringgenPackage.REPOSITORY__FIND_BY_METHODS:
-        return findByMethods != null && !findByMethods.isEmpty();
-      case SpringgenPackage.REPOSITORY__DELETE_BY_METHODS:
-        return deleteByMethods != null && !deleteByMethods.isEmpty();
-      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHODS:
-        return customQueryMethods != null && !customQueryMethods.isEmpty();
+      case SpringgenPackage.REPOSITORY__FIND_BY:
+        return findBy != null && !findBy.isEmpty();
+      case SpringgenPackage.REPOSITORY__DELETE_BY:
+        return deleteBy != null && !deleteBy.isEmpty();
+      case SpringgenPackage.REPOSITORY__CUSTOM_QUERY_METHOD:
+        return customQueryMethod != null && !customQueryMethod.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -25,7 +25,7 @@ import org.xtext.example.springgen.springgen.ValueTypes;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.springgen.springgen.impl.FindByMethodImpl#getProperty <em>Property</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.FindByMethodImpl#getPtype <em>Ptype</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.FindByMethodImpl#getPropertyType <em>Property Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,14 +53,14 @@ public class FindByMethodImpl extends MinimalEObjectImpl.Container implements Fi
   protected String property = PROPERTY_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPtype() <em>Ptype</em>}' containment reference.
+   * The cached value of the '{@link #getPropertyType() <em>Property Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPtype()
+   * @see #getPropertyType()
    * @generated
    * @ordered
    */
-  protected ValueTypes ptype;
+  protected ValueTypes propertyType;
 
   /**
    * <!-- begin-user-doc -->
@@ -114,9 +114,9 @@ public class FindByMethodImpl extends MinimalEObjectImpl.Container implements Fi
    * @generated
    */
   @Override
-  public ValueTypes getPtype()
+  public ValueTypes getPropertyType()
   {
-    return ptype;
+    return propertyType;
   }
 
   /**
@@ -124,13 +124,13 @@ public class FindByMethodImpl extends MinimalEObjectImpl.Container implements Fi
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPtype(ValueTypes newPtype, NotificationChain msgs)
+  public NotificationChain basicSetPropertyType(ValueTypes newPropertyType, NotificationChain msgs)
   {
-    ValueTypes oldPtype = ptype;
-    ptype = newPtype;
+    ValueTypes oldPropertyType = propertyType;
+    propertyType = newPropertyType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SpringgenPackage.FIND_BY_METHOD__PTYPE, oldPtype, newPtype);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SpringgenPackage.FIND_BY_METHOD__PROPERTY_TYPE, oldPropertyType, newPropertyType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -142,20 +142,20 @@ public class FindByMethodImpl extends MinimalEObjectImpl.Container implements Fi
    * @generated
    */
   @Override
-  public void setPtype(ValueTypes newPtype)
+  public void setPropertyType(ValueTypes newPropertyType)
   {
-    if (newPtype != ptype)
+    if (newPropertyType != propertyType)
     {
       NotificationChain msgs = null;
-      if (ptype != null)
-        msgs = ((InternalEObject)ptype).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SpringgenPackage.FIND_BY_METHOD__PTYPE, null, msgs);
-      if (newPtype != null)
-        msgs = ((InternalEObject)newPtype).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SpringgenPackage.FIND_BY_METHOD__PTYPE, null, msgs);
-      msgs = basicSetPtype(newPtype, msgs);
+      if (propertyType != null)
+        msgs = ((InternalEObject)propertyType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SpringgenPackage.FIND_BY_METHOD__PROPERTY_TYPE, null, msgs);
+      if (newPropertyType != null)
+        msgs = ((InternalEObject)newPropertyType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SpringgenPackage.FIND_BY_METHOD__PROPERTY_TYPE, null, msgs);
+      msgs = basicSetPropertyType(newPropertyType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.FIND_BY_METHOD__PTYPE, newPtype, newPtype));
+      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.FIND_BY_METHOD__PROPERTY_TYPE, newPropertyType, newPropertyType));
   }
 
   /**
@@ -168,8 +168,8 @@ public class FindByMethodImpl extends MinimalEObjectImpl.Container implements Fi
   {
     switch (featureID)
     {
-      case SpringgenPackage.FIND_BY_METHOD__PTYPE:
-        return basicSetPtype(null, msgs);
+      case SpringgenPackage.FIND_BY_METHOD__PROPERTY_TYPE:
+        return basicSetPropertyType(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -186,8 +186,8 @@ public class FindByMethodImpl extends MinimalEObjectImpl.Container implements Fi
     {
       case SpringgenPackage.FIND_BY_METHOD__PROPERTY:
         return getProperty();
-      case SpringgenPackage.FIND_BY_METHOD__PTYPE:
-        return getPtype();
+      case SpringgenPackage.FIND_BY_METHOD__PROPERTY_TYPE:
+        return getPropertyType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -205,8 +205,8 @@ public class FindByMethodImpl extends MinimalEObjectImpl.Container implements Fi
       case SpringgenPackage.FIND_BY_METHOD__PROPERTY:
         setProperty((String)newValue);
         return;
-      case SpringgenPackage.FIND_BY_METHOD__PTYPE:
-        setPtype((ValueTypes)newValue);
+      case SpringgenPackage.FIND_BY_METHOD__PROPERTY_TYPE:
+        setPropertyType((ValueTypes)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -225,8 +225,8 @@ public class FindByMethodImpl extends MinimalEObjectImpl.Container implements Fi
       case SpringgenPackage.FIND_BY_METHOD__PROPERTY:
         setProperty(PROPERTY_EDEFAULT);
         return;
-      case SpringgenPackage.FIND_BY_METHOD__PTYPE:
-        setPtype((ValueTypes)null);
+      case SpringgenPackage.FIND_BY_METHOD__PROPERTY_TYPE:
+        setPropertyType((ValueTypes)null);
         return;
     }
     super.eUnset(featureID);
@@ -244,8 +244,8 @@ public class FindByMethodImpl extends MinimalEObjectImpl.Container implements Fi
     {
       case SpringgenPackage.FIND_BY_METHOD__PROPERTY:
         return PROPERTY_EDEFAULT == null ? property != null : !PROPERTY_EDEFAULT.equals(property);
-      case SpringgenPackage.FIND_BY_METHOD__PTYPE:
-        return ptype != null;
+      case SpringgenPackage.FIND_BY_METHOD__PROPERTY_TYPE:
+        return propertyType != null;
     }
     return super.eIsSet(featureID);
   }

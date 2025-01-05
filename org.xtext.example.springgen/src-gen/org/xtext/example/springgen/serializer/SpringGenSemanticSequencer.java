@@ -269,7 +269,7 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     DatabaseRelations returns DatabaseRelations
 	 *
 	 * Constraint:
-	 *     (M2M='ManyToMany' | M2O='ManyToOne' | O2M='OneToMany')
+	 *     (MANY_TO_MANY='ManyToMany' | MANY_TO_ONE='ManyToOne' | ONE_TO_MANY='OneToMany')
 	 * </pre>
 	 */
 	protected void sequence_DatabaseRelations(ISerializationContext context, DatabaseRelations semanticObject) {
@@ -283,19 +283,19 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     DeleteByMethod returns DeleteByMethod
 	 *
 	 * Constraint:
-	 *     (property=ID ptype=ValueTypes)
+	 *     (property=ID propertyType=ValueTypes)
 	 * </pre>
 	 */
 	protected void sequence_DeleteByMethod(ISerializationContext context, DeleteByMethod semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.DELETE_BY_METHOD__PROPERTY) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.DELETE_BY_METHOD__PROPERTY));
-			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.DELETE_BY_METHOD__PTYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.DELETE_BY_METHOD__PTYPE));
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.DELETE_BY_METHOD__PROPERTY_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.DELETE_BY_METHOD__PROPERTY_TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDeleteByMethodAccess().getPropertyIDTerminalRuleCall_2_0(), semanticObject.getProperty());
-		feeder.accept(grammarAccess.getDeleteByMethodAccess().getPtypeValueTypesParserRuleCall_4_0(), semanticObject.getPtype());
+		feeder.accept(grammarAccess.getDeleteByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0(), semanticObject.getPropertyType());
 		feeder.finish();
 	}
 	
@@ -356,19 +356,19 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     FindByMethod returns FindByMethod
 	 *
 	 * Constraint:
-	 *     (property=ID ptype=ValueTypes)
+	 *     (property=ID propertyType=ValueTypes)
 	 * </pre>
 	 */
 	protected void sequence_FindByMethod(ISerializationContext context, FindByMethod semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.FIND_BY_METHOD__PROPERTY) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.FIND_BY_METHOD__PROPERTY));
-			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.FIND_BY_METHOD__PTYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.FIND_BY_METHOD__PTYPE));
+			if (transientValues.isValueTransient(semanticObject, SpringgenPackage.Literals.FIND_BY_METHOD__PROPERTY_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SpringgenPackage.Literals.FIND_BY_METHOD__PROPERTY_TYPE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getFindByMethodAccess().getPropertyIDTerminalRuleCall_2_0(), semanticObject.getProperty());
-		feeder.accept(grammarAccess.getFindByMethodAccess().getPtypeValueTypesParserRuleCall_4_0(), semanticObject.getPtype());
+		feeder.accept(grammarAccess.getFindByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0(), semanticObject.getPropertyType());
 		feeder.finish();
 	}
 	
@@ -438,7 +438,7 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     ParamTransfer returns ParamTransfer
 	 *
 	 * Constraint:
-	 *     (RequestBody='RequestBody' | RequestParam='RequestParam' | PathVariable='PathVariable')
+	 *     (REQUEST_BODY='RequestBody' | REQUEST_PARAM='RequestParam' | PATH_VARIABLE='PathVariable')
 	 * </pre>
 	 */
 	protected void sequence_ParamTransfer(ISerializationContext context, ParamTransfer semanticObject) {
@@ -496,9 +496,9 @@ public class SpringGenSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *
 	 * Constraint:
 	 *     (
-	 *         (findByMethods+=FindByMethod* deleteByMethods+=DeleteByMethod+ customQueryMethods+=CustomQueryMethod+) | 
-	 *         (findByMethods+=FindByMethod* customQueryMethods+=CustomQueryMethod+) | 
-	 *         customQueryMethods+=CustomQueryMethod+
+	 *         (findBy+=FindByMethod* deleteBy+=DeleteByMethod+ customQueryMethod+=CustomQueryMethod+) | 
+	 *         (findBy+=FindByMethod* customQueryMethod+=CustomQueryMethod+) | 
+	 *         customQueryMethod+=CustomQueryMethod+
 	 *     )?
 	 * </pre>
 	 */

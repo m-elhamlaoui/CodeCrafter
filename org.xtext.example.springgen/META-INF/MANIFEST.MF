@@ -14,6 +14,7 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.emf.common,
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
+Import-Package: org.apache.log4j
 Export-Package: org.xtext.example.springgen.parser.antlr.internal,
  org.xtext.example.springgen.scoping,
  org.xtext.example.springgen.generator,
@@ -25,4 +26,3 @@ Export-Package: org.xtext.example.springgen.parser.antlr.internal,
  org.xtext.example.springgen.services,
  org.xtext.example.springgen.springgen,
  org.xtext.example.springgen.springgen.util
-Import-Package: org.apache.log4j

@@ -21,9 +21,9 @@ import org.xtext.example.springgen.springgen.SpringgenPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.ParamTransferImpl#getRequestBody <em>Request Body</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.ParamTransferImpl#getRequestParam <em>Request Param</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.impl.ParamTransferImpl#getPathVariable <em>Path Variable</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.ParamTransferImpl#getREQUEST_BODY <em>REQUEST BODY</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.ParamTransferImpl#getREQUEST_PARAM <em>REQUEST PARAM</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.impl.ParamTransferImpl#getPATH_VARIABLE <em>PATH VARIABLE</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,64 +31,64 @@ import org.xtext.example.springgen.springgen.SpringgenPackage;
 public class ParamTransferImpl extends MinimalEObjectImpl.Container implements ParamTransfer
 {
   /**
-   * The default value of the '{@link #getRequestBody() <em>Request Body</em>}' attribute.
+   * The default value of the '{@link #getREQUEST_BODY() <em>REQUEST BODY</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRequestBody()
+   * @see #getREQUEST_BODY()
    * @generated
    * @ordered
    */
   protected static final String REQUEST_BODY_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRequestBody() <em>Request Body</em>}' attribute.
+   * The cached value of the '{@link #getREQUEST_BODY() <em>REQUEST BODY</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRequestBody()
+   * @see #getREQUEST_BODY()
    * @generated
    * @ordered
    */
-  protected String requestBody = REQUEST_BODY_EDEFAULT;
+  protected String requesT_BODY = REQUEST_BODY_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getRequestParam() <em>Request Param</em>}' attribute.
+   * The default value of the '{@link #getREQUEST_PARAM() <em>REQUEST PARAM</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRequestParam()
+   * @see #getREQUEST_PARAM()
    * @generated
    * @ordered
    */
   protected static final String REQUEST_PARAM_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getRequestParam() <em>Request Param</em>}' attribute.
+   * The cached value of the '{@link #getREQUEST_PARAM() <em>REQUEST PARAM</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRequestParam()
+   * @see #getREQUEST_PARAM()
    * @generated
    * @ordered
    */
-  protected String requestParam = REQUEST_PARAM_EDEFAULT;
+  protected String requesT_PARAM = REQUEST_PARAM_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getPathVariable() <em>Path Variable</em>}' attribute.
+   * The default value of the '{@link #getPATH_VARIABLE() <em>PATH VARIABLE</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPathVariable()
+   * @see #getPATH_VARIABLE()
    * @generated
    * @ordered
    */
   protected static final String PATH_VARIABLE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getPathVariable() <em>Path Variable</em>}' attribute.
+   * The cached value of the '{@link #getPATH_VARIABLE() <em>PATH VARIABLE</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPathVariable()
+   * @see #getPATH_VARIABLE()
    * @generated
    * @ordered
    */
-  protected String pathVariable = PATH_VARIABLE_EDEFAULT;
+  protected String patH_VARIABLE = PATH_VARIABLE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,9 +117,9 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
    * @generated
    */
   @Override
-  public String getRequestBody()
+  public String getREQUEST_BODY()
   {
-    return requestBody;
+    return requesT_BODY;
   }
 
   /**
@@ -128,12 +128,12 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
    * @generated
    */
   @Override
-  public void setRequestBody(String newRequestBody)
+  public void setREQUEST_BODY(String newREQUEST_BODY)
   {
-    String oldRequestBody = requestBody;
-    requestBody = newRequestBody;
+    String oldREQUEST_BODY = requesT_BODY;
+    requesT_BODY = newREQUEST_BODY;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.PARAM_TRANSFER__REQUEST_BODY, oldRequestBody, requestBody));
+      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.PARAM_TRANSFER__REQUEST_BODY, oldREQUEST_BODY, requesT_BODY));
   }
 
   /**
@@ -142,9 +142,9 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
    * @generated
    */
   @Override
-  public String getRequestParam()
+  public String getREQUEST_PARAM()
   {
-    return requestParam;
+    return requesT_PARAM;
   }
 
   /**
@@ -153,12 +153,12 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
    * @generated
    */
   @Override
-  public void setRequestParam(String newRequestParam)
+  public void setREQUEST_PARAM(String newREQUEST_PARAM)
   {
-    String oldRequestParam = requestParam;
-    requestParam = newRequestParam;
+    String oldREQUEST_PARAM = requesT_PARAM;
+    requesT_PARAM = newREQUEST_PARAM;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.PARAM_TRANSFER__REQUEST_PARAM, oldRequestParam, requestParam));
+      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.PARAM_TRANSFER__REQUEST_PARAM, oldREQUEST_PARAM, requesT_PARAM));
   }
 
   /**
@@ -167,9 +167,9 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
    * @generated
    */
   @Override
-  public String getPathVariable()
+  public String getPATH_VARIABLE()
   {
-    return pathVariable;
+    return patH_VARIABLE;
   }
 
   /**
@@ -178,12 +178,12 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
    * @generated
    */
   @Override
-  public void setPathVariable(String newPathVariable)
+  public void setPATH_VARIABLE(String newPATH_VARIABLE)
   {
-    String oldPathVariable = pathVariable;
-    pathVariable = newPathVariable;
+    String oldPATH_VARIABLE = patH_VARIABLE;
+    patH_VARIABLE = newPATH_VARIABLE;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.PARAM_TRANSFER__PATH_VARIABLE, oldPathVariable, pathVariable));
+      eNotify(new ENotificationImpl(this, Notification.SET, SpringgenPackage.PARAM_TRANSFER__PATH_VARIABLE, oldPATH_VARIABLE, patH_VARIABLE));
   }
 
   /**
@@ -197,11 +197,11 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
     switch (featureID)
     {
       case SpringgenPackage.PARAM_TRANSFER__REQUEST_BODY:
-        return getRequestBody();
+        return getREQUEST_BODY();
       case SpringgenPackage.PARAM_TRANSFER__REQUEST_PARAM:
-        return getRequestParam();
+        return getREQUEST_PARAM();
       case SpringgenPackage.PARAM_TRANSFER__PATH_VARIABLE:
-        return getPathVariable();
+        return getPATH_VARIABLE();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -217,13 +217,13 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
     switch (featureID)
     {
       case SpringgenPackage.PARAM_TRANSFER__REQUEST_BODY:
-        setRequestBody((String)newValue);
+        setREQUEST_BODY((String)newValue);
         return;
       case SpringgenPackage.PARAM_TRANSFER__REQUEST_PARAM:
-        setRequestParam((String)newValue);
+        setREQUEST_PARAM((String)newValue);
         return;
       case SpringgenPackage.PARAM_TRANSFER__PATH_VARIABLE:
-        setPathVariable((String)newValue);
+        setPATH_VARIABLE((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -240,13 +240,13 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
     switch (featureID)
     {
       case SpringgenPackage.PARAM_TRANSFER__REQUEST_BODY:
-        setRequestBody(REQUEST_BODY_EDEFAULT);
+        setREQUEST_BODY(REQUEST_BODY_EDEFAULT);
         return;
       case SpringgenPackage.PARAM_TRANSFER__REQUEST_PARAM:
-        setRequestParam(REQUEST_PARAM_EDEFAULT);
+        setREQUEST_PARAM(REQUEST_PARAM_EDEFAULT);
         return;
       case SpringgenPackage.PARAM_TRANSFER__PATH_VARIABLE:
-        setPathVariable(PATH_VARIABLE_EDEFAULT);
+        setPATH_VARIABLE(PATH_VARIABLE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -263,11 +263,11 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
     switch (featureID)
     {
       case SpringgenPackage.PARAM_TRANSFER__REQUEST_BODY:
-        return REQUEST_BODY_EDEFAULT == null ? requestBody != null : !REQUEST_BODY_EDEFAULT.equals(requestBody);
+        return REQUEST_BODY_EDEFAULT == null ? requesT_BODY != null : !REQUEST_BODY_EDEFAULT.equals(requesT_BODY);
       case SpringgenPackage.PARAM_TRANSFER__REQUEST_PARAM:
-        return REQUEST_PARAM_EDEFAULT == null ? requestParam != null : !REQUEST_PARAM_EDEFAULT.equals(requestParam);
+        return REQUEST_PARAM_EDEFAULT == null ? requesT_PARAM != null : !REQUEST_PARAM_EDEFAULT.equals(requesT_PARAM);
       case SpringgenPackage.PARAM_TRANSFER__PATH_VARIABLE:
-        return PATH_VARIABLE_EDEFAULT == null ? pathVariable != null : !PATH_VARIABLE_EDEFAULT.equals(pathVariable);
+        return PATH_VARIABLE_EDEFAULT == null ? patH_VARIABLE != null : !PATH_VARIABLE_EDEFAULT.equals(patH_VARIABLE);
     }
     return super.eIsSet(featureID);
   }
@@ -283,12 +283,12 @@ public class ParamTransferImpl extends MinimalEObjectImpl.Container implements P
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (RequestBody: ");
-    result.append(requestBody);
-    result.append(", RequestParam: ");
-    result.append(requestParam);
-    result.append(", PathVariable: ");
-    result.append(pathVariable);
+    result.append(" (REQUEST_BODY: ");
+    result.append(requesT_BODY);
+    result.append(", REQUEST_PARAM: ");
+    result.append(requesT_PARAM);
+    result.append(", PATH_VARIABLE: ");
+    result.append(patH_VARIABLE);
     result.append(')');
     return result.toString();
   }

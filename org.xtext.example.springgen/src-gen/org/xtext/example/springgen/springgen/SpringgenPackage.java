@@ -748,31 +748,31 @@ public interface SpringgenPackage extends EPackage
   int REPOSITORY = 14;
 
   /**
-   * The feature id for the '<em><b>Find By Methods</b></em>' containment reference list.
+   * The feature id for the '<em><b>Find By</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REPOSITORY__FIND_BY_METHODS = PROJECT_ELEMENT_FEATURE_COUNT + 0;
+  int REPOSITORY__FIND_BY = PROJECT_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Delete By Methods</b></em>' containment reference list.
+   * The feature id for the '<em><b>Delete By</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REPOSITORY__DELETE_BY_METHODS = PROJECT_ELEMENT_FEATURE_COUNT + 1;
+  int REPOSITORY__DELETE_BY = PROJECT_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Custom Query Methods</b></em>' containment reference list.
+   * The feature id for the '<em><b>Custom Query Method</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REPOSITORY__CUSTOM_QUERY_METHODS = PROJECT_ELEMENT_FEATURE_COUNT + 2;
+  int REPOSITORY__CUSTOM_QUERY_METHOD = PROJECT_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Repository</em>' class.
@@ -803,13 +803,13 @@ public interface SpringgenPackage extends EPackage
   int FIND_BY_METHOD__PROPERTY = 0;
 
   /**
-   * The feature id for the '<em><b>Ptype</b></em>' containment reference.
+   * The feature id for the '<em><b>Property Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FIND_BY_METHOD__PTYPE = 1;
+  int FIND_BY_METHOD__PROPERTY_TYPE = 1;
 
   /**
    * The number of structural features of the '<em>Find By Method</em>' class.
@@ -840,13 +840,13 @@ public interface SpringgenPackage extends EPackage
   int DELETE_BY_METHOD__PROPERTY = 0;
 
   /**
-   * The feature id for the '<em><b>Ptype</b></em>' containment reference.
+   * The feature id for the '<em><b>Property Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DELETE_BY_METHOD__PTYPE = 1;
+  int DELETE_BY_METHOD__PROPERTY_TYPE = 1;
 
   /**
    * The number of structural features of the '<em>Delete By Method</em>' class.
@@ -1246,31 +1246,31 @@ public interface SpringgenPackage extends EPackage
   int DATABASE_RELATIONS = 26;
 
   /**
-   * The feature id for the '<em><b>M2M</b></em>' attribute.
+   * The feature id for the '<em><b>MANY TO MANY</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DATABASE_RELATIONS__M2M = 0;
+  int DATABASE_RELATIONS__MANY_TO_MANY = 0;
 
   /**
-   * The feature id for the '<em><b>M2O</b></em>' attribute.
+   * The feature id for the '<em><b>MANY TO ONE</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DATABASE_RELATIONS__M2O = 1;
+  int DATABASE_RELATIONS__MANY_TO_ONE = 1;
 
   /**
-   * The feature id for the '<em><b>O2M</b></em>' attribute.
+   * The feature id for the '<em><b>ONE TO MANY</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DATABASE_RELATIONS__O2M = 2;
+  int DATABASE_RELATIONS__ONE_TO_MANY = 2;
 
   /**
    * The number of structural features of the '<em>Database Relations</em>' class.
@@ -1292,7 +1292,7 @@ public interface SpringgenPackage extends EPackage
   int PARAM_TRANSFER = 27;
 
   /**
-   * The feature id for the '<em><b>Request Body</b></em>' attribute.
+   * The feature id for the '<em><b>REQUEST BODY</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1301,7 +1301,7 @@ public interface SpringgenPackage extends EPackage
   int PARAM_TRANSFER__REQUEST_BODY = 0;
 
   /**
-   * The feature id for the '<em><b>Request Param</b></em>' attribute.
+   * The feature id for the '<em><b>REQUEST PARAM</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1310,7 +1310,7 @@ public interface SpringgenPackage extends EPackage
   int PARAM_TRANSFER__REQUEST_PARAM = 1;
 
   /**
-   * The feature id for the '<em><b>Path Variable</b></em>' attribute.
+   * The feature id for the '<em><b>PATH VARIABLE</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1985,37 +1985,37 @@ public interface SpringgenPackage extends EPackage
   EClass getRepository();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.Repository#getFindByMethods <em>Find By Methods</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.Repository#getFindBy <em>Find By</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Find By Methods</em>'.
-   * @see org.xtext.example.springgen.springgen.Repository#getFindByMethods()
+   * @return the meta object for the containment reference list '<em>Find By</em>'.
+   * @see org.xtext.example.springgen.springgen.Repository#getFindBy()
    * @see #getRepository()
    * @generated
    */
-  EReference getRepository_FindByMethods();
+  EReference getRepository_FindBy();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.Repository#getDeleteByMethods <em>Delete By Methods</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.Repository#getDeleteBy <em>Delete By</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Delete By Methods</em>'.
-   * @see org.xtext.example.springgen.springgen.Repository#getDeleteByMethods()
+   * @return the meta object for the containment reference list '<em>Delete By</em>'.
+   * @see org.xtext.example.springgen.springgen.Repository#getDeleteBy()
    * @see #getRepository()
    * @generated
    */
-  EReference getRepository_DeleteByMethods();
+  EReference getRepository_DeleteBy();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.Repository#getCustomQueryMethods <em>Custom Query Methods</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.springgen.springgen.Repository#getCustomQueryMethod <em>Custom Query Method</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Custom Query Methods</em>'.
-   * @see org.xtext.example.springgen.springgen.Repository#getCustomQueryMethods()
+   * @return the meta object for the containment reference list '<em>Custom Query Method</em>'.
+   * @see org.xtext.example.springgen.springgen.Repository#getCustomQueryMethod()
    * @see #getRepository()
    * @generated
    */
-  EReference getRepository_CustomQueryMethods();
+  EReference getRepository_CustomQueryMethod();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.FindByMethod <em>Find By Method</em>}'.
@@ -2039,15 +2039,15 @@ public interface SpringgenPackage extends EPackage
   EAttribute getFindByMethod_Property();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.springgen.springgen.FindByMethod#getPtype <em>Ptype</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.springgen.springgen.FindByMethod#getPropertyType <em>Property Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ptype</em>'.
-   * @see org.xtext.example.springgen.springgen.FindByMethod#getPtype()
+   * @return the meta object for the containment reference '<em>Property Type</em>'.
+   * @see org.xtext.example.springgen.springgen.FindByMethod#getPropertyType()
    * @see #getFindByMethod()
    * @generated
    */
-  EReference getFindByMethod_Ptype();
+  EReference getFindByMethod_PropertyType();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.DeleteByMethod <em>Delete By Method</em>}'.
@@ -2071,15 +2071,15 @@ public interface SpringgenPackage extends EPackage
   EAttribute getDeleteByMethod_Property();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.springgen.springgen.DeleteByMethod#getPtype <em>Ptype</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.springgen.springgen.DeleteByMethod#getPropertyType <em>Property Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ptype</em>'.
-   * @see org.xtext.example.springgen.springgen.DeleteByMethod#getPtype()
+   * @return the meta object for the containment reference '<em>Property Type</em>'.
+   * @see org.xtext.example.springgen.springgen.DeleteByMethod#getPropertyType()
    * @see #getDeleteByMethod()
    * @generated
    */
-  EReference getDeleteByMethod_Ptype();
+  EReference getDeleteByMethod_PropertyType();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.CustomQueryMethod <em>Custom Query Method</em>}'.
@@ -2435,37 +2435,37 @@ public interface SpringgenPackage extends EPackage
   EClass getDatabaseRelations();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getM2M <em>M2M</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getMANY_TO_MANY <em>MANY TO MANY</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>M2M</em>'.
-   * @see org.xtext.example.springgen.springgen.DatabaseRelations#getM2M()
+   * @return the meta object for the attribute '<em>MANY TO MANY</em>'.
+   * @see org.xtext.example.springgen.springgen.DatabaseRelations#getMANY_TO_MANY()
    * @see #getDatabaseRelations()
    * @generated
    */
-  EAttribute getDatabaseRelations_M2M();
+  EAttribute getDatabaseRelations_MANY_TO_MANY();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getM2O <em>M2O</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getMANY_TO_ONE <em>MANY TO ONE</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>M2O</em>'.
-   * @see org.xtext.example.springgen.springgen.DatabaseRelations#getM2O()
+   * @return the meta object for the attribute '<em>MANY TO ONE</em>'.
+   * @see org.xtext.example.springgen.springgen.DatabaseRelations#getMANY_TO_ONE()
    * @see #getDatabaseRelations()
    * @generated
    */
-  EAttribute getDatabaseRelations_M2O();
+  EAttribute getDatabaseRelations_MANY_TO_ONE();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getO2M <em>O2M</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.DatabaseRelations#getONE_TO_MANY <em>ONE TO MANY</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>O2M</em>'.
-   * @see org.xtext.example.springgen.springgen.DatabaseRelations#getO2M()
+   * @return the meta object for the attribute '<em>ONE TO MANY</em>'.
+   * @see org.xtext.example.springgen.springgen.DatabaseRelations#getONE_TO_MANY()
    * @see #getDatabaseRelations()
    * @generated
    */
-  EAttribute getDatabaseRelations_O2M();
+  EAttribute getDatabaseRelations_ONE_TO_MANY();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.springgen.springgen.ParamTransfer <em>Param Transfer</em>}'.
@@ -2478,37 +2478,37 @@ public interface SpringgenPackage extends EPackage
   EClass getParamTransfer();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.ParamTransfer#getRequestBody <em>Request Body</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.ParamTransfer#getREQUEST_BODY <em>REQUEST BODY</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Request Body</em>'.
-   * @see org.xtext.example.springgen.springgen.ParamTransfer#getRequestBody()
+   * @return the meta object for the attribute '<em>REQUEST BODY</em>'.
+   * @see org.xtext.example.springgen.springgen.ParamTransfer#getREQUEST_BODY()
    * @see #getParamTransfer()
    * @generated
    */
-  EAttribute getParamTransfer_RequestBody();
+  EAttribute getParamTransfer_REQUEST_BODY();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.ParamTransfer#getRequestParam <em>Request Param</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.ParamTransfer#getREQUEST_PARAM <em>REQUEST PARAM</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Request Param</em>'.
-   * @see org.xtext.example.springgen.springgen.ParamTransfer#getRequestParam()
+   * @return the meta object for the attribute '<em>REQUEST PARAM</em>'.
+   * @see org.xtext.example.springgen.springgen.ParamTransfer#getREQUEST_PARAM()
    * @see #getParamTransfer()
    * @generated
    */
-  EAttribute getParamTransfer_RequestParam();
+  EAttribute getParamTransfer_REQUEST_PARAM();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.ParamTransfer#getPathVariable <em>Path Variable</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.springgen.springgen.ParamTransfer#getPATH_VARIABLE <em>PATH VARIABLE</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Path Variable</em>'.
-   * @see org.xtext.example.springgen.springgen.ParamTransfer#getPathVariable()
+   * @return the meta object for the attribute '<em>PATH VARIABLE</em>'.
+   * @see org.xtext.example.springgen.springgen.ParamTransfer#getPATH_VARIABLE()
    * @see #getParamTransfer()
    * @generated
    */
-  EAttribute getParamTransfer_PathVariable();
+  EAttribute getParamTransfer_PATH_VARIABLE();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -3052,28 +3052,28 @@ public interface SpringgenPackage extends EPackage
     EClass REPOSITORY = eINSTANCE.getRepository();
 
     /**
-     * The meta object literal for the '<em><b>Find By Methods</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Find By</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REPOSITORY__FIND_BY_METHODS = eINSTANCE.getRepository_FindByMethods();
+    EReference REPOSITORY__FIND_BY = eINSTANCE.getRepository_FindBy();
 
     /**
-     * The meta object literal for the '<em><b>Delete By Methods</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Delete By</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REPOSITORY__DELETE_BY_METHODS = eINSTANCE.getRepository_DeleteByMethods();
+    EReference REPOSITORY__DELETE_BY = eINSTANCE.getRepository_DeleteBy();
 
     /**
-     * The meta object literal for the '<em><b>Custom Query Methods</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Custom Query Method</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REPOSITORY__CUSTOM_QUERY_METHODS = eINSTANCE.getRepository_CustomQueryMethods();
+    EReference REPOSITORY__CUSTOM_QUERY_METHOD = eINSTANCE.getRepository_CustomQueryMethod();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.FindByMethodImpl <em>Find By Method</em>}' class.
@@ -3094,12 +3094,12 @@ public interface SpringgenPackage extends EPackage
     EAttribute FIND_BY_METHOD__PROPERTY = eINSTANCE.getFindByMethod_Property();
 
     /**
-     * The meta object literal for the '<em><b>Ptype</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Property Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FIND_BY_METHOD__PTYPE = eINSTANCE.getFindByMethod_Ptype();
+    EReference FIND_BY_METHOD__PROPERTY_TYPE = eINSTANCE.getFindByMethod_PropertyType();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.DeleteByMethodImpl <em>Delete By Method</em>}' class.
@@ -3120,12 +3120,12 @@ public interface SpringgenPackage extends EPackage
     EAttribute DELETE_BY_METHOD__PROPERTY = eINSTANCE.getDeleteByMethod_Property();
 
     /**
-     * The meta object literal for the '<em><b>Ptype</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Property Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DELETE_BY_METHOD__PTYPE = eINSTANCE.getDeleteByMethod_Ptype();
+    EReference DELETE_BY_METHOD__PROPERTY_TYPE = eINSTANCE.getDeleteByMethod_PropertyType();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.CustomQueryMethodImpl <em>Custom Query Method</em>}' class.
@@ -3412,28 +3412,28 @@ public interface SpringgenPackage extends EPackage
     EClass DATABASE_RELATIONS = eINSTANCE.getDatabaseRelations();
 
     /**
-     * The meta object literal for the '<em><b>M2M</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>MANY TO MANY</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DATABASE_RELATIONS__M2M = eINSTANCE.getDatabaseRelations_M2M();
+    EAttribute DATABASE_RELATIONS__MANY_TO_MANY = eINSTANCE.getDatabaseRelations_MANY_TO_MANY();
 
     /**
-     * The meta object literal for the '<em><b>M2O</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>MANY TO ONE</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DATABASE_RELATIONS__M2O = eINSTANCE.getDatabaseRelations_M2O();
+    EAttribute DATABASE_RELATIONS__MANY_TO_ONE = eINSTANCE.getDatabaseRelations_MANY_TO_ONE();
 
     /**
-     * The meta object literal for the '<em><b>O2M</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>ONE TO MANY</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute DATABASE_RELATIONS__O2M = eINSTANCE.getDatabaseRelations_O2M();
+    EAttribute DATABASE_RELATIONS__ONE_TO_MANY = eINSTANCE.getDatabaseRelations_ONE_TO_MANY();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.springgen.springgen.impl.ParamTransferImpl <em>Param Transfer</em>}' class.
@@ -3446,28 +3446,28 @@ public interface SpringgenPackage extends EPackage
     EClass PARAM_TRANSFER = eINSTANCE.getParamTransfer();
 
     /**
-     * The meta object literal for the '<em><b>Request Body</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>REQUEST BODY</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PARAM_TRANSFER__REQUEST_BODY = eINSTANCE.getParamTransfer_RequestBody();
+    EAttribute PARAM_TRANSFER__REQUEST_BODY = eINSTANCE.getParamTransfer_REQUEST_BODY();
 
     /**
-     * The meta object literal for the '<em><b>Request Param</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>REQUEST PARAM</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PARAM_TRANSFER__REQUEST_PARAM = eINSTANCE.getParamTransfer_RequestParam();
+    EAttribute PARAM_TRANSFER__REQUEST_PARAM = eINSTANCE.getParamTransfer_REQUEST_PARAM();
 
     /**
-     * The meta object literal for the '<em><b>Path Variable</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>PATH VARIABLE</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PARAM_TRANSFER__PATH_VARIABLE = eINSTANCE.getParamTransfer_PathVariable();
+    EAttribute PARAM_TRANSFER__PATH_VARIABLE = eINSTANCE.getParamTransfer_PATH_VARIABLE();
 
   }
 

@@ -17,9 +17,12 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
+import org.xtext.example.springgen.springgen.CustomQueryMethod;
 import org.xtext.example.springgen.springgen.DTO;
 import org.xtext.example.springgen.springgen.DatabaseConfiguration;
+import org.xtext.example.springgen.springgen.DeleteByMethod;
 import org.xtext.example.springgen.springgen.Entity;
+import org.xtext.example.springgen.springgen.FindByMethod;
 import org.xtext.example.springgen.springgen.Identifier;
 import org.xtext.example.springgen.springgen.ListType;
 import org.xtext.example.springgen.springgen.ParamTransfer;
@@ -1483,11 +1486,100 @@ public class SpringGenGenerator extends AbstractGenerator {
   }
 
   public void generateRepository(final Entity entity, final IFileSystemAccess2 fsa, final Resource input, final String idType) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field propertyType is undefined for the type FindByMethod"
-      + "\nThe method or field propertyType is undefined for the type DeleteByMethod"
-      + "\ntoString cannot be resolved"
-      + "\ntoString cannot be resolved");
+    final ArrayList<String> projectNameHolder = new ArrayList<String>();
+    final Procedure1<EObject> _function = (EObject element) -> {
+      if ((element instanceof SpringBootProject)) {
+        projectNameHolder.add(((SpringBootProject)element).getName());
+      }
+    };
+    IteratorExtensions.<EObject>forEach(input.getAllContents(), _function);
+    final String projectName = projectNameHolder.get(0);
+    final String className = entity.getName();
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("package com.springboot.");
+    _builder.append(projectName);
+    _builder.append(".repository;");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("import lombok.*;");
+    _builder.newLine();
+    _builder.append("import java.util.*;");
+    _builder.newLine();
+    _builder.append("import org.springframework.data.jpa.repository.JpaRepository;");
+    _builder.newLine();
+    _builder.append("import org.springframework.stereotype.Repository;");
+    _builder.newLine();
+    _builder.append("import com.springboot.");
+    _builder.append(projectName);
+    _builder.append(".entities.");
+    _builder.append(className);
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("@Repository");
+    _builder.newLine();
+    _builder.append("public interface ");
+    _builder.append(className);
+    _builder.append("Repository extends JpaRepository<");
+    _builder.append(className);
+    _builder.append(", ");
+    _builder.append(idType);
+    _builder.append("> {");
+    _builder.newLineIfNotEmpty();
+    {
+      EList<FindByMethod> _findBy = entity.getRepository().getFindBy();
+      for(final FindByMethod method : _findBy) {
+        _builder.append("    ");
+        _builder.append("List<");
+        String _name = entity.getName();
+        _builder.append(_name, "    ");
+        _builder.append("> findBy");
+        String _firstUpper = StringExtensions.toFirstUpper(method.getProperty());
+        _builder.append(_firstUpper, "    ");
+        _builder.append("(");
+        String _extractValueType = this.extractValueType(method.getPropertyType().toString());
+        _builder.append(_extractValueType, "    ");
+        _builder.append(" ");
+        String _property = method.getProperty();
+        _builder.append(_property, "    ");
+        _builder.append(");");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.newLine();
+    {
+      EList<DeleteByMethod> _deleteBy = entity.getRepository().getDeleteBy();
+      for(final DeleteByMethod method_1 : _deleteBy) {
+        _builder.append("    ");
+        _builder.append("void deleteBy");
+        String _firstUpper_1 = StringExtensions.toFirstUpper(method_1.getProperty());
+        _builder.append(_firstUpper_1, "    ");
+        _builder.append("(");
+        String _extractValueType_1 = this.extractValueType(method_1.getPropertyType().toString());
+        _builder.append(_extractValueType_1, "    ");
+        _builder.append(" ");
+        String _property_1 = method_1.getProperty();
+        _builder.append(_property_1, "    ");
+        _builder.append(");");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.newLine();
+    {
+      EList<CustomQueryMethod> _customQueryMethod = entity.getRepository().getCustomQueryMethod();
+      for(final CustomQueryMethod method_2 : _customQueryMethod) {
+        _builder.append("    ");
+        String _query = method_2.getQuery();
+        _builder.append(_query, "    ");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("}");
+    _builder.newLine();
+    final String content = _builder.toString();
+    final String folderPath = (("src/main/java/com/springboot/" + projectName) + "/repositories");
+    final String filePath = (((folderPath + "/") + className) + ".java");
+    fsa.generateFile(filePath, content);
   }
 
   public void generateEntityClass(final Entity entity, final IFileSystemAccess2 fsa, final Resource input, final String idType, final String idName) {
@@ -1537,7 +1629,6 @@ public class SpringGenGenerator extends AbstractGenerator {
     }
     _builder.append("{");
     _builder.newLineIfNotEmpty();
-    _builder.newLine();
     _builder.append("    ");
     _builder.append("@Id");
     _builder.newLine();

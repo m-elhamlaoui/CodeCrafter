@@ -982,7 +982,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EReference getRepository_FindByMethods()
+  public EReference getRepository_FindBy()
   {
     return (EReference)repositoryEClass.getEStructuralFeatures().get(0);
   }
@@ -993,7 +993,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EReference getRepository_DeleteByMethods()
+  public EReference getRepository_DeleteBy()
   {
     return (EReference)repositoryEClass.getEStructuralFeatures().get(1);
   }
@@ -1004,7 +1004,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EReference getRepository_CustomQueryMethods()
+  public EReference getRepository_CustomQueryMethod()
   {
     return (EReference)repositoryEClass.getEStructuralFeatures().get(2);
   }
@@ -1037,7 +1037,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EReference getFindByMethod_Ptype()
+  public EReference getFindByMethod_PropertyType()
   {
     return (EReference)findByMethodEClass.getEStructuralFeatures().get(1);
   }
@@ -1070,7 +1070,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EReference getDeleteByMethod_Ptype()
+  public EReference getDeleteByMethod_PropertyType()
   {
     return (EReference)deleteByMethodEClass.getEStructuralFeatures().get(1);
   }
@@ -1444,7 +1444,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EAttribute getDatabaseRelations_M2M()
+  public EAttribute getDatabaseRelations_MANY_TO_MANY()
   {
     return (EAttribute)databaseRelationsEClass.getEStructuralFeatures().get(0);
   }
@@ -1455,7 +1455,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EAttribute getDatabaseRelations_M2O()
+  public EAttribute getDatabaseRelations_MANY_TO_ONE()
   {
     return (EAttribute)databaseRelationsEClass.getEStructuralFeatures().get(1);
   }
@@ -1466,7 +1466,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EAttribute getDatabaseRelations_O2M()
+  public EAttribute getDatabaseRelations_ONE_TO_MANY()
   {
     return (EAttribute)databaseRelationsEClass.getEStructuralFeatures().get(2);
   }
@@ -1488,7 +1488,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EAttribute getParamTransfer_RequestBody()
+  public EAttribute getParamTransfer_REQUEST_BODY()
   {
     return (EAttribute)paramTransferEClass.getEStructuralFeatures().get(0);
   }
@@ -1499,7 +1499,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EAttribute getParamTransfer_RequestParam()
+  public EAttribute getParamTransfer_REQUEST_PARAM()
   {
     return (EAttribute)paramTransferEClass.getEStructuralFeatures().get(1);
   }
@@ -1510,7 +1510,7 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
    * @generated
    */
   @Override
-  public EAttribute getParamTransfer_PathVariable()
+  public EAttribute getParamTransfer_PATH_VARIABLE()
   {
     return (EAttribute)paramTransferEClass.getEStructuralFeatures().get(2);
   }
@@ -1621,17 +1621,17 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
     createEAttribute(actionParameterEClass, ACTION_PARAMETER__DEFAULT_VALUE);
 
     repositoryEClass = createEClass(REPOSITORY);
-    createEReference(repositoryEClass, REPOSITORY__FIND_BY_METHODS);
-    createEReference(repositoryEClass, REPOSITORY__DELETE_BY_METHODS);
-    createEReference(repositoryEClass, REPOSITORY__CUSTOM_QUERY_METHODS);
+    createEReference(repositoryEClass, REPOSITORY__FIND_BY);
+    createEReference(repositoryEClass, REPOSITORY__DELETE_BY);
+    createEReference(repositoryEClass, REPOSITORY__CUSTOM_QUERY_METHOD);
 
     findByMethodEClass = createEClass(FIND_BY_METHOD);
     createEAttribute(findByMethodEClass, FIND_BY_METHOD__PROPERTY);
-    createEReference(findByMethodEClass, FIND_BY_METHOD__PTYPE);
+    createEReference(findByMethodEClass, FIND_BY_METHOD__PROPERTY_TYPE);
 
     deleteByMethodEClass = createEClass(DELETE_BY_METHOD);
     createEAttribute(deleteByMethodEClass, DELETE_BY_METHOD__PROPERTY);
-    createEReference(deleteByMethodEClass, DELETE_BY_METHOD__PTYPE);
+    createEReference(deleteByMethodEClass, DELETE_BY_METHOD__PROPERTY_TYPE);
 
     customQueryMethodEClass = createEClass(CUSTOM_QUERY_METHOD);
     createEAttribute(customQueryMethodEClass, CUSTOM_QUERY_METHOD__QUERY);
@@ -1675,9 +1675,9 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
     createEAttribute(rdbmsEClass, RDBMS__ORACLE);
 
     databaseRelationsEClass = createEClass(DATABASE_RELATIONS);
-    createEAttribute(databaseRelationsEClass, DATABASE_RELATIONS__M2M);
-    createEAttribute(databaseRelationsEClass, DATABASE_RELATIONS__M2O);
-    createEAttribute(databaseRelationsEClass, DATABASE_RELATIONS__O2M);
+    createEAttribute(databaseRelationsEClass, DATABASE_RELATIONS__MANY_TO_MANY);
+    createEAttribute(databaseRelationsEClass, DATABASE_RELATIONS__MANY_TO_ONE);
+    createEAttribute(databaseRelationsEClass, DATABASE_RELATIONS__ONE_TO_MANY);
 
     paramTransferEClass = createEClass(PARAM_TRANSFER);
     createEAttribute(paramTransferEClass, PARAM_TRANSFER__REQUEST_BODY);
@@ -1802,17 +1802,17 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
     initEAttribute(getActionParameter_DefaultValue(), ecorePackage.getEString(), "defaultValue", null, 0, 1, ActionParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(repositoryEClass, Repository.class, "Repository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRepository_FindByMethods(), this.getFindByMethod(), null, "findByMethods", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRepository_DeleteByMethods(), this.getDeleteByMethod(), null, "deleteByMethods", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRepository_CustomQueryMethods(), this.getCustomQueryMethod(), null, "customQueryMethods", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRepository_FindBy(), this.getFindByMethod(), null, "findBy", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRepository_DeleteBy(), this.getDeleteByMethod(), null, "deleteBy", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRepository_CustomQueryMethod(), this.getCustomQueryMethod(), null, "customQueryMethod", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(findByMethodEClass, FindByMethod.class, "FindByMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFindByMethod_Property(), ecorePackage.getEString(), "property", null, 0, 1, FindByMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFindByMethod_Ptype(), this.getValueTypes(), null, "ptype", null, 0, 1, FindByMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFindByMethod_PropertyType(), this.getValueTypes(), null, "propertyType", null, 0, 1, FindByMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(deleteByMethodEClass, DeleteByMethod.class, "DeleteByMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDeleteByMethod_Property(), ecorePackage.getEString(), "property", null, 0, 1, DeleteByMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDeleteByMethod_Ptype(), this.getValueTypes(), null, "ptype", null, 0, 1, DeleteByMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDeleteByMethod_PropertyType(), this.getValueTypes(), null, "propertyType", null, 0, 1, DeleteByMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(customQueryMethodEClass, CustomQueryMethod.class, "CustomQueryMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCustomQueryMethod_Query(), ecorePackage.getEString(), "query", null, 0, 1, CustomQueryMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1856,14 +1856,14 @@ public class SpringgenPackageImpl extends EPackageImpl implements SpringgenPacka
     initEAttribute(getRDBMS_ORACLE(), ecorePackage.getEString(), "ORACLE", null, 0, 1, org.xtext.example.springgen.springgen.RDBMS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(databaseRelationsEClass, DatabaseRelations.class, "DatabaseRelations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDatabaseRelations_M2M(), ecorePackage.getEString(), "M2M", null, 0, 1, DatabaseRelations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDatabaseRelations_M2O(), ecorePackage.getEString(), "M2O", null, 0, 1, DatabaseRelations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDatabaseRelations_O2M(), ecorePackage.getEString(), "O2M", null, 0, 1, DatabaseRelations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDatabaseRelations_MANY_TO_MANY(), ecorePackage.getEString(), "MANY_TO_MANY", null, 0, 1, DatabaseRelations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDatabaseRelations_MANY_TO_ONE(), ecorePackage.getEString(), "MANY_TO_ONE", null, 0, 1, DatabaseRelations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDatabaseRelations_ONE_TO_MANY(), ecorePackage.getEString(), "ONE_TO_MANY", null, 0, 1, DatabaseRelations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(paramTransferEClass, ParamTransfer.class, "ParamTransfer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getParamTransfer_RequestBody(), ecorePackage.getEString(), "RequestBody", null, 0, 1, ParamTransfer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getParamTransfer_RequestParam(), ecorePackage.getEString(), "RequestParam", null, 0, 1, ParamTransfer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getParamTransfer_PathVariable(), ecorePackage.getEString(), "PathVariable", null, 0, 1, ParamTransfer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getParamTransfer_REQUEST_BODY(), ecorePackage.getEString(), "REQUEST_BODY", null, 0, 1, ParamTransfer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getParamTransfer_REQUEST_PARAM(), ecorePackage.getEString(), "REQUEST_PARAM", null, 0, 1, ParamTransfer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getParamTransfer_PATH_VARIABLE(), ecorePackage.getEString(), "PATH_VARIABLE", null, 0, 1, ParamTransfer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

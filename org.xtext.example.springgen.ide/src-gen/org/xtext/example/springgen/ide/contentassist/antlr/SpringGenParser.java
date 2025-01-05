@@ -116,13 +116,13 @@ public class SpringGenParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getActionParameterAccess().getNameAssignment_0(), "rule__ActionParameter__NameAssignment_0");
 			builder.put(grammarAccess.getActionParameterAccess().getTypeAssignment_2(), "rule__ActionParameter__TypeAssignment_2");
 			builder.put(grammarAccess.getActionParameterAccess().getDefaultValueAssignment_3_1(), "rule__ActionParameter__DefaultValueAssignment_3_1");
-			builder.put(grammarAccess.getRepositoryAccess().getFindByMethodsAssignment_2(), "rule__Repository__FindByMethodsAssignment_2");
-			builder.put(grammarAccess.getRepositoryAccess().getDeleteByMethodsAssignment_3(), "rule__Repository__DeleteByMethodsAssignment_3");
-			builder.put(grammarAccess.getRepositoryAccess().getCustomQueryMethodsAssignment_4(), "rule__Repository__CustomQueryMethodsAssignment_4");
+			builder.put(grammarAccess.getRepositoryAccess().getFindByAssignment_2(), "rule__Repository__FindByAssignment_2");
+			builder.put(grammarAccess.getRepositoryAccess().getDeleteByAssignment_3(), "rule__Repository__DeleteByAssignment_3");
+			builder.put(grammarAccess.getRepositoryAccess().getCustomQueryMethodAssignment_4(), "rule__Repository__CustomQueryMethodAssignment_4");
 			builder.put(grammarAccess.getFindByMethodAccess().getPropertyAssignment_2(), "rule__FindByMethod__PropertyAssignment_2");
-			builder.put(grammarAccess.getFindByMethodAccess().getPtypeAssignment_4(), "rule__FindByMethod__PtypeAssignment_4");
+			builder.put(grammarAccess.getFindByMethodAccess().getPropertyTypeAssignment_4(), "rule__FindByMethod__PropertyTypeAssignment_4");
 			builder.put(grammarAccess.getDeleteByMethodAccess().getPropertyAssignment_2(), "rule__DeleteByMethod__PropertyAssignment_2");
-			builder.put(grammarAccess.getDeleteByMethodAccess().getPtypeAssignment_4(), "rule__DeleteByMethod__PtypeAssignment_4");
+			builder.put(grammarAccess.getDeleteByMethodAccess().getPropertyTypeAssignment_4(), "rule__DeleteByMethod__PropertyTypeAssignment_4");
 			builder.put(grammarAccess.getCustomQueryMethodAccess().getQueryAssignment_2(), "rule__CustomQueryMethod__QueryAssignment_2");
 			builder.put(grammarAccess.getPropertyAccess().getNameAssignment_0(), "rule__Property__NameAssignment_0");
 			builder.put(grammarAccess.getPropertyAccess().getTypeAssignment_2(), "rule__Property__TypeAssignment_2");
@@ -146,12 +146,12 @@ public class SpringGenParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getRDBMSAccess().getMARIADBAssignment_2(), "rule__RDBMS__MARIADBAssignment_2");
 			builder.put(grammarAccess.getRDBMSAccess().getH2Assignment_3(), "rule__RDBMS__H2Assignment_3");
 			builder.put(grammarAccess.getRDBMSAccess().getORACLEAssignment_4(), "rule__RDBMS__ORACLEAssignment_4");
-			builder.put(grammarAccess.getDatabaseRelationsAccess().getM2MAssignment_0(), "rule__DatabaseRelations__M2MAssignment_0");
-			builder.put(grammarAccess.getDatabaseRelationsAccess().getM2OAssignment_1(), "rule__DatabaseRelations__M2OAssignment_1");
-			builder.put(grammarAccess.getDatabaseRelationsAccess().getO2MAssignment_2(), "rule__DatabaseRelations__O2MAssignment_2");
-			builder.put(grammarAccess.getParamTransferAccess().getRequestBodyAssignment_0(), "rule__ParamTransfer__RequestBodyAssignment_0");
-			builder.put(grammarAccess.getParamTransferAccess().getRequestParamAssignment_1(), "rule__ParamTransfer__RequestParamAssignment_1");
-			builder.put(grammarAccess.getParamTransferAccess().getPathVariableAssignment_2(), "rule__ParamTransfer__PathVariableAssignment_2");
+			builder.put(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYAssignment_0(), "rule__DatabaseRelations__MANY_TO_MANYAssignment_0");
+			builder.put(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEAssignment_1(), "rule__DatabaseRelations__MANY_TO_ONEAssignment_1");
+			builder.put(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYAssignment_2(), "rule__DatabaseRelations__ONE_TO_MANYAssignment_2");
+			builder.put(grammarAccess.getParamTransferAccess().getREQUEST_BODYAssignment_0(), "rule__ParamTransfer__REQUEST_BODYAssignment_0");
+			builder.put(grammarAccess.getParamTransferAccess().getREQUEST_PARAMAssignment_1(), "rule__ParamTransfer__REQUEST_PARAMAssignment_1");
+			builder.put(grammarAccess.getParamTransferAccess().getPATH_VARIABLEAssignment_2(), "rule__ParamTransfer__PATH_VARIABLEAssignment_2");
 		}
 	}
 	

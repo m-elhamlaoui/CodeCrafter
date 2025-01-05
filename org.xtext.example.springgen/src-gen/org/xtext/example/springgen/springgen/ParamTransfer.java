@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.springgen.springgen.ParamTransfer#getRequestBody <em>Request Body</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.ParamTransfer#getRequestParam <em>Request Param</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.ParamTransfer#getPathVariable <em>Path Variable</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.ParamTransfer#getREQUEST_BODY <em>REQUEST BODY</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.ParamTransfer#getREQUEST_PARAM <em>REQUEST PARAM</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.ParamTransfer#getPATH_VARIABLE <em>PATH VARIABLE</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.springgen.springgen.SpringgenPackage#getParamTransfer()
@@ -26,69 +26,69 @@ import org.eclipse.emf.ecore.EObject;
 public interface ParamTransfer extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Request Body</b></em>' attribute.
+   * Returns the value of the '<em><b>REQUEST BODY</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Request Body</em>' attribute.
-   * @see #setRequestBody(String)
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getParamTransfer_RequestBody()
+   * @return the value of the '<em>REQUEST BODY</em>' attribute.
+   * @see #setREQUEST_BODY(String)
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getParamTransfer_REQUEST_BODY()
    * @model
    * @generated
    */
-  String getRequestBody();
+  String getREQUEST_BODY();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.springgen.springgen.ParamTransfer#getRequestBody <em>Request Body</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.springgen.springgen.ParamTransfer#getREQUEST_BODY <em>REQUEST BODY</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Request Body</em>' attribute.
-   * @see #getRequestBody()
+   * @param value the new value of the '<em>REQUEST BODY</em>' attribute.
+   * @see #getREQUEST_BODY()
    * @generated
    */
-  void setRequestBody(String value);
+  void setREQUEST_BODY(String value);
 
   /**
-   * Returns the value of the '<em><b>Request Param</b></em>' attribute.
+   * Returns the value of the '<em><b>REQUEST PARAM</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Request Param</em>' attribute.
-   * @see #setRequestParam(String)
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getParamTransfer_RequestParam()
+   * @return the value of the '<em>REQUEST PARAM</em>' attribute.
+   * @see #setREQUEST_PARAM(String)
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getParamTransfer_REQUEST_PARAM()
    * @model
    * @generated
    */
-  String getRequestParam();
+  String getREQUEST_PARAM();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.springgen.springgen.ParamTransfer#getRequestParam <em>Request Param</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.springgen.springgen.ParamTransfer#getREQUEST_PARAM <em>REQUEST PARAM</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Request Param</em>' attribute.
-   * @see #getRequestParam()
+   * @param value the new value of the '<em>REQUEST PARAM</em>' attribute.
+   * @see #getREQUEST_PARAM()
    * @generated
    */
-  void setRequestParam(String value);
+  void setREQUEST_PARAM(String value);
 
   /**
-   * Returns the value of the '<em><b>Path Variable</b></em>' attribute.
+   * Returns the value of the '<em><b>PATH VARIABLE</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Path Variable</em>' attribute.
-   * @see #setPathVariable(String)
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getParamTransfer_PathVariable()
+   * @return the value of the '<em>PATH VARIABLE</em>' attribute.
+   * @see #setPATH_VARIABLE(String)
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getParamTransfer_PATH_VARIABLE()
    * @model
    * @generated
    */
-  String getPathVariable();
+  String getPATH_VARIABLE();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.springgen.springgen.ParamTransfer#getPathVariable <em>Path Variable</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.springgen.springgen.ParamTransfer#getPATH_VARIABLE <em>PATH VARIABLE</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Path Variable</em>' attribute.
-   * @see #getPathVariable()
+   * @param value the new value of the '<em>PATH VARIABLE</em>' attribute.
+   * @see #getPATH_VARIABLE()
    * @generated
    */
-  void setPathVariable(String value);
+  void setPATH_VARIABLE(String value);
 
 } // ParamTransfer

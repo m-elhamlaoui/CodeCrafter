@@ -1482,17 +1482,17 @@ ruleRepository returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRepositoryAccess().getFindByMethodsFindByMethodParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getRepositoryAccess().getFindByFindByMethodParserRuleCall_2_0());
 				}
-				lv_findByMethods_2_0=ruleFindByMethod
+				lv_findBy_2_0=ruleFindByMethod
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRepositoryRule());
 					}
 					add(
 						$current,
-						"findByMethods",
-						lv_findByMethods_2_0,
+						"findBy",
+						lv_findBy_2_0,
 						"org.xtext.example.springgen.SpringGen.FindByMethod");
 					afterParserOrEnumRuleCall();
 				}
@@ -1501,17 +1501,17 @@ ruleRepository returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRepositoryAccess().getDeleteByMethodsDeleteByMethodParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getRepositoryAccess().getDeleteByDeleteByMethodParserRuleCall_3_0());
 				}
-				lv_deleteByMethods_3_0=ruleDeleteByMethod
+				lv_deleteBy_3_0=ruleDeleteByMethod
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRepositoryRule());
 					}
 					add(
 						$current,
-						"deleteByMethods",
-						lv_deleteByMethods_3_0,
+						"deleteBy",
+						lv_deleteBy_3_0,
 						"org.xtext.example.springgen.SpringGen.DeleteByMethod");
 					afterParserOrEnumRuleCall();
 				}
@@ -1520,17 +1520,17 @@ ruleRepository returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRepositoryAccess().getCustomQueryMethodsCustomQueryMethodParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getRepositoryAccess().getCustomQueryMethodCustomQueryMethodParserRuleCall_4_0());
 				}
-				lv_customQueryMethods_4_0=ruleCustomQueryMethod
+				lv_customQueryMethod_4_0=ruleCustomQueryMethod
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRepositoryRule());
 					}
 					add(
 						$current,
-						"customQueryMethods",
-						lv_customQueryMethods_4_0,
+						"customQueryMethod",
+						lv_customQueryMethod_4_0,
 						"org.xtext.example.springgen.SpringGen.CustomQueryMethod");
 					afterParserOrEnumRuleCall();
 				}
@@ -1592,17 +1592,17 @@ ruleFindByMethod returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFindByMethodAccess().getPtypeValueTypesParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getFindByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0());
 				}
-				lv_ptype_4_0=ruleValueTypes
+				lv_propertyType_4_0=ruleValueTypes
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFindByMethodRule());
 					}
 					set(
 						$current,
-						"ptype",
-						lv_ptype_4_0,
+						"propertyType",
+						lv_propertyType_4_0,
 						"org.xtext.example.springgen.SpringGen.ValueTypes");
 					afterParserOrEnumRuleCall();
 				}
@@ -1660,17 +1660,17 @@ ruleDeleteByMethod returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDeleteByMethodAccess().getPtypeValueTypesParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getDeleteByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0());
 				}
-				lv_ptype_4_0=ruleValueTypes
+				lv_propertyType_4_0=ruleValueTypes
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDeleteByMethodRule());
 					}
 					set(
 						$current,
-						"ptype",
-						lv_ptype_4_0,
+						"propertyType",
+						lv_propertyType_4_0,
 						"org.xtext.example.springgen.SpringGen.ValueTypes");
 					afterParserOrEnumRuleCall();
 				}
@@ -2317,45 +2317,45 @@ ruleDatabaseRelations returns [EObject current=null]
 	(
 		(
 			(
-				lv_M2M_0_0='ManyToMany'
+				lv_MANY_TO_MANY_0_0='ManyToMany'
 				{
-					newLeafNode(lv_M2M_0_0, grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0());
+					newLeafNode(lv_MANY_TO_MANY_0_0, grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getDatabaseRelationsRule());
 					}
-					setWithLastConsumed($current, "M2M", lv_M2M_0_0, "ManyToMany");
+					setWithLastConsumed($current, "MANY_TO_MANY", lv_MANY_TO_MANY_0_0, "ManyToMany");
 				}
 			)
 		)
 		    |
 		(
 			(
-				lv_M2O_1_0='ManyToOne'
+				lv_MANY_TO_ONE_1_0='ManyToOne'
 				{
-					newLeafNode(lv_M2O_1_0, grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0());
+					newLeafNode(lv_MANY_TO_ONE_1_0, grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getDatabaseRelationsRule());
 					}
-					setWithLastConsumed($current, "M2O", lv_M2O_1_0, "ManyToOne");
+					setWithLastConsumed($current, "MANY_TO_ONE", lv_MANY_TO_ONE_1_0, "ManyToOne");
 				}
 			)
 		)
 		    |
 		(
 			(
-				lv_O2M_2_0='OneToMany'
+				lv_ONE_TO_MANY_2_0='OneToMany'
 				{
-					newLeafNode(lv_O2M_2_0, grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0());
+					newLeafNode(lv_ONE_TO_MANY_2_0, grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getDatabaseRelationsRule());
 					}
-					setWithLastConsumed($current, "O2M", lv_O2M_2_0, "OneToMany");
+					setWithLastConsumed($current, "ONE_TO_MANY", lv_ONE_TO_MANY_2_0, "OneToMany");
 				}
 			)
 		)
@@ -2380,45 +2380,45 @@ ruleParamTransfer returns [EObject current=null]
 	(
 		(
 			(
-				lv_RequestBody_0_0='RequestBody'
+				lv_REQUEST_BODY_0_0='RequestBody'
 				{
-					newLeafNode(lv_RequestBody_0_0, grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0());
+					newLeafNode(lv_REQUEST_BODY_0_0, grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getParamTransferRule());
 					}
-					setWithLastConsumed($current, "RequestBody", lv_RequestBody_0_0, "RequestBody");
+					setWithLastConsumed($current, "REQUEST_BODY", lv_REQUEST_BODY_0_0, "RequestBody");
 				}
 			)
 		)
 		    |
 		(
 			(
-				lv_RequestParam_1_0='RequestParam'
+				lv_REQUEST_PARAM_1_0='RequestParam'
 				{
-					newLeafNode(lv_RequestParam_1_0, grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0());
+					newLeafNode(lv_REQUEST_PARAM_1_0, grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getParamTransferRule());
 					}
-					setWithLastConsumed($current, "RequestParam", lv_RequestParam_1_0, "RequestParam");
+					setWithLastConsumed($current, "REQUEST_PARAM", lv_REQUEST_PARAM_1_0, "RequestParam");
 				}
 			)
 		)
 		    |
 		(
 			(
-				lv_PathVariable_2_0='PathVariable'
+				lv_PATH_VARIABLE_2_0='PathVariable'
 				{
-					newLeafNode(lv_PathVariable_2_0, grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0());
+					newLeafNode(lv_PATH_VARIABLE_2_0, grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getParamTransferRule());
 					}
-					setWithLastConsumed($current, "PathVariable", lv_PathVariable_2_0, "PathVariable");
+					setWithLastConsumed($current, "PATH_VARIABLE", lv_PATH_VARIABLE_2_0, "PathVariable");
 				}
 			)
 		)

@@ -983,21 +983,21 @@ rule__DatabaseRelations__Alternatives
 	}
 :
 	(
-		{ before(grammarAccess.getDatabaseRelationsAccess().getM2MAssignment_0()); }
-		(rule__DatabaseRelations__M2MAssignment_0)
-		{ after(grammarAccess.getDatabaseRelationsAccess().getM2MAssignment_0()); }
+		{ before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYAssignment_0()); }
+		(rule__DatabaseRelations__MANY_TO_MANYAssignment_0)
+		{ after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYAssignment_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getDatabaseRelationsAccess().getM2OAssignment_1()); }
-		(rule__DatabaseRelations__M2OAssignment_1)
-		{ after(grammarAccess.getDatabaseRelationsAccess().getM2OAssignment_1()); }
+		{ before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEAssignment_1()); }
+		(rule__DatabaseRelations__MANY_TO_ONEAssignment_1)
+		{ after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEAssignment_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getDatabaseRelationsAccess().getO2MAssignment_2()); }
-		(rule__DatabaseRelations__O2MAssignment_2)
-		{ after(grammarAccess.getDatabaseRelationsAccess().getO2MAssignment_2()); }
+		{ before(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYAssignment_2()); }
+		(rule__DatabaseRelations__ONE_TO_MANYAssignment_2)
+		{ after(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYAssignment_2()); }
 	)
 ;
 finally {
@@ -1010,21 +1010,21 @@ rule__ParamTransfer__Alternatives
 	}
 :
 	(
-		{ before(grammarAccess.getParamTransferAccess().getRequestBodyAssignment_0()); }
-		(rule__ParamTransfer__RequestBodyAssignment_0)
-		{ after(grammarAccess.getParamTransferAccess().getRequestBodyAssignment_0()); }
+		{ before(grammarAccess.getParamTransferAccess().getREQUEST_BODYAssignment_0()); }
+		(rule__ParamTransfer__REQUEST_BODYAssignment_0)
+		{ after(grammarAccess.getParamTransferAccess().getREQUEST_BODYAssignment_0()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getParamTransferAccess().getRequestParamAssignment_1()); }
-		(rule__ParamTransfer__RequestParamAssignment_1)
-		{ after(grammarAccess.getParamTransferAccess().getRequestParamAssignment_1()); }
+		{ before(grammarAccess.getParamTransferAccess().getREQUEST_PARAMAssignment_1()); }
+		(rule__ParamTransfer__REQUEST_PARAMAssignment_1)
+		{ after(grammarAccess.getParamTransferAccess().getREQUEST_PARAMAssignment_1()); }
 	)
 	|
 	(
-		{ before(grammarAccess.getParamTransferAccess().getPathVariableAssignment_2()); }
-		(rule__ParamTransfer__PathVariableAssignment_2)
-		{ after(grammarAccess.getParamTransferAccess().getPathVariableAssignment_2()); }
+		{ before(grammarAccess.getParamTransferAccess().getPATH_VARIABLEAssignment_2()); }
+		(rule__ParamTransfer__PATH_VARIABLEAssignment_2)
+		{ after(grammarAccess.getParamTransferAccess().getPATH_VARIABLEAssignment_2()); }
 	)
 ;
 finally {
@@ -4127,9 +4127,9 @@ rule__Repository__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getRepositoryAccess().getFindByMethodsAssignment_2()); }
-	(rule__Repository__FindByMethodsAssignment_2)*
-	{ after(grammarAccess.getRepositoryAccess().getFindByMethodsAssignment_2()); }
+	{ before(grammarAccess.getRepositoryAccess().getFindByAssignment_2()); }
+	(rule__Repository__FindByAssignment_2)*
+	{ after(grammarAccess.getRepositoryAccess().getFindByAssignment_2()); }
 )
 ;
 finally {
@@ -4154,9 +4154,9 @@ rule__Repository__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getRepositoryAccess().getDeleteByMethodsAssignment_3()); }
-	(rule__Repository__DeleteByMethodsAssignment_3)*
-	{ after(grammarAccess.getRepositoryAccess().getDeleteByMethodsAssignment_3()); }
+	{ before(grammarAccess.getRepositoryAccess().getDeleteByAssignment_3()); }
+	(rule__Repository__DeleteByAssignment_3)*
+	{ after(grammarAccess.getRepositoryAccess().getDeleteByAssignment_3()); }
 )
 ;
 finally {
@@ -4181,9 +4181,9 @@ rule__Repository__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getRepositoryAccess().getCustomQueryMethodsAssignment_4()); }
-	(rule__Repository__CustomQueryMethodsAssignment_4)*
-	{ after(grammarAccess.getRepositoryAccess().getCustomQueryMethodsAssignment_4()); }
+	{ before(grammarAccess.getRepositoryAccess().getCustomQueryMethodAssignment_4()); }
+	(rule__Repository__CustomQueryMethodAssignment_4)*
+	{ after(grammarAccess.getRepositoryAccess().getCustomQueryMethodAssignment_4()); }
 )
 ;
 finally {
@@ -4342,9 +4342,9 @@ rule__FindByMethod__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getFindByMethodAccess().getPtypeAssignment_4()); }
-	(rule__FindByMethod__PtypeAssignment_4)
-	{ after(grammarAccess.getFindByMethodAccess().getPtypeAssignment_4()); }
+	{ before(grammarAccess.getFindByMethodAccess().getPropertyTypeAssignment_4()); }
+	(rule__FindByMethod__PropertyTypeAssignment_4)
+	{ after(grammarAccess.getFindByMethodAccess().getPropertyTypeAssignment_4()); }
 )
 ;
 finally {
@@ -4477,9 +4477,9 @@ rule__DeleteByMethod__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDeleteByMethodAccess().getPtypeAssignment_4()); }
-	(rule__DeleteByMethod__PtypeAssignment_4)
-	{ after(grammarAccess.getDeleteByMethodAccess().getPtypeAssignment_4()); }
+	{ before(grammarAccess.getDeleteByMethodAccess().getPropertyTypeAssignment_4()); }
+	(rule__DeleteByMethod__PropertyTypeAssignment_4)
+	{ after(grammarAccess.getDeleteByMethodAccess().getPropertyTypeAssignment_4()); }
 )
 ;
 finally {
@@ -5625,45 +5625,45 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Repository__FindByMethodsAssignment_2
+rule__Repository__FindByAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getRepositoryAccess().getFindByMethodsFindByMethodParserRuleCall_2_0()); }
+		{ before(grammarAccess.getRepositoryAccess().getFindByFindByMethodParserRuleCall_2_0()); }
 		ruleFindByMethod
-		{ after(grammarAccess.getRepositoryAccess().getFindByMethodsFindByMethodParserRuleCall_2_0()); }
+		{ after(grammarAccess.getRepositoryAccess().getFindByFindByMethodParserRuleCall_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Repository__DeleteByMethodsAssignment_3
+rule__Repository__DeleteByAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getRepositoryAccess().getDeleteByMethodsDeleteByMethodParserRuleCall_3_0()); }
+		{ before(grammarAccess.getRepositoryAccess().getDeleteByDeleteByMethodParserRuleCall_3_0()); }
 		ruleDeleteByMethod
-		{ after(grammarAccess.getRepositoryAccess().getDeleteByMethodsDeleteByMethodParserRuleCall_3_0()); }
+		{ after(grammarAccess.getRepositoryAccess().getDeleteByDeleteByMethodParserRuleCall_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Repository__CustomQueryMethodsAssignment_4
+rule__Repository__CustomQueryMethodAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getRepositoryAccess().getCustomQueryMethodsCustomQueryMethodParserRuleCall_4_0()); }
+		{ before(grammarAccess.getRepositoryAccess().getCustomQueryMethodCustomQueryMethodParserRuleCall_4_0()); }
 		ruleCustomQueryMethod
-		{ after(grammarAccess.getRepositoryAccess().getCustomQueryMethodsCustomQueryMethodParserRuleCall_4_0()); }
+		{ after(grammarAccess.getRepositoryAccess().getCustomQueryMethodCustomQueryMethodParserRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -5685,15 +5685,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__FindByMethod__PtypeAssignment_4
+rule__FindByMethod__PropertyTypeAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getFindByMethodAccess().getPtypeValueTypesParserRuleCall_4_0()); }
+		{ before(grammarAccess.getFindByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0()); }
 		ruleValueTypes
-		{ after(grammarAccess.getFindByMethodAccess().getPtypeValueTypesParserRuleCall_4_0()); }
+		{ after(grammarAccess.getFindByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -5715,15 +5715,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__DeleteByMethod__PtypeAssignment_4
+rule__DeleteByMethod__PropertyTypeAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getDeleteByMethodAccess().getPtypeValueTypesParserRuleCall_4_0()); }
+		{ before(grammarAccess.getDeleteByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0()); }
 		ruleValueTypes
-		{ after(grammarAccess.getDeleteByMethodAccess().getPtypeValueTypesParserRuleCall_4_0()); }
+		{ after(grammarAccess.getDeleteByMethodAccess().getPropertyTypeValueTypesParserRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -6143,114 +6143,114 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__DatabaseRelations__M2MAssignment_0
+rule__DatabaseRelations__MANY_TO_MANYAssignment_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0()); }
+		{ before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0()); }
 		(
-			{ before(grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0()); }
+			{ before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0()); }
 			'ManyToMany'
-			{ after(grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0()); }
+			{ after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0()); }
 		)
-		{ after(grammarAccess.getDatabaseRelationsAccess().getM2MManyToManyKeyword_0_0()); }
+		{ after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_MANYManyToManyKeyword_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__DatabaseRelations__M2OAssignment_1
+rule__DatabaseRelations__MANY_TO_ONEAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0()); }
+		{ before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0()); }
 		(
-			{ before(grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0()); }
+			{ before(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0()); }
 			'ManyToOne'
-			{ after(grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0()); }
+			{ after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0()); }
 		)
-		{ after(grammarAccess.getDatabaseRelationsAccess().getM2OManyToOneKeyword_1_0()); }
+		{ after(grammarAccess.getDatabaseRelationsAccess().getMANY_TO_ONEManyToOneKeyword_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__DatabaseRelations__O2MAssignment_2
+rule__DatabaseRelations__ONE_TO_MANYAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0()); }
+		{ before(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0()); }
 		(
-			{ before(grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0()); }
+			{ before(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0()); }
 			'OneToMany'
-			{ after(grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0()); }
+			{ after(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0()); }
 		)
-		{ after(grammarAccess.getDatabaseRelationsAccess().getO2MOneToManyKeyword_2_0()); }
+		{ after(grammarAccess.getDatabaseRelationsAccess().getONE_TO_MANYOneToManyKeyword_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ParamTransfer__RequestBodyAssignment_0
+rule__ParamTransfer__REQUEST_BODYAssignment_0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0()); }
+		{ before(grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0()); }
 		(
-			{ before(grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0()); }
+			{ before(grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0()); }
 			'RequestBody'
-			{ after(grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0()); }
+			{ after(grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0()); }
 		)
-		{ after(grammarAccess.getParamTransferAccess().getRequestBodyRequestBodyKeyword_0_0()); }
+		{ after(grammarAccess.getParamTransferAccess().getREQUEST_BODYRequestBodyKeyword_0_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ParamTransfer__RequestParamAssignment_1
+rule__ParamTransfer__REQUEST_PARAMAssignment_1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0()); }
+		{ before(grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0()); }
 		(
-			{ before(grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0()); }
+			{ before(grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0()); }
 			'RequestParam'
-			{ after(grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0()); }
+			{ after(grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0()); }
 		)
-		{ after(grammarAccess.getParamTransferAccess().getRequestParamRequestParamKeyword_1_0()); }
+		{ after(grammarAccess.getParamTransferAccess().getREQUEST_PARAMRequestParamKeyword_1_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ParamTransfer__PathVariableAssignment_2
+rule__ParamTransfer__PATH_VARIABLEAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0()); }
+		{ before(grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0()); }
 		(
-			{ before(grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0()); }
+			{ before(grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0()); }
 			'PathVariable'
-			{ after(grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0()); }
+			{ after(grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0()); }
 		)
-		{ after(grammarAccess.getParamTransferAccess().getPathVariablePathVariableKeyword_2_0()); }
+		{ after(grammarAccess.getParamTransferAccess().getPATH_VARIABLEPathVariableKeyword_2_0()); }
 	)
 ;
 finally {

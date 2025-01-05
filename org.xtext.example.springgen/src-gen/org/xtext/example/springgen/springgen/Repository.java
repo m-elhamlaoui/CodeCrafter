@@ -14,9 +14,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.springgen.springgen.Repository#getFindByMethods <em>Find By Methods</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.Repository#getDeleteByMethods <em>Delete By Methods</em>}</li>
- *   <li>{@link org.xtext.example.springgen.springgen.Repository#getCustomQueryMethods <em>Custom Query Methods</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.Repository#getFindBy <em>Find By</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.Repository#getDeleteBy <em>Delete By</em>}</li>
+ *   <li>{@link org.xtext.example.springgen.springgen.Repository#getCustomQueryMethod <em>Custom Query Method</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.springgen.springgen.SpringgenPackage#getRepository()
@@ -26,39 +26,39 @@ import org.eclipse.emf.common.util.EList;
 public interface Repository extends ProjectElement
 {
   /**
-   * Returns the value of the '<em><b>Find By Methods</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Find By</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.example.springgen.springgen.FindByMethod}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Find By Methods</em>' containment reference list.
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getRepository_FindByMethods()
+   * @return the value of the '<em>Find By</em>' containment reference list.
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getRepository_FindBy()
    * @model containment="true"
    * @generated
    */
-  EList<FindByMethod> getFindByMethods();
+  EList<FindByMethod> getFindBy();
 
   /**
-   * Returns the value of the '<em><b>Delete By Methods</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Delete By</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.example.springgen.springgen.DeleteByMethod}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Delete By Methods</em>' containment reference list.
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getRepository_DeleteByMethods()
+   * @return the value of the '<em>Delete By</em>' containment reference list.
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getRepository_DeleteBy()
    * @model containment="true"
    * @generated
    */
-  EList<DeleteByMethod> getDeleteByMethods();
+  EList<DeleteByMethod> getDeleteBy();
 
   /**
-   * Returns the value of the '<em><b>Custom Query Methods</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Custom Query Method</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.example.springgen.springgen.CustomQueryMethod}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Custom Query Methods</em>' containment reference list.
-   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getRepository_CustomQueryMethods()
+   * @return the value of the '<em>Custom Query Method</em>' containment reference list.
+   * @see org.xtext.example.springgen.springgen.SpringgenPackage#getRepository_CustomQueryMethod()
    * @model containment="true"
    * @generated
    */
-  EList<CustomQueryMethod> getCustomQueryMethods();
+  EList<CustomQueryMethod> getCustomQueryMethod();
 
 } // Repository
