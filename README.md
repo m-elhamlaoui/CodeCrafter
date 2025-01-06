@@ -241,3 +241,48 @@ CmdInstruction:
 
 
 ```
+## Generator
+
+The generator for the **SpringGen DSL** is responsible for generating the necessary files and code for a Spring Boot project based on the DSL input. The generator handles various aspects of the project, including entities, repositories, services, controllers, DTOs, and Dockerfiles.
+
+### Key Features of the Generator
+
+1. **Entity Generation**:
+   - Generates Java entity classes with JPA annotations.
+   - Includes fields for each property specified in the DSL.
+
+2. **Repository Generation**:
+   - Creates Spring Data JPA repositories for each entity.
+   - Includes methods for basic CRUD operations and custom queries.
+
+3. **DTO Generation**:
+   - Generates DTO classes based on the DSL definitions.
+   - Utilizes Lombok's `@Builder` annotation for a convenient builder pattern.
+   - Generates getter and setter methods for each DTO property.
+
+4. **Controller and Service Generation**:
+   - Creates controllers and services for each entity.
+   - Controllers handle HTTP requests, while services encapsulate business logic.
+   - Generates methods in controllers for CRUD operations and custom actions specified in the DSL.
+
+5. **Properties File Generation**:
+   - Generates properties files to configure the Spring Boot application.
+   - Different files are generated based on the specified database type in the DSL configuration.
+
+6. **POM.xml Generation**:
+   - Generates the POM.xml file for Maven, including dependencies based on the chosen database type.
+
+7. **Dockerfile Generation**:
+   - Generates a Dockerfile for containerizing the Spring Boot application.
+   - Includes various Docker instructions such as `RUN`, `COPY`, `EXPOSE`, `ENV`, `WORKDIR`, and `CMD`.
+
+8. **Main Class and Test Folder Generation**:
+   - Generates the main class for the Spring Boot application.
+   - Generates a placeholder test class within the test folder.
+
+This generator automates the creation of boilerplate code, promoting consistency and reducing effort when setting up a new Spring Boot project based on the **SpringGen DSL** specifications.
+
+### Example Generator Code
+
+Below is an example of the generator code that handles the generation of various components based on the DSL input:
+
