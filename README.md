@@ -587,6 +587,7 @@ public interface ProductRepository extends JpaRepository<Product, null> {
 }
 ```
 4. **Controllers**: E.g., `PersonController.java`, `ProductController.java`
+   
 ```
 package com.springboot.MySpringBootProject.repository;
 
@@ -604,6 +605,9 @@ public interface ProductRepository extends JpaRepository<Product, null> {
     void deleteById(null id);
 
 }```
+
+```
+
 5. **Service Layer**: E.g., `PersonService.java`, `ProductService.java`
 ```
 package com.springboot.MySpringBootProject.repository;
