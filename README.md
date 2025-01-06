@@ -78,7 +78,7 @@ In the context of Model-Driven Engineering (MDE), a meta-model serves as a found
 ### Grammar Building
 The grammar aligns with the dedicated meta-model, enabling the precise representation of key project elements in a textual format. Developers can articulate project structures, including entities, data transfer objects (**DTOs**), **repositories**, and their **relationships**, employing an intuitive syntax. **Configuration** settings, **server** specifications, and **database** details are seamlessly integrated, ensuring comprehensive project definitions. This grammar acts as a bridge between the high-level abstraction provided by the DSL and the underlying meta-model, facilitating the creation of Spring Boot applications and Dockerfiles through a concise and expressive textual syntax. Our grammar is as follows:
 
-grammar org.xtext.example.springgen.SpringGen with org.eclipse.xtext.common.Terminals
+```grammar org.xtext.example.springgen.SpringGen with org.eclipse.xtext.common.Terminals
 
 generate springgen "http://www.xtext.org/example/springgen/springgen"
 
@@ -240,3 +240,4 @@ CmdInstruction:
     'CMD' command=STRING;
 
 
+```
