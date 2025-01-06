@@ -6,12 +6,12 @@
 3. [MetaModel Definition](#metamodel-definition)  
 4. [Grammar Building](#grammar-building)  
 5. [Generator](#generator)  
-   - [Validation](#validation)  
-6. [Setup and Installation](#setup-and-installation)  
-7. [Usage](#usage)  
-8. [Example Input](#example-input)  
-9. [Output Files](#output-files)  
-10. [Contributing](#contributing) 
+6. [Validation](#validation)  
+7. [Setup and Installation](#setup-and-installation)  
+8. [Usage](#usage)  
+9. [Example Input](#example-input)  
+10. [Output Files](#output-files)  
+11. [Contributing](#contributing) 
 
 ---
 
