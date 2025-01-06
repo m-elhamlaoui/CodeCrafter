@@ -281,8 +281,39 @@ The generator for the **SpringGen DSL** is responsible for generating the necess
    - Generates a placeholder test class within the test folder.
 
 This generator automates the creation of boilerplate code, promoting consistency and reducing effort when setting up a new Spring Boot project based on the **SpringGen DSL** specifications.
+### Validation
 
-### Example Generator Code
+Validation ensures the integrity and correctness of the generated code and configurations. By implementing validation checks, we can catch errors early in the development process, preventing issues that might arise later. Here are some key aspects of the validation role in our project:
 
-Below is an example of the generator code that handles the generation of various components based on the DSL input:
+1. **Entity Validation**:
+   - Ensure that entity names start with a capital letter.
+   - Check that each entity has at least one property.
+   - Verify that there are no cycles in the entity hierarchy.
 
+2. **Relationship Validation**:
+   - Ensure that each relationship has a valid source and target.
+   - Check that the source and target of a relationship are different.
+
+3. **Property Validation**:
+   - Ensure that property names within an entity are unique.
+
+4. **Service Action Validation**:
+   - Ensure that service action names within a service are unique.
+
+5. **Server Configuration Validation**:
+   - Ensure that the server configuration has a valid port.
+
+6. **Database Configuration Validation**:
+   - Ensure that the database configuration has a valid port.
+
+7. **Project Configuration Validation**:
+   - Ensure that the project configuration includes both server and database configurations.
+
+8. **Controller Validation**:
+   - Ensure that controller names start with a capital letter.
+
+9. **Dockerfile Validation**:
+   - Ensure that the Dockerfile has a base image.
+   - Check that Dockerfile instructions are valid.
+
+By implementing these validation checks, we can ensure the quality and correctness of the generated code and configurations, making the development process more robust and reliable.
