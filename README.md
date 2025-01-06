@@ -1,12 +1,31 @@
 # SpringGen: A DSL for Automated Spring Boot and Dockerfile Generation
 
+# SpringGen: A DSL for Automated Spring Boot and Dockerfile Generation
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Key Features](#key-features)
+3. [DSL Syntax](#dsl-syntax)
+4. [Setup and Installation](#setup-and-installation)
+5. [Usage](#usage)
+6. [Example Input](#example-input)
+7. [Output Files](#output-files)
+8. [Contributing](#contributing)
+9. [License](#license)
+
+---
+
 ## Introduction
 
-**SpringGen** is a Domain-Specific Language (DSL) designed to streamline the development of Spring Boot applications and their corresponding Dockerfiles. By leveraging **Model-Driven Engineering** (MDE) principles, **SpringGen** provides a high-level, expressive syntax that allows developers to define the structure and behavior of their applications in a concise and intuitive manner. This DSL aims to reduce redundancy and simplify the generation of basic code, making it easier to create **CRUD (Create, Read, Update, Delete) RESTful APIs** and containerize them using Docker.
+**SpringGen** is a Domain-Specific Language (DSL) designed to simplify the development of Spring Boot applications and Dockerfiles. By using **Model-Driven Engineering (MDE)** principles, SpringGen provides an expressive syntax that allows developers to define the structure, behavior, and configuration of their applications in a concise manner. 
 
-**SpringGen** is built on top of powerful tools and frameworks, including Xtext for defining the DSL syntax and semantics, Xtend for code generation, and **EMF** for model handling. Together, these technologies enable seamless **model-to-model and model-to-text transformations**, ensuring consistency and maintainability in the development process.
+With **SpringGen**, you can:
+- Automatically generate **CRUD RESTful APIs** for entities.
+- Create and manage DTOs, services, repositories, and controllers.
+- Generate Dockerfiles for containerization.
+- Focus on unique business logic while automating repetitive tasks.
 
-Whether you are a full-stack developer or a software engineer, **SpringGen** offers a unified approach to generating Spring Boot applications, allowing you to focus on the unique aspects of your project while automating the repetitive tasks. This README will guide you through the setup, usage, and features of **SpringGen**, helping you get started with this powerful tool.
+SpringGen is powered by technologies like **Xtext**, **Xtend**, and **EMF**, ensuring seamless model-to-model and model-to-text transformations for a consistent development experience.
 
 ## DSL Input
 
@@ -317,3 +336,229 @@ Validation ensures the integrity and correctness of the generated code and confi
    - Check that Dockerfile instructions are valid.
 
 By implementing these validation checks, we can ensure the quality and correctness of the generated code and configurations, making the development process more robust and reliable.
+## Setup and Installation
+
+### Prerequisites
+1. Java 11 or later.
+2. Maven or Gradle.
+3. Eclipse IDE (recommended) with Xtext plugin installed.
+
+### Installation
+1. Clone the SpringGen repository:
+   ```bash
+   git clone https://github.com/username/SpringGen.git
+   ```
+2. Build the project:
+   ```bash
+   mvn clean install
+   ```
+3. Import the project into your IDE for development.
+
+---
+
+## Usage
+
+1. Create a new SpringGen DSL file (`.springgen`).
+2. Define your project, entities, and configurations using the DSL syntax.
+3. save DSL file (`.springgen`).
+4. The generated files will be available in the output directory.
+
+---
+
+## Example Input
+
+### DSL File (`MySpringBootProject.springgen`)
+```text
+SpringBootProject MySpringBootProject {
+    config {
+        server {
+            port 8080
+        }
+        database {
+            dbms MySQL
+            name testdb
+            port 3306
+            username root
+            password root
+        }
+    }
+
+    // Define the Person entity
+    entity Person {
+        Id id long
+        nom: String
+        age: int
+
+        // Repository methods
+        repository {
+            find by id: long
+            delete by id: long
+        }
+
+        // Controller methods
+        controller {
+            create entity: RequestParam
+            delete entity: PathVariable
+        }
+    }
+
+    // Define a PersonDTO (data transfer object)
+    dto PersonDTO {
+        nom: String
+        age: int
+    }
+
+    // Define a RequestDto for request transfer
+    dto RequestDto {
+        nom: String
+        age: int
+        childs: List<int>
+        idCardNum: String
+    }
+
+    // Define a Product entity with repository and controller methods
+    entity Product {
+        Id id long
+        productName: String
+        price: float
+
+        repository {
+            find by id: long
+            find by productName: String
+            delete by id: long
+        }
+
+        controller {
+            create entity: RequestParam
+            delete entity: PathVariable
+        }
+    }
+
+    // Define a ProductDTO
+    dto ProductDTO {
+        productName: String
+        price: float
+    }
+
+    // Define the Dockerfile
+    dockerfile {
+        FROM "openjdk:11-jre-slim"
+        RUN "apt-get update && apt-get install -y curl"
+        COPY "target/myapp.jar": "/app/myapp.jar"
+        EXPOSE 8080
+        ENV JAVA_OPTS "-Xms512m -Xmx1024m"
+        WORKDIR "/app"
+        CMD "java -jar myapp.jar"
+    }
+}
+```
+
+---
+
+## Output Files
+
+After running the generator, the following files will be generated:
+1. **Java Entity Classes**: E.g., `Person.java`, `Product.java`
+```
+package com.springboot.MySpringBootProject.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.*;
+import java.util.*;
+
+@Entity
+@Table(name = "Person")
+@Builder
+public class Person {
+    @Id
+    private null id;
+    private org.xtext.example.springgen.springgen.impl.ValueTypesImpl@2584c7f (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) nom;
+    private org.xtext.example.springgen.springgen.impl.ValueTypesImpl@531c131a (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) age;
+
+    public null getId() {
+        return id;
+    }
+
+    public org.xtext.example.springgen.springgen.impl.ValueTypesImpl@2584c7f (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) getNom() {
+        return nom;
+    }
+
+    public void setNom(org.xtext.example.springgen.springgen.impl.ValueTypesImpl@2584c7f (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) nom) {
+        this.nom = nom;
+    }
+    public org.xtext.example.springgen.springgen.impl.ValueTypesImpl@531c131a (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) getAge() {
+        return age;
+    }
+
+    public void setAge(org.xtext.example.springgen.springgen.impl.ValueTypesImpl@531c131a (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) age) {
+        this.age = age;
+    }
+}
+```
+```
+package com.springboot.MySpringBootProject.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.*;
+import java.util.*;
+
+@Entity
+@Table(name = "Person")
+@Builder
+public class Person {
+    @Id
+    private null id;
+    private org.xtext.example.springgen.springgen.impl.ValueTypesImpl@2584c7f (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) nom;
+    private org.xtext.example.springgen.springgen.impl.ValueTypesImpl@531c131a (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) age;
+
+    public null getId() {
+        return id;
+    }
+
+    public org.xtext.example.springgen.springgen.impl.ValueTypesImpl@2584c7f (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) getNom() {
+        return nom;
+    }
+
+    public void setNom(org.xtext.example.springgen.springgen.impl.ValueTypesImpl@2584c7f (FLOAT: null, LONG: null, INTEGER: null, CHAR: null, BOOLEAN: null, BYTE: null, STRING: String) nom) {
+        this.nom = nom;
+    }
+    public org.xtext.example.springgen.springgen.impl.ValueTypesImpl@531c131a (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) getAge() {
+        return age;
+    }
+
+    public void setAge(org.xtext.example.springgen.springgen.impl.ValueTypesImpl@531c131a (FLOAT: null, LONG: null, INTEGER: int, CHAR: null, BOOLEAN: null, BYTE: null, STRING: null) age) {
+        this.age = age;
+    }
+}
+```
+2. **Repositories**: E.g., `PersonRepository.java`, `ProductRepository.java`
+3. **DTOs**: E.g., `PersonDTO.java`, `ProductDTO.java`
+4. **Controllers**: E.g., `PersonController.java`, `ProductController.java`
+5. **Service Layer**: E.g., `PersonService.java`, `ProductService.java`
+6. **Application Configuration**: `application.properties`
+7. **Dockerfile`**:`Dockerfile`
+
+---
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new feature branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. Push the branch and create a Pull Request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
