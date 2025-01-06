@@ -1,21 +1,21 @@
 # SpringGen: A DSL for Automated Spring Boot and Dockerfile Generation
 
-# SpringGen: A DSL for Automated Spring Boot and Dockerfile Generation
-
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Key Features](#key-features)
-3. [DSL Syntax](#dsl-syntax)
-4. [Setup and Installation](#setup-and-installation)
-5. [Usage](#usage)
-6. [Example Input](#example-input)
-7. [Output Files](#output-files)
-8. [Contributing](#contributing)
-9. [License](#license)
+1. [Introduction](#introduction)  
+2. [DSL Input](#dsl-input)  
+3. [MetaModel Definition](#metamodel-definition)  
+4. [Grammar Building](#grammar-building)  
+5. [Generator](#generator)  
+   - [Validation](#validation)  
+6. [Setup and Installation](#setup-and-installation)  
+7. [Usage](#usage)  
+8. [Example Input](#example-input)  
+9. [Output Files](#output-files)  
+10. [Contributing](#contributing) 
 
 ---
 
-## Introduction
+## 1- Introduction
 
 **SpringGen** is a Domain-Specific Language (DSL) designed to simplify the development of Spring Boot applications and Dockerfiles. By using **Model-Driven Engineering (MDE)** principles, SpringGen provides an expressive syntax that allows developers to define the structure, behavior, and configuration of their applications in a concise manner. 
 
@@ -27,55 +27,55 @@ With **SpringGen**, you can:
 
 SpringGen is powered by technologies like **Xtext**, **Xtend**, and **EMF**, ensuring seamless model-to-model and model-to-text transformations for a consistent development experience.
 
-## DSL Input
+## 2- DSL Input
 
 **SpringGen DSL** allows the definition of Spring Boot RESTful APIs and Dockerfiles through a concise and expressive syntax. The DSL encompasses various aspects of API development, including project configuration, entity modeling, Data Transfer Objects (DTOs), controllers, repositories, and custom actions.
 
-### Project Definition
+ **Project Definition**
 
 Define a Spring Boot project using the 'SpringBootProject' keyword, specifying the project name ('name') and optional configuration settings.
 
-### Entity Modeling
+**Entity Modeling**
 
 Entities are defined using the 'entity' keyword, specifying the entity name ('name'), identifier details, properties, repository, and controller.
 
-### Data Transfer Objects (DTOs)
+**Data Transfer Objects (DTOs)**
 
 DTOs are defined using the 'dto' keyword, specifying the DTO name ('name') and its properties.
 
-### Controllers
+**Controllers**
 
 Controllers are defined using the 'controller' keyword, allowing the specification of base URLs, custom actions, and CRUD operations.
 
-### Custom Actions
+**Custom Actions**
 
 Custom actions are defined using the 'service' keyword, providing details such as HTTP method, path, return type, implementation, and parameters.
 
-### Repositories
+**Repositories**
 
 Repositories are defined using the 'repository' keyword, encompassing custom query methods, 'find by' methods, and 'delete by' methods.
 
-### Configuration
+**Configuration**
 
 Configuration settings, including server and database details, are defined using the 'config' keyword.
-
-### Data Types
+ 
+**Data Types**
 
 Various data types, including primitive types and enumerations, are supported.
 
-### Relationships
+**Relationships**
 
 Entity relationships, such as Many-to-Many ('MANY_TO_MANY'), Many-to-One ('MANY_TO_ONE'), and One-to-Many ('ONE_TO_MANY'), can be specified.
 
-### HTTP Methods and Database Types
+ **HTTP Methods and Database Types**
 
 HTTP methods ('GET', 'POST', 'PUT', 'DELETE', 'PATCH') and database types ('MariaDB', 'MYSQL', 'POSTGRES', 'H2', 'Oracle') are supported.
 
-### Parameter Transfer Types
+ **Parameter Transfer Types**
 
 Different parameter transfer types, such as 'RequestBody', 'RequestParam', and 'PathVariable', are available for custom actions.
 
-### Dockerfile
+**Dockerfile**
 
 Dockerfile instructions are defined using the 'dockerfile' keyword, allowing the specification of base image and various Docker instructions. The Dockerfile section includes the following instructions:
 
@@ -260,11 +260,11 @@ CmdInstruction:
 
 
 ```
-## Generator
+### Generator
 
 The generator for the **SpringGen DSL** is responsible for generating the necessary files and code for a Spring Boot project based on the DSL input. The generator handles various aspects of the project, including entities, repositories, services, controllers, DTOs, and Dockerfiles.
 
-### Key Features of the Generator
+**Key Features of the Generator**
 
 1. **Entity Generation**:
    - Generates Java entity classes with JPA annotations.
@@ -300,6 +300,7 @@ The generator for the **SpringGen DSL** is responsible for generating the necess
    - Generates a placeholder test class within the test folder.
 
 This generator automates the creation of boilerplate code, promoting consistency and reducing effort when setting up a new Spring Boot project based on the **SpringGen DSL** specifications.
+
 ### Validation
 
 Validation ensures the integrity and correctness of the generated code and configurations. By implementing validation checks, we can catch errors early in the development process, preventing issues that might arise later. Here are some key aspects of the validation role in our project:
@@ -336,23 +337,20 @@ Validation ensures the integrity and correctness of the generated code and confi
    - Check that Dockerfile instructions are valid.
 
 By implementing these validation checks, we can ensure the quality and correctness of the generated code and configurations, making the development process more robust and reliable.
+
 ## Setup and Installation
 
 ### Prerequisites
 1. Java 11 or later.
 2. Maven or Gradle.
-3. Eclipse IDE (recommended) with Xtext plugin installed.
+3. Eclipse IDE (EMF) with Xtext plugin installed.
 
 ### Installation
-1. Clone the SpringGen repository:
+1. Clone the CodeCrafter repository:
    ```bash
-   git clone https://github.com/username/SpringGen.git
+   git clone [https://github.com/username/SpringGen.git](https://github.com/m-elhamlaoui/CodeCrafter.git)
    ```
-2. Build the project:
-   ```bash
-   mvn clean install
-   ```
-3. Import the project into your IDE for development.
+2. Import the project into your IDE for development.
 
 ---
 
@@ -533,11 +531,114 @@ public class Person {
     }
 }
 ```
-2. **Repositories**: E.g., `PersonRepository.java`, `ProductRepository.java`
-3. **DTOs**: E.g., `PersonDTO.java`, `ProductDTO.java`
+2. **Repositories**: E.g., `PersonRepository.java`
+```
+# Server Configuration
+server.port = 8080
+server.cpath = /api
+
+# Database Configuration
+spring.datasource.url = jdbc:org.xtext.example.springgen.springgen.impl.RDBMSImpl@29159552 (MYSQL: MySQL, POSTGRES: null, MARIADB: null, H2: null, ORACLE: null)://localhost:3306/testdb
+spring.datasource.username = root
+spring.datasource.password = root
+
+# Hibernate Configuration
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.show-sql = true
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.org.hibernate.dialect.MySQL5Dialect
+```
+
+ `ProductRepository.java` 
+```
+package com.springboot.MySpringBootProject.repository;
+
+import lombok.*;
+import java.util.*;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.springboot.MySpringBootProject.entities.Product;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, null> {
+    List<Product> findById(null id);
+    List<Product> findByProductName(String productName);
+
+    void deleteById(null id);
+
+}
+```
+3. **DTOs**: E.g., `PersonDTO.java`,`ProductDTO.java`
+```
+package com.springboot.MySpringBootProject.repository;
+
+import lombok.*;
+import java.util.*;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.springboot.MySpringBootProject.entities.Product;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, null> {
+    List<Product> findById(null id);
+    List<Product> findByProductName(String productName);
+
+    void deleteById(null id);
+
+}
+```
 4. **Controllers**: E.g., `PersonController.java`, `ProductController.java`
+```
+package com.springboot.MySpringBootProject.repository;
+
+import lombok.*;
+import java.util.*;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.springboot.MySpringBootProject.entities.Product;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, null> {
+    List<Product> findById(null id);
+    List<Product> findByProductName(String productName);
+
+    void deleteById(null id);
+
+}```
 5. **Service Layer**: E.g., `PersonService.java`, `ProductService.java`
+```
+package com.springboot.MySpringBootProject.repository;
+
+import lombok.*;
+import java.util.*;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.springboot.MySpringBootProject.entities.Product;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, null> {
+    List<Product> findById(null id);
+    List<Product> findByProductName(String productName);
+
+    void deleteById(null id);
+
+}```
 6. **Application Configuration**: `application.properties`
+```
+
+# Server Configuration
+server.port = 8080
+server.cpath = /api
+
+# Database Configuration
+spring.datasource.url = jdbc:org.xtext.example.springgen.springgen.impl.RDBMSImpl@29159552 (MYSQL: MySQL, POSTGRES: null, MARIADB: null, H2: null, ORACLE: null)://localhost:3306/testdb
+spring.datasource.username = root
+spring.datasource.password = root
+
+# Hibernate Configuration
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.show-sql = true
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.org.hibernate.dialect.MySQL5Dialect
+```
 7. **Dockerfile`**:`Dockerfile`
 
 ---
