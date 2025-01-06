@@ -50,7 +50,7 @@ Entity relationships, such as Many-to-Many ('MANY_TO_MANY'), Many-to-One ('MANY_
 
 ### HTTP Methods and Database Types
 
-HTTP methods ('GET', 'POST', 'PUT', 'DELETE', 'PATCH') and database types (e.g., 'MYSQL', 'POSTGRES') are supported.
+HTTP methods ('GET', 'POST', 'PUT', 'DELETE', 'PATCH') and database types ('MariaDB', 'MYSQL', 'POSTGRES', 'H2', 'Oracle') are supported.
 
 ### Parameter Transfer Types
 
@@ -70,5 +70,173 @@ Dockerfile instructions are defined using the 'dockerfile' keyword, allowing the
 
 The DSL aims to provide a declarative and intuitive syntax for describing the structure and behavior of Spring Boot RESTful APIs and Dockerfiles, facilitating rapid development and easy customization. **SpringGen** is a DSL that aims to be intuitive and user-friendly from the first use.
 
-### Example DSL Input
+### MetaModel Definition
+In the context of Model-Driven Engineering (MDE), a meta-model serves as a foundational abstraction that defines the structure and semantics of a modeling language. In our DSL for Spring Boot RESTful API and Dockerfile generation, the meta-model acts as a conceptual framework, capturing the essential concepts and relationships inherent to the representation of a software project. SpringGen is defined under the meta-model represented below:
+
+\\
+
+### Grammar Building
+The grammar aligns with the dedicated meta-model, enabling the precise representation of key project elements in a textual format. Developers can articulate project structures, including entities, data transfer objects (**DTOs**), **repositories**, and their **relationships**, employing an intuitive syntax. **Configuration** settings, **server** specifications, and **database** details are seamlessly integrated, ensuring comprehensive project definitions. This grammar acts as a bridge between the high-level abstraction provided by the DSL and the underlying meta-model, facilitating the creation of Spring Boot applications and Dockerfiles through a concise and expressive textual syntax. Our grammar is as follows:
+
+grammar org.xtext.example.springgen.SpringGen with org.eclipse.xtext.common.Terminals
+
+generate springgen "http://www.xtext.org/example/springgen/springgen"
+
+SpringBootProject:
+    'SpringBootProject' name=ID
+    configuration=ProjectConfiguration?
+    elements+=ProjectElement*
+    dockerfile=Dockerfile?;
+
+ProjectElement:
+    Entity | EntityRelationship | DTO | Service | Repository | Controller;
+
+EntityRelationship:
+    'relation' type=DatabaseRelations 'between' source=[Entity] 'and' target=[Entity];
+
+ProjectConfiguration:
+    'config' '{'
+        server=ServerConfiguration?
+        database=DatabaseConfiguration
+    '}';
+
+ServerConfiguration:
+    'server' '{'
+        'port' port=INT
+        ('contextPath' contextPath=STRING)?
+    '}';
+
+DatabaseConfiguration:
+    'database' '{'
+        'dbms' type=RDBMS
+        'name' name=ID
+        'port' port=INT
+        'username' username=ID
+        'password' password=ID
+    '}';
+
+Entity:
+    'entity' name=ID ('inherits' extends=[Entity])? '{'
+        identifier=Identifier
+        properties+=Property*
+        repository=Repository?
+        services+=Service*
+        controller=Controller?
+    '}';
+
+Identifier:
+    'Id' name=ID type=ValueTypes;
+
+DTO:
+    'dto' name=ID '{'
+        properties+=Property*
+    '}';
+
+Service:
+    'service' name=ID ('pertainingTo' entity=[Entity])? '{'
+        actions+=ServiceAction*
+    '}';
+
+Controller:
+    'controller' '{'
+        baseUrl=STRING?
+        customActions+=CustomAction*
+        ('create' 'entity:' createParam=ParamTransfer)?
+        ('find' 'entity:' findParam=ParamTransfer)?
+        ('delete' 'entity:' deleteParam=ParamTransfer)?
+    '}';
+
+ServiceAction:
+    'operation' name=ID '{'
+        'returns' returnType=ReturnType
+        ('raises' exceptionType=Type)?
+        ('implementation' implementation=STRING)?
+        'params' '(' parameters+=ActionParameter* ')'
+    '}';
+
+CustomAction:
+    method=HttpMethods 'action' name=ID '{'
+        ('mappedAt' url=STRING)?
+        parameters+=ActionParameter*
+    '}';
+
+ActionParameter:
+    name=ID ':' type=Type ('default' defaultValue=STRING)?;
+
+Repository:
+    'repository' '{'
+        findBy+=FindByMethod*
+        deleteBy+=DeleteByMethod*
+        customQueryMethod+=CustomQueryMethod*
+    '}';
+
+FindByMethod:
+    'find' 'by' property=ID ':' propertyType=ValueTypes;
+
+DeleteByMethod:
+    'delete' 'by' property=ID ':' propertyType=ValueTypes;
+
+CustomQueryMethod:
+    'customQuery' '{' query=STRING '}';
+
+Property:
+    name=ID ':' type=Type ('default' defaultValue=STRING)?;
+
+Type:
+    ValueTypes | ListType | SetType;
+
+ReturnType:
+    ValueTypes | ListType | ID;
+
+ListType:
+    'List<' type=Type '>';
+
+SetType:
+    'Set<' type=Type '>';
+
+ValueTypes:
+    FLOAT='float' | LONG='long' | INTEGER='int' | CHAR='char' | BOOLEAN='boolean' | BYTE='byte' | STRING='String';
+
+HttpMethods:
+    GET="GET" | DELETE="DELETE" | POST="POST" | PUT="PUT" | PATCH="PATCH";
+
+RDBMS:
+    MYSQL="MySQL" | POSTGRES="Postgres" | MARIADB="MariaDB" | H2="H2" | ORACLE="Oracle";
+
+DatabaseRelations:
+    MANY_TO_MANY="ManyToMany" | MANY_TO_ONE="ManyToOne" | ONE_TO_MANY="OneToMany";
+
+ParamTransfer:
+    REQUEST_BODY="RequestBody" | REQUEST_PARAM="RequestParam" | PATH_VARIABLE="PathVariable";
+
+Dockerfile:
+    'dockerfile' '{'
+        baseImage=BaseImage
+        instructions+=DockerInstruction*
+    '}';
+
+BaseImage:
+    'FROM' image=STRING;
+
+DockerInstruction:
+    RunInstruction | CopyInstruction | ExposeInstruction | EnvInstruction | WorkdirInstruction | CmdInstruction;
+
+RunInstruction:
+    'RUN' command=STRING;
+
+CopyInstruction:
+    'COPY' source=STRING ':' target=STRING;
+
+ExposeInstruction:
+    'EXPOSE' port=INT;
+
+EnvInstruction:
+    'ENV' key=ID value=STRING;
+
+WorkdirInstruction:
+    'WORKDIR' path=STRING;
+
+CmdInstruction:
+    'CMD' command=STRING;
+
 
