@@ -92,7 +92,7 @@ The DSL aims to provide a declarative and intuitive syntax for describing the st
 ### MetaModel Definition
 In the context of Model-Driven Engineering (MDE), a meta-model serves as a foundational abstraction that defines the structure and semantics of a modeling language. In our DSL for Spring Boot RESTful API and Dockerfile generation, the meta-model acts as a conceptual framework, capturing the essential concepts and relationships inherent to the representation of a software project. SpringGen is defined under the meta-model represented below:
 
-![SpringGen Class Diagram](springgen class diagram.jpg)
+![SpringGen Class Diagram](springgen_class_diagram.jpg)
 
 ### Grammar Building
 The grammar aligns with the dedicated meta-model, enabling the precise representation of key project elements in a textual format. Developers can articulate project structures, including entities, data transfer objects (**DTOs**), **repositories**, and their **relationships**, employing an intuitive syntax. **Configuration** settings, **server** specifications, and **database** details are seamlessly integrated, ensuring comprehensive project definitions. This grammar acts as a bridge between the high-level abstraction provided by the DSL and the underlying meta-model, facilitating the creation of Spring Boot applications and Dockerfiles through a concise and expressive textual syntax. Our grammar is as follows:
